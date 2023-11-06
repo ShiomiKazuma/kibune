@@ -75,8 +75,10 @@ public class GeneralFunctionAI : MonoBehaviour
     /// <summary> Chasing Behaviour </summary>
     void Chase()
     {
+        if (_movePointSet) { _movePointSet = false; }
         _currentTarget = GetTargetsInsideSRange(_sightRange, _targetLayer)[0];
-        if (Vector3.Distance(transform.position, _currentTarget.position) > 1)
+        var dis = Vector3.Distance(transform.position, _currentTarget.position);
+        if (dis > 1)
         {
             _agent.SetDestination(_currentTarget.position);
         }
@@ -99,7 +101,7 @@ public class GeneralFunctionAI : MonoBehaviour
     {
         _isTargetFound = IsTargetInsideRange(_sightRange, _targetLayer);
         _isInAttackingRange = IsTargetInsideRange(_AttackingRange, _targetLayer);
-        if (!_isTargetFound && !_isInAttackingRange) // Patroll
+        if (!_isTargetFound && !_isInAttackingRange || _movePointSet) // Patroll
         {
             Patroll();
             _patrollingEvent.Invoke();
