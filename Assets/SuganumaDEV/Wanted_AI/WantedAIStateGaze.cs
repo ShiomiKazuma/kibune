@@ -1,10 +1,16 @@
-using RSEngine.AI.StateMachine;
+// 管理者 菅沼
+using RSEngine.StateMachine;
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using static RSEngine.OriginalMethods;
 /// <summary> Wanted AI State : Gaze(注視) </summary>
 public class WantedAIStateGaze : IState
 {
+    #region __DEBUG__
+    bool __DEBUG__ = false;
+    #endregion
+
     float _sigthRange;
     float _gazingLimitTime;
     Transform _selfTransform;
@@ -26,7 +32,7 @@ public class WantedAIStateGaze : IState
         _onTargetFound = onTargetFound;
     }
 
-    public void Update(Transform selfTransform)
+    public void UpdateSelf(Transform selfTransform)
     {
         _selfTransform = selfTransform;
     }
@@ -35,7 +41,8 @@ public class WantedAIStateGaze : IState
     {
         if (Physics.CheckSphere(_selfTransform.position, _sigthRange, _targetLayer))
         {
-            Debug.Log("ん？");
+            Knock(__DEBUG__,
+            () => Debug.Log("ん？"));
             _agent.SetDestination(_selfTransform.position);
             _gazingTime += Time.deltaTime;
             var cols = Physics.OverlapSphere(_selfTransform.position, _sigthRange, _targetLayer);
@@ -43,25 +50,28 @@ public class WantedAIStateGaze : IState
 
             if (_gazingTime > _gazingLimitTime)
             {
-                Debug.Log("みつけたぞ！");
+                Knock(__DEBUG__,
+                () => Debug.Log("みつけたぞ！"));
                 _onTargetFound(cols[0].transform);
             }
         }
     }
 
-    public void Do()
+    public void Entry()
+    {
+        Knock(__DEBUG__,
+        () => Debug.Log("睨むぞ！"));
+    }
+
+    public void Update()
     {
         GazeOrNot();
     }
 
-    public void In()
+    public void Exit()
     {
-        Debug.Log("睨むぞ！");
-    }
-
-    public void Out()
-    {
-        Debug.Log("睨んだ！");
+        Knock(__DEBUG__,
+        () => Debug.Log("睨んだ！"));
         _gazingTime = 0;
     }
 }
