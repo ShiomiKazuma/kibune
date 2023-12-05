@@ -1,11 +1,17 @@
-using RSEngine.AI.StateMachine;
+// 管理者 菅沼
+using RSEngine.StateMachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static RSEngine.OriginalMethods;
 /// <summary> Wanted AI State : Chase </summary>
 public class WantedAIStateChase : IState
 {
+    #region __DEBUG__
+    bool __DEBUG__ = false;
+    #endregion
+
     float _sightRange;
     LayerMask _targetLayer;
     Transform _selfTransform;
@@ -18,14 +24,21 @@ public class WantedAIStateChase : IState
         _agent = agent;
     }
 
-    public void Update(Transform selfTransform)
+    public void UpdateSelf(Transform selfTransform)
     {
         _selfTransform = selfTransform;
     }
 
-    public void Do()
+    public void Entry()
     {
-        Debug.Log("まて！");
+        Knock(__DEBUG__,
+        () => Debug.Log("追うぞ！"));
+    }
+
+    public void Update()
+    {
+        Knock(__DEBUG__, 
+        () => Debug.Log("まて！"));
         if (Physics.CheckSphere(_selfTransform.position, _sightRange, _targetLayer))
         {
             var cols = Physics.OverlapSphere(_selfTransform.position, _sightRange, _targetLayer);
@@ -37,13 +50,9 @@ public class WantedAIStateChase : IState
         }
     }
 
-    public void In()
+    public void Exit()
     {
-        Debug.Log("追うぞ！");
-    }
-
-    public void Out()
-    {
-        Debug.Log("もう追わない");
+        Knock(__DEBUG__,
+        ()=> Debug.Log("もう追わない"));
     }
 }

@@ -1,11 +1,17 @@
-using RSEngine.AI.StateMachine;
+// 管理者 菅沼
+using RSEngine.StateMachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static RSEngine.OriginalMethods;
 /// <summary> Wanted AI State : Death </summary>
 public class WantedAIStateDeath : IState
 {
+    #region __DEBUG__
+    bool __DEBUG__ = false;
+    #endregion
+
     Transform _selfTransform;
     NavMeshAgent _agent;
 
@@ -15,7 +21,7 @@ public class WantedAIStateDeath : IState
         _agent = agent;
     }
 
-    public void Update(Transform selfTransform)
+    public void UpdateSelf(Transform selfTransform)
     {
         _selfTransform = selfTransform;
     }
@@ -23,19 +29,20 @@ public class WantedAIStateDeath : IState
     void Death()
     {
         _agent.SetDestination(_selfTransform.position);
-        Debug.Log("なん…だと…");
+        Knock(__DEBUG__,
+        ()=> Debug.Log("なん…だと…"));
     }
 
-    public void Do()
+    public void Entry()
+    {
+    }
+
+    public void Update()
     {
         Death();
     }
 
-    public void In()
-    {
-    }
-
-    public void Out()
+    public void Exit()
     {
     }
 }

@@ -1,53 +1,68 @@
-using RSEngine.AI.StateMachine;
-using System.Collections;
-using System.Collections.Generic;
+// 管理者 菅沼
 using UnityEngine;
+using RSEngine.StateMachine;
 using UnityEngine.AI;
+using System;
+using System.Collections.Generic;
+using RSEngine.AI;
+using static RSEngine.OriginalMethods;
+
 /// <summary> Wanted AI State : Default </summary>
 /// デフォルトでは特定の経路をパトロールする。
 public class WantedAIStateDefault : IState
 {
+    #region __DEBUG__
+    bool __DEBUG__ = false;
+    #endregion
+
     // 各必要パラメータ
-    int _currentPathIndex;
-    Transform[] _patrollingPath;
     Transform _selfTransform;
 
     NavMeshAgent _agent;
-    public WantedAIStateDefault(Transform[] patrollingPath, NavMeshAgent agent)
+
+    List<Vector3> _patrolPath = new();
+
+    int _currentPathIndex;
+
+    public WantedAIStateDefault(NavMeshAgent agent, Transform selfTransform, PathHolder patrollingPath)
     {
         _agent = agent;
-        _patrollingPath = patrollingPath;
-        _currentPathIndex = 0;
+        _selfTransform = selfTransform;
+        foreach (var path in patrollingPath.GetPatrollingPath())
+        {
+            _patrolPath.Add(path);
+        }
     }
-    public void Update(Transform selfTransform)
+
+    public void UpdateSelf(Transform selfTransform)
     {
         _selfTransform = selfTransform;
     }
-    void Patroll()
+
+    public void Entry()
     {
-        if (_patrollingPath != null && _patrollingPath.Length > 0)
+        Knock(__DEBUG__,
+        () => Debug.Log("巡回を始める！"));
+        _agent.SetDestination(_selfTransform.position);
+    }
+
+    public void Update()
+    {
+        Knock(__DEBUG__,
+            () => Debug.Log("巡回中"));
+        if ((_selfTransform.position - _patrolPath[_currentPathIndex]).sqrMagnitude < 2)
         {
-            var isNearToPoint = (_patrollingPath[_currentPathIndex].position - _selfTransform.position).sqrMagnitude < 2;
-            if(isNearToPoint)
-            {
-                _currentPathIndex = (_currentPathIndex + 1 < _patrollingPath.Length) ? _currentPathIndex + 1 : 0;
-            }
-            _agent.SetDestination(_patrollingPath[_currentPathIndex].position);
+            _currentPathIndex = (_currentPathIndex < _patrolPath.Count - 1) ? _currentPathIndex + 1 : 0;
+        }
+        else
+        {
+            _agent.SetDestination(_patrolPath[_currentPathIndex]);
         }
     }
-    public void Do()
-    {
-        Debug.Log("巡回中");
-        Patroll();
-    }
 
-    public void In()
+    public void Exit()
     {
-        Debug.Log("巡回を始める！");
-    }
-
-    public void Out()
-    {
-        Debug.Log("巡回を終わる！");
+        Knock(__DEBUG__,
+        () => Debug.Log("巡回を終わる！"));
     }
 }
