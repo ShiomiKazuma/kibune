@@ -25,9 +25,9 @@ namespace RSEngine
             // ステートマシンが一時停止中かのフラグ
             bool _bIsPausing = true;
             // デリゲート公開部
-            public event Action<string> OnEntered;
-            public event Action<string> OnUpdated;
-            public event Action<string> OnExited;
+            public event Action<string> OnEntered = (str) => { Debug.Log(str + "Entered"); };
+            public event Action<string> OnUpdated = (str) => { Debug.Log(str + "Updated"); };
+            public event Action<string> OnExited = (str) => { Debug.Log(str + "Exited"); };
 
             #region 登録処理
             /// <summary> ステートの登録 </summary>

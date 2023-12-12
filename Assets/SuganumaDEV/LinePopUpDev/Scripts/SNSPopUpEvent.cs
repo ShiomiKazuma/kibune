@@ -46,6 +46,7 @@ public class SNSPopUpEvent : MonoBehaviour
         {
             _elapsedTime += Time.deltaTime;
         }
+
         if (_isCountingTimeForDestoy)
         {
             _elapsedTime += Time.deltaTime;
