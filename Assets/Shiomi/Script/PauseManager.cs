@@ -11,6 +11,7 @@ public class PauseManager : MonoBehaviour
     public static Action EndPause;
     /// <summary> ポーズ状態であるかのフラグ </summary>
     bool IsPause;
+    [SerializeField] GameObject _inventoryUI;
 
     private void OnEnable()
     {
@@ -35,7 +36,7 @@ public class PauseManager : MonoBehaviour
     void Update()
     {
         //ポーズボタンを押したら、処理が走る
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Inventory"))
         {
             if(IsPause)
             {
@@ -50,11 +51,11 @@ public class PauseManager : MonoBehaviour
 
     void StartPause()
     {
-
+         _inventoryUI.SetActive(!_inventoryUI.activeSelf);
     }
 
     void PauseEnd()
     {
-
+        _inventoryUI.SetActive(!_inventoryUI.activeSelf);
     }
 }

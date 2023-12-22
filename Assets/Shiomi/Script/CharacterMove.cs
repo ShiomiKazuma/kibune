@@ -28,6 +28,8 @@ public class CharacterMove : MonoBehaviour
     Vector3 _characterVecMomentum;
     float _hockshotSize;
     CameraFov _cameraFov;
+    /// <summary> ポーズフラグ </summary>
+    bool IsPause;
     enum State
     {
         Normal,
@@ -45,11 +47,16 @@ public class CharacterMove : MonoBehaviour
         _state = State.Normal;
         _aimImage = _aim.GetComponent<Image>();
         _hookshotTransform.gameObject.SetActive(false);
+        IsPause = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //ポーズ中なら処理を実行しない
+        if(!IsPause)
+            return;
+
         switch(_state)
         {
             case State.Normal:
@@ -214,5 +221,30 @@ public class CharacterMove : MonoBehaviour
     bool InputJump()
     {
         return Input.GetButtonDown("Jump");
+    }
+
+    //デリゲート登録、解除処理
+    private void OnEnable()
+    {
+        //デリゲート登録
+        PauseManager.BeginPause += StartPause;
+        PauseManager.EndPause += PauseEnd;
+    }
+
+    private void OnDisable()
+    {
+        //デリゲート解除
+        PauseManager.BeginPause -= StartPause;
+        PauseManager.EndPause -= PauseEnd;
+    }
+
+    void StartPause()
+    {
+        IsPause = true;
+    }
+
+    void PauseEnd()
+    {
+        IsPause = false;
     }
 }
