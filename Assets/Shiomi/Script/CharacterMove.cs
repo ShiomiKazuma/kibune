@@ -240,11 +240,13 @@ public class CharacterMove : MonoBehaviour
 
     void StartPause()
     {
+        Cursor.lockState = CursorLockMode.None;
         IsPause = true;
     }
 
     void PauseEnd()
     {
         IsPause = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
