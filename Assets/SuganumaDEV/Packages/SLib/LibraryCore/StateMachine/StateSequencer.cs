@@ -3,12 +3,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace RSEngine
+namespace SLib
 {
-    namespace StateMachine
+    namespace StateSequencer
     {
         /// <summary> ステートマシンの機能を提供する </summary>
-        public class StateMachineFoundation
+        public class StateSequencer
         {
             // 通常ステート
             HashSet<IState> _states = new HashSet<IState>();
@@ -25,9 +25,9 @@ namespace RSEngine
             // ステートマシンが一時停止中かのフラグ
             bool _bIsPausing = true;
             // デリゲート公開部
-            public event Action<string> OnEntered = (str) => { Debug.Log(str + "Entered"); };
-            public event Action<string> OnUpdated = (str) => { Debug.Log(str + "Updated"); };
-            public event Action<string> OnExited = (str) => { Debug.Log(str + "Exited"); };
+            public event Action<string> OnEntered;
+            public event Action<string> OnUpdated;
+            public event Action<string> OnExited;
 
             #region 登録処理
             /// <summary> ステートの登録 </summary>
@@ -106,11 +106,13 @@ namespace RSEngine
                         if (t.SFrom == _currentPlayingState) // 現在左ステートなら
                         {
                             _currentPlayingState.Exit(); // 右ステートへの遷移条件を満たしたので抜ける
-                            OnExited(_currentTransitionName);
+                            if (OnExited != null)
+                                OnExited(_currentTransitionName);
                             if (isTrigger) condition2transist = !equalsTo; // IsTrigger が trueなら
                             _currentPlayingState = t.STo; // 現在のステートを右ステートに更新、遷移はそのまま
                             _currentPlayingState.Entry(); // 現在のステートの初回起動処理を呼ぶ
-                            OnEntered(_currentTransitionName);
+                            if (OnEntered != null)
+                                OnEntered(_currentTransitionName);
                             _currentTransitionName = name; // 現在の遷移ネームを更新
                         }
                     }
@@ -118,7 +120,8 @@ namespace RSEngine
                     else if (t.Name == name)
                     {
                         _currentPlayingState.Update();
-                        OnUpdated(_currentTransitionName);
+                        if (OnUpdated != null)
+                            OnUpdated(_currentTransitionName);
                     }
                 } // 全遷移を検索。
             }
