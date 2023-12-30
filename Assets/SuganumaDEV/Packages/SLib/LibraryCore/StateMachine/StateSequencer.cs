@@ -139,18 +139,21 @@ namespace SLib
                     if ((condition2transist == equalsTo) && t.Name == name)
                     {
                         _currentPlayingState.Exit(); // 右ステートへの遷移条件を満たしたので抜ける
-                        OnExited(_currentTransitionName);
+                        if (OnExited != null)
+                            OnExited(_currentTransitionName);
                         if (isTrigger) condition2transist = !equalsTo; // 遷移条件を初期化
                         _currentPlayingState = t.STo; // 現在のステートを右ステートに更新、遷移はそのまま
                         _currentPlayingState.Entry(); // 現在のステートの初回起動処理を呼ぶ
-                        OnEntered(_currentTransitionName);
+                        if (OnEntered != null)
+                            OnEntered(_currentTransitionName);
                         _currentTransitionName = name; // 現在の遷移ネームを更新
                     }
                     // 遷移の条件を満たしてはいないが、遷移ネームが一致（更新されていないなら）現在のステートの更新処理を呼ぶ
                     else if (t.Name == name)
                     {
                         _currentPlayingState.Update();
-                        OnUpdated(_currentTransitionName);
+                        if (OnUpdated != null)
+                            OnUpdated(_currentTransitionName);
                     }
                 } // 全遷移を検索。
             }
