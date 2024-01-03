@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "CsvInporter/Create EnemyData")]
+[CreateAssetMenu(menuName = "CsvImporter/Create EnemyData")]
 public class EnemyData : ScriptableObject
 {
     public string enemyName;
-    public int maxHp;
-    public int atk;
-    public int def;
-    public int exp;
-    public int gold;
+    public int enemyMaxHp;
+    public int enemyAtk;
+    public int enemyDef;
+    public int enemyExp;
+    public int enemyGold;
 }

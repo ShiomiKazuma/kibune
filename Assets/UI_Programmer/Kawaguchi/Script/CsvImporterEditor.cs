@@ -42,7 +42,7 @@ public class CsvImporterEditor : Editor
 
             //行数をIDとしてファイルを作成
             string fileName = "enemyData_" + i.ToString("D4") + ".asset";
-            string path = "Assets/UI_Programmer/Kawaguchi/Editer/" + fileName;//ファイルの場所
+            string path = "Assets/UI_Programmer/Kawaguchi/Editor/" + fileName;//ファイルの場所
 
             //EnemyDataのインスタンスをメモリ上に作成
             var enemyData = CreateInstance<EnemyData>();
@@ -52,23 +52,23 @@ public class CsvImporterEditor : Editor
 
             //最大HP
             column++;
-            enemyData.maxHp = int.Parse(parseByComma[column]);
+            enemyData.enemyMaxHp = int.Parse(parseByComma[column]);
 
             //攻撃力
             column++;
-            enemyData.atk = int.Parse(parseByComma[column]);
+            enemyData.enemyAtk = int.Parse(parseByComma[column]);
 
             //防御力
             column++;
-            enemyData.def = int.Parse(parseByComma[column]);
+            enemyData.enemyDef = int.Parse(parseByComma[column]);
 
             //経験値
             column++;
-            enemyData.exp = int.Parse(parseByComma[column]);
+            enemyData.enemyExp = int.Parse(parseByComma[column]);
 
             //ゴールド
             column++;
-            enemyData.gold = int.Parse(parseByComma[column]);
+            enemyData.enemyGold = int.Parse(parseByComma[column]);
 
             //インスタンス化したものをアセットとして保存
             var asset = (EnemyData)AssetDatabase.LoadAssetAtPath(path, typeof(EnemyData));
