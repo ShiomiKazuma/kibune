@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectRotator : MonoBehaviour
+public class UIObjRotator : MonoBehaviour
 {
     /// <summary>ターゲットのオブジェクト</summary>
     [SerializeField] GameObject _targetObject;
