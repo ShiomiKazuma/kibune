@@ -5,7 +5,7 @@ using UnityEngine.UI;
 /// <summary>
 /// テキストの文字送りを行う
 /// </summary>
-public class TextController : MonoBehaviour
+public class DialogueFeeder : MonoBehaviour
 {
     // おそらくここにシナリオデータが入るため変更される
     [SerializeField, Header("シナリオを格納する")] string[] _scenarios;

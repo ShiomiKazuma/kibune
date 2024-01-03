@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MousePointer : MonoBehaviour
+public class PlayerUIPointer : MonoBehaviour
 {
     /// <summary>マウスポインターを投影するCanvasの参照</summary>
     [SerializeField] private Canvas _canvas;
