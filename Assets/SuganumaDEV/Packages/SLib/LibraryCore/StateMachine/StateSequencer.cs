@@ -40,7 +40,7 @@ namespace SLib
 
             /// <summary> Anyからのステートの登録 </summary>
             /// <param name="state"></param>
-            public void ResisteStateFromAny(IState state)
+            public void ResistStateFromAny(IState state)
             {
                 _statesFromAnyState.Add(state);
             }
