@@ -9,9 +9,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<BGMSoundData> _bgmSoundData;
     [SerializeField] List<SESoundData> _seSoundData;
 
-    public float masterVolume = 1;
-    public float bgmMasterVolume = 1;
-    public float seMasterVolume = 1;
+    [SerializeField] float _masterVolume = 1;
+    [SerializeField] float _bgmMasterVolume = 1;
+    [SerializeField] float _seMasterVolume = 1;
 
     public static AudioManager Instance { get; private set; }
 
@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
     {
         BGMSoundData data = _bgmSoundData.Find(data => data.bgm == bgm);
         _bgmAudioSource.clip = data.audioClip;
-        _bgmAudioSource.volume = data.volume * bgmMasterVolume * masterVolume;
+        _bgmAudioSource.volume = data.volume * _bgmMasterVolume * _masterVolume;
         _bgmAudioSource.Play();
     }
 
@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySE(SESoundData.SE se)
     {
         SESoundData data = _seSoundData.Find(data => data.se == se);
-        _seAudioSource.volume = data.volume * seMasterVolume * masterVolume;
+        _seAudioSource.volume = data.volume * _seMasterVolume * _masterVolume;
         _seAudioSource.PlayOneShot(data.audioClip);
     }
 
