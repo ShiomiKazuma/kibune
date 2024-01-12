@@ -24,6 +24,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         //ゲームオーバー画面に遷移
-        SceneManager.LoadScene(_gameOverName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_gameOverName);
     }
 }
