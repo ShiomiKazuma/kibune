@@ -27,6 +27,6 @@ public class Fade : MonoBehaviour
 
     void MoveScene()
     {
-        SceneManager.LoadScene(_sceneName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneName);
     }
 }
