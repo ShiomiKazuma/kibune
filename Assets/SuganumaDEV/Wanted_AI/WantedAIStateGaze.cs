@@ -20,6 +20,7 @@ public class WantedAIStateGaze : IState
     Action<Transform> _onTargetFound;
 
     float _gazingTime = 0f;
+    public float GazingElapsedTime => _gazingTime;
 
     public WantedAIStateGaze(float sigthRange, float gazingTimeLimit, Transform selfTransform, LayerMask targetLayer, NavMeshAgent agent, Action<Transform> onTargetGazing, Action<Transform> onTargetFound)
     {

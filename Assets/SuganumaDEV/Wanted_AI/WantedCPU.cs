@@ -7,6 +7,7 @@ using UnityEngine.AI;
 using static SLib.SLib;
 using SLib.AI;
 using SLib.StateSequencer;
+using UnityEngine.UI;
 public class WantedCPU : MonoBehaviour
 {
     // ステートマシン
@@ -44,6 +45,12 @@ public class WantedCPU : MonoBehaviour
     [SerializeField] PathHolder _patrolingPath;
     // 体力
     [SerializeField] float _health;
+    // 発見判定までの時間
+    [SerializeField] float _gazingTime;
+    // インジケータ画像
+    [SerializeField] Sprite _sprtGazing;
+    [SerializeField] Sprite _sprtFound;
+    [SerializeField] Image _indicator;
 
     Transform _selfTransform;
 
@@ -63,12 +70,15 @@ public class WantedCPU : MonoBehaviour
 
         // 各ステート初期化
         _sDef = new(_agent, _selfTransform, _patrolingPath);
-        _sGaze = new(_sightRange, 2, transform, _targetLayer, _agent
+        _sGaze = new(_sightRange, _gazingTime, transform, _targetLayer, _agent
             , (tTransform) =>
             {
                 var dir = (tTransform.position - transform.position).normalized;
                 dir.y = 0;
                 transform.forward = dir;
+                _indicator.sprite = _sprtGazing;
+                _indicator.color = Color.white;
+                _indicator.fillAmount = (_sGaze.GazingElapsedTime / _gazingTime);
             } // On Gazing
             , (tTransform) =>
             {
@@ -76,6 +86,7 @@ public class WantedCPU : MonoBehaviour
                 dir.y = 0;
                 transform.forward = dir;
                 if (!_isFoundTargetNow) _isFoundTargetNow = true;
+                _indicator.sprite = _sprtFound;
             } // On Target Found
             );
 
