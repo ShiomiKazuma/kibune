@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float _masterVolume = 1;
     [SerializeField] float _bgmMasterVolume = 1;
     [SerializeField] float _seMasterVolume = 1;
+
+    [SerializeField] Slider _masterSlider;
+    [SerializeField] Slider _bgmSlider;
+    [SerializeField] Slider _seSlider;
 
     public static AudioManager Instance { get; private set; }
 
@@ -26,6 +31,14 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        //スライダーを動かした時の処理を登録。Startでないとうまくいかない。
+        _masterSlider.onValueChanged.AddListener(SetMasterVolume);
+        _bgmSlider.onValueChanged.AddListener(SetBGMVolume);
+        _seSlider.onValueChanged.AddListener(SetSEVolume);
     }
 
     public void PlayBGM(BGMSoundData.BGM bgm)
@@ -44,6 +57,26 @@ public class AudioManager : MonoBehaviour
         _seAudioSource.PlayOneShot(data.audioClip);
     }
 
+    /// <summary>
+    /// Masterの音量をセットします
+    /// valueはSliderの初期設定である0～1の値を想定しています。
+    /// </summary>
+    /// <param name="value">Masterの音量</param>
+    public void SetMasterVolume(float value) => _masterVolume = Mathf.Clamp01(value);
+
+    /// <summary>
+    /// BGMの音量をセットします
+    /// valueはSliderの初期設定である0～1の値を想定しています。
+    /// </summary>
+    /// <param name="value">BGMの音量</param>
+    public void SetBGMVolume(float value) => _bgmMasterVolume = Mathf.Clamp01(value);
+
+    /// <summary>
+    /// SEの音量をセットします
+    /// valueはSliderの初期設定である0～1の値を想定しています。
+    /// </summary>
+    /// <param name="value">SEの音量</param>
+    public void SetSEVolume(float value) => _seMasterVolume = Mathf.Clamp01(value);
 }
 
 [System.Serializable]

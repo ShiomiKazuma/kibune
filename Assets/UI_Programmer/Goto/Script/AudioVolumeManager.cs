@@ -17,7 +17,7 @@ public class AudioVolumeManager : MonoBehaviour
         _seSlider.onValueChanged.AddListener(SetAudioMixerSEVolume);
     }
 
-    /// <summary>Masterの音量をセットします</summary>
+    /// <summary>AudioMixerでMasterの音量をセットします</summary>
     /// <param name="value">Masterの音量</param>
     public void SetAudioMixerMasterVolume(float value)
     {
@@ -29,7 +29,7 @@ public class AudioVolumeManager : MonoBehaviour
         _audioMixer.SetFloat("MasterVolume", decibel);
     }
 
-    /// <summary>BGMの音量をセットします</summary>
+    /// <summary>AudioMixerでBGMの音量をセットします</summary>
     /// <param name="value">BGMの音量</param>
     public void SetAudioMixerBGMVolume(float value)
     {
@@ -41,7 +41,7 @@ public class AudioVolumeManager : MonoBehaviour
         _audioMixer.SetFloat("BGMVolume", decibel);
     }
 
-    /// <summary>SEの音量をセットします</summary>
+    /// <summary>AudioMixerでSEの音量をセットします</summary>
     /// <param name="value">SEの音量</param>
     public void SetAudioMixerSEVolume(float value)
     {
