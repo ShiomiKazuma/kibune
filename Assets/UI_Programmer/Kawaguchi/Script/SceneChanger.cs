@@ -13,8 +13,7 @@ public class SceneChanger : MonoBehaviour
     [Header("フェードアウトに使うパネル")]
     [SerializeField]
     private Graphic _fadePanel;
-
-    [SerializeField] float _LoadSpeed;
+    [SerializeField] Text _LoadText;
 
     void Awake()
     {
@@ -42,6 +41,7 @@ public class SceneChanger : MonoBehaviour
     IEnumerator Execute(string name)
     {
         yield return FadeOut();
+        yield return LoadText();
         SceneManager.LoadScene(name);
         yield return FadeIn();
     }
@@ -81,6 +81,20 @@ public class SceneChanger : MonoBehaviour
         else
         {
             Debug.LogError("フェードアウトに使うパネルが設定されていません");
+        }
+    }
+
+    IEnumerator LoadText(float duration = 1.0f)
+    {
+        if (_LoadText != null)
+        {
+            _LoadText.gameObject.SetActive(true);
+            yield return new WaitForSeconds(duration);
+            _LoadText.gameObject.SetActive(false) ;
+        }
+        else
+        {
+            Debug.Log("ロード画面に出すテキストが設定されていません");
         }
     }
 
