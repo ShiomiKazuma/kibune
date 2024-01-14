@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG;
+using DG.Tweening;
 // 担当 ： UIプログラマ 
 // ver 1 菅沼
 public class PlayerCrossHair : MonoBehaviour
@@ -9,25 +11,32 @@ public class PlayerCrossHair : MonoBehaviour
     [SerializeField]
     GameObject _imgTop;
     [SerializeField]
-    GameObject _imgBottomDeployed;
+    Image _imgBtmLeft;
     [SerializeField]
-    GameObject _imgBottomClosed;
+    Image _imgBtmRight;
+    [SerializeField]
+    RectTransform _rectMiddleAnchor;
+    [SerializeField]
+    RectTransform _rectClosedLeft;
+    [SerializeField]
+    RectTransform _rectDeployedLeft;
+    [SerializeField]
+    RectTransform _rectClosedRight;
+    [SerializeField]
+    RectTransform _rectDeployedRight;
 
-    [SerializeField]
+    public enum CrossHairStatus
+    {
+        Closed,
+        Deployed,
+    }
+
     bool _canGrapple;
-    [SerializeField]
+    public bool CanGrapple => _canGrapple;
     bool _isGrappling;
+    public bool IsGrappling => _isGrappling;
 
-    void SetCrossHairStatus(bool canGrapple, bool isGrappling)
-    {
-        _imgTop.SetActive(isGrappling);
+    public void SetGrappling(bool isGrappling) => _imgTop.SetActive(isGrappling);
 
-        _imgBottomDeployed.SetActive(!canGrapple);
-        _imgBottomClosed.SetActive(canGrapple);
-    }
-
-    private void FixedUpdate()
-    {
-        SetCrossHairStatus(_canGrapple, _isGrappling);
-    }
+    
 }
