@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG;
+using DG.Tweening;
 // 担当 ： UIプログラマ 
 // ver 1 菅沼
 public class PlayerCrossHair : MonoBehaviour
@@ -9,25 +11,62 @@ public class PlayerCrossHair : MonoBehaviour
     [SerializeField]
     GameObject _imgTop;
     [SerializeField]
-    GameObject _imgBottomDeployed;
+    Image _imgBtmLeft;
     [SerializeField]
-    GameObject _imgBottomClosed;
+    Image _imgBtmRight;
+    [SerializeField]
+    RectTransform _rectMiddleAnchor;
+    [SerializeField]
+    RectTransform _rectClosedLeft;
+    [SerializeField]
+    RectTransform _rectDeployedLeft;
+    [SerializeField]
+    RectTransform _rectClosedRight;
+    [SerializeField]
+    RectTransform _rectDeployedRight;
 
-    [SerializeField]
-    bool _canGrapple;
-    [SerializeField]
-    bool _isGrappling;
-
-    void SetCrossHairStatus(bool canGrapple, bool isGrappling)
+    public enum CrossHairStatus
     {
-        _imgTop.SetActive(isGrappling);
-
-        _imgBottomDeployed.SetActive(!canGrapple);
-        _imgBottomClosed.SetActive(canGrapple);
+        Close,
+        Deploy,
     }
 
-    private void FixedUpdate()
+    bool _canGrapple;
+    public bool CanGrapple => _canGrapple;
+    bool _isGrappling;
+    public bool IsGrappling => _isGrappling;
+
+    public void SetGrappling(bool isGrappling) => _imgTop.SetActive(isGrappling);
+
+    public void SetCrossHairStatus(CrossHairStatus crossHairStatus)
     {
-        SetCrossHairStatus(_canGrapple, _isGrappling);
+        switch (crossHairStatus)
+        {
+            case CrossHairStatus.Close:
+                _imgBtmLeft.rectTransform.localPosition = _rectClosedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectClosedRight.localPosition;
+                break;
+            case CrossHairStatus.Deploy:
+                _imgBtmLeft.rectTransform.localPosition = _rectDeployedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectDeployedRight.localPosition;
+                break;
+        }
+    }
+
+    public void SetCrossHairStatus(string crossHairStatus)
+    {
+        Vector2 endvalue_left = _imgBtmLeft.rectTransform.localPosition;
+        Vector2 endvalue_right = _imgBtmRight.rectTransform.localPosition;
+        switch (crossHairStatus)
+        {
+            case "Close":
+                _imgBtmLeft.rectTransform.localPosition = _rectClosedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectClosedRight.localPosition;
+                break;
+            case "Deploy":
+                _imgBtmLeft.rectTransform.localPosition = _rectDeployedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectDeployedRight.localPosition;
+                break;
+        }
     }
 }
