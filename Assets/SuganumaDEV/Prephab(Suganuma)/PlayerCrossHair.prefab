@@ -497,9 +497,9 @@ MonoBehaviour:
   _imgBtmLeft: {fileID: 5695476722106594337}
   _imgBtmRight: {fileID: 6814421866985963608}
   _rectMiddleAnchor: {fileID: 6205796465441379641}
-  _rectClosedLeft: {fileID: 8613399929668213198}
+  _rectClosedLeft: {fileID: 5171261620643332777}
   _rectDeployedLeft: {fileID: 205357215858968824}
-  _rectClosedRight: {fileID: 7430023715906307466}
+  _rectClosedRight: {fileID: 5192458119185313145}
   _rectDeployedRight: {fileID: 7999411893346303}
 --- !u!1 &8551071565308348650
 GameObject:

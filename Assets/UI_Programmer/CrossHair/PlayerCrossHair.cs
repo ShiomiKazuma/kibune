@@ -27,8 +27,8 @@ public class PlayerCrossHair : MonoBehaviour
 
     public enum CrossHairStatus
     {
-        Closed,
-        Deployed,
+        Close,
+        Deploy,
     }
 
     bool _canGrapple;
@@ -38,5 +38,35 @@ public class PlayerCrossHair : MonoBehaviour
 
     public void SetGrappling(bool isGrappling) => _imgTop.SetActive(isGrappling);
 
-    
+    public void SetCrossHairStatus(CrossHairStatus crossHairStatus)
+    {
+        switch (crossHairStatus)
+        {
+            case CrossHairStatus.Close:
+                _imgBtmLeft.rectTransform.localPosition = _rectClosedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectClosedRight.localPosition;
+                break;
+            case CrossHairStatus.Deploy:
+                _imgBtmLeft.rectTransform.localPosition = _rectDeployedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectDeployedRight.localPosition;
+                break;
+        }
+    }
+
+    public void SetCrossHairStatus(string crossHairStatus)
+    {
+        Vector2 endvalue_left = _imgBtmLeft.rectTransform.localPosition;
+        Vector2 endvalue_right = _imgBtmRight.rectTransform.localPosition;
+        switch (crossHairStatus)
+        {
+            case "Close":
+                _imgBtmLeft.rectTransform.localPosition = _rectClosedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectClosedRight.localPosition;
+                break;
+            case "Deploy":
+                _imgBtmLeft.rectTransform.localPosition = _rectDeployedLeft.localPosition;
+                _imgBtmRight.rectTransform.localPosition = _rectDeployedRight.localPosition;
+                break;
+        }
+    }
 }
