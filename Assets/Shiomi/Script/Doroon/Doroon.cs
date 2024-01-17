@@ -30,6 +30,8 @@ public class Doroon : MonoBehaviour
     Image _image;
     [SerializeField, Header("自爆するまでの時間")]
     float _explosionTime;
+    [SerializeField, Header("どこまで近づけば爆発するか")]
+    float _explosionPos = 2f;
     float _explosionTimer;
     bool IsChase = false;
     //プレイヤーのゲームオブジェクト
@@ -167,7 +169,7 @@ public class Doroon : MonoBehaviour
             _rb.AddForce(dir * _doroonSpeed);
             _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, _doroonLimitSpeed);
             //自爆時間を過ぎるかプレイヤーに近づくと爆発する
-            if (_explosionTime < _explosionTimer || Vector3.Distance(this.transform.position, _player.transform.position) < 1)
+            if (_explosionTime < _explosionTimer || Vector3.Distance(this.transform.position, _player.transform.position) < _explosionPos)
             {
                 Debug.Log("爆発");
                 Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
