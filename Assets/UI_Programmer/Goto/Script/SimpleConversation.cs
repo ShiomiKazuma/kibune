@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 // 作成 菅沼
 // 加工 五島
 public class SimpleConversation : MonoBehaviour
@@ -11,14 +10,13 @@ public class SimpleConversation : MonoBehaviour
     //[SerializeField] Button _convStartButton; // ”会話をする”ボタン
     //[SerializeField] Button _convNextButton; // ”次へ”ボタン
     [SerializeField] Transform _speakerTransform; // 会話者
-    [SerializeField] DialogueFeeder _dialogueFeeder;
+    [SerializeField] DialogueFeeder _dialogueFeeder; // 使用するDialogueFeeder
 
     [SerializeField] LayerMask _playerLayer; // プレイヤーレイヤ
 
     [SerializeField, Range(1f, 5f)] float _conversationRange; // 会話可能距離
 
     bool _isConversible = false; // 会話スタートしたフラグ
-    bool _isTextEnd = false;
 
     public void OnStartConversation()
     {
@@ -41,19 +39,19 @@ public class SimpleConversation : MonoBehaviour
         bool canSpeak = Physics.CheckSphere(_speakerTransform.position, _conversationRange, _playerLayer); // 会話可能圏内にいるなら
         //_convPanel.gameObject.SetActive(canSpeak);
 
-        if (_isConversible ^ canSpeak)   // ハットと読む。排他的論理和 ORではたくさん呼ばれてしまうため良くない
+        // 会話可能範囲の出入りを判定
+        if (_isConversible ^ canSpeak)
         {
             _isConversible = canSpeak;
 
-            if (canSpeak && _convPanel)
+            if (canSpeak && _convPanel) // 会話開始したら会話ボックスを開く
             {
                 _convPanel.alpha = 1f;
                 _convPanel.blocksRaycasts = true;
                 _convPanel.interactable = true;
-                _isTextEnd = false;
                 _dialogueFeeder.TextStart();
             }
-            else if (!_dialogueFeeder.IsUpdatingText)
+            else if (!_dialogueFeeder.IsUpdatingText)　// 会話終了したら会話ボックスを閉じる
             {
                 _convPanel.alpha = 0;
                 _convPanel.blocksRaycasts = false;
@@ -63,17 +61,13 @@ public class SimpleConversation : MonoBehaviour
             }
         }
 
-        if (!canSpeak || (_isTextEnd ^ !_dialogueFeeder.IsUpdatingText))
+        // 会話可能範囲の外に出たら会話ボックスを閉じる
+        if (!canSpeak)
         {
-            _isTextEnd = !_dialogueFeeder.IsUpdatingText;
-
-            if (!_dialogueFeeder.IsUpdatingText)
-            {
-                _convPanel.alpha = 0;
-                _convPanel.blocksRaycasts = false;
-                _convPanel.interactable = false;
-                _dialogueFeeder.StopFeedText();
-            }
+            _convPanel.alpha = 0;
+            _convPanel.blocksRaycasts = false;
+            _convPanel.interactable = false;
+            _dialogueFeeder.StopFeedText();
         }
 
         //_convStartButton.gameObject.SetActive(canSpeak); // 可視化
