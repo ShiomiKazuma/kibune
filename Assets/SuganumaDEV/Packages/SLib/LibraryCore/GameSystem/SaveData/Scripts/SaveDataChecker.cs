@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
+// auth Suganuma
 namespace SLib
 {
     namespace Systems
@@ -22,9 +24,16 @@ namespace SLib
                 _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
                 if (_gameInfo.TitleSceneName != SceneManager.GetActiveScene().name) return; // If Active Scene Is NOT TitleScene, DoNothing
 
-                if (_dataSerializer.ReadSaveData() != null)
+                try
                 {
-                    _startGameButtonsText.text = "Continue Game";
+                    if (_dataSerializer.ReadSaveData() != null)
+                    {
+                        _startGameButtonsText.text = "Continue Saga";
+                    }
+                }
+                catch (FileNotFoundException)
+                {
+                    _startGameButtonsText.text = "Start Saga";
                 }
             }
         }
