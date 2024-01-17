@@ -10,18 +10,12 @@ namespace SLib
 {
     namespace Systems
     {
-        enum AppQuitStatus
-        {
-            Title,
-            InGame,
-        }
-
         public class ApplicationQuitter : SingletonBaseClass<ApplicationQuitter>
         {
             [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
             [SerializeField, Header("タイトルかインゲームかの選択をする")]
-            AppQuitStatus _appStatus;
+            GameInfo.SceneTransitStatus _appStatus;
 
             PlayerSaveDataCreator _playerSaveDataCreator;
             GameInfo _gameInfo;
@@ -34,9 +28,13 @@ namespace SLib
             }
             void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
             {
-                if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
+                if (arg1.name == "Prolougue" || arg1.name == "Epilougue")
                 {
-                    _appStatus = AppQuitStatus.InGame;
+                    _appStatus = GameInfo.SceneTransitStatus.To_UniqueScene;
+                }
+                else if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
+                {
+                    _appStatus = GameInfo.SceneTransitStatus.To_InGameScene;
                 }
             }
 
@@ -50,10 +48,11 @@ namespace SLib
 
                 switch (_appStatus)
                 {
-                    case AppQuitStatus.InGame:
+                    case GameInfo.SceneTransitStatus.To_InGameScene:
                         _playerSaveDataCreator.SavePlayerData(_playerTransform, SceneManager.GetActiveScene().name);
                         break;
-                    case AppQuitStatus.Title: break;
+                    case GameInfo.SceneTransitStatus.To_TitleScene: break;
+                    case GameInfo.SceneTransitStatus.To_UniqueScene: break;
                 }
                 Application.Quit();
             }

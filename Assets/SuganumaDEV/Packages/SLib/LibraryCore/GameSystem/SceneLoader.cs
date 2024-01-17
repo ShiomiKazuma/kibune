@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG;
+using DG.Tweening;
 // Auth : Suganuma
 namespace SLib
 {
@@ -30,7 +33,10 @@ namespace SLib
 
             void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
             {
-                _eventOnSceneLoaded.Invoke(arg1);
+                _eventOnSceneLoaded.Invoke(arg1);   // ‘¼ƒNƒ‰ƒX‚©‚ç
+
+                _nowLoadingPanel.transform.SetAsFirstSibling();
+                _nowLoadingPanel.SetActive(false);
             }
 
             IEnumerator LoadSceneAcyncByName(string sceneName)

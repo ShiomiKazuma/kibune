@@ -1,7 +1,5 @@
 using SLib.Singleton;
 using SLib.Systems;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 // auth suganuma
@@ -9,16 +7,19 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
 {
     GameInfo _gameInfo;
     SceneLoader _sceneLoader;
+    GameObject _player;
+
+
 
     public void OnSceneTransitComplete(Scene scene)
     {
-        if (scene.name == _gameInfo.TitleSceneName)
+        if (scene.name == _gameInfo.TitleSceneName || scene.name == "Prolougue" || scene.name == "Epilougue")
         {
 
         }
         else if(scene.name == "InGameTesters")
         {
-            
+            _player = GameObject.FindGameObjectWithTag("Player");
         }
     }
 
