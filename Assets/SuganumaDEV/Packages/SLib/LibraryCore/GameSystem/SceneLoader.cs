@@ -2,6 +2,7 @@ using SLib.Singleton;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 // Auth : Suganuma
 namespace SLib
@@ -10,8 +11,10 @@ namespace SLib
     {
         public class SceneLoader : SingletonBaseClass<SceneLoader>
         {
-            [SerializeField]
+            [SerializeField, Header("Now Loading 表示のパネル")]
             GameObject _nowLoadingPanel;
+            [SerializeField, Header("シーン遷移時に必ず発火されるイベント")]
+            public UnityEvent<Scene> _eventOnSceneLoaded;
 
             public void LoadSceneByName(string sceneName)
             {
@@ -22,6 +25,12 @@ namespace SLib
             {
                 _nowLoadingPanel.SetActive(false);
                 _nowLoadingPanel.transform.SetAsFirstSibling();
+                SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+            }
+
+            void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
+            {
+                _eventOnSceneLoaded.Invoke(arg1);
             }
 
             IEnumerator LoadSceneAcyncByName(string sceneName)
@@ -34,6 +43,11 @@ namespace SLib
                     yield return null;
                 }
             }
+        }
+
+        public interface IOnSceneTransit
+        {
+            public void OnSceneTransitComplete(Scene scene);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SLib
         [Serializable]
         public class SaveDataTemplate
         {
-            public Vector3 _lastStandingPosition;       // Pos
+            public Vector3 _lastStandingPosition;           // Pos
             public Quaternion _lastStandingRotation;       // Rot
             public string _sceneName;                      // Scene Name
         }
@@ -39,16 +39,12 @@ namespace SLib
                 SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
             }
 
-            private void Start()
-            {
-                SavePlayerDataAutomatically();
-            }
-
             void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
             {
                 if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
                 {
                     _sceneStatus = SceneStatus.InGame;
+                    SavePlayerDataAutomatically();
                 }
             }
 

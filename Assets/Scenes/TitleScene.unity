@@ -231,6 +231,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4707011424834883714, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
   m_PrefabInstance: {fileID: 5074346518284899789}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1147911976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 896907079596643209, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
+  m_PrefabInstance: {fileID: 5074346518284899789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482846820
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,13 +329,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482846820}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.29343605, y: 0.29343605, z: 0.64334697, w: 0.64334697}
-  m_LocalPosition: {x: 1434, y: -564, z: 200.32452}
+  m_LocalRotation: {x: -0.53076583, y: -0.044649616, z: 0.78970695, w: 0.30439606}
+  m_LocalPosition: {x: 553, y: -577, z: -345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -49.036, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: -14.632, y: -63.443, z: 146.916}
 --- !u!1 &1691971168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7570550232458478889, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
@@ -698,7 +709,7 @@ PrefabInstance:
     - target: {fileID: 350145143565801443, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: _startGameButtonsText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1147911976}
     - target: {fileID: 1979064098242866069, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: _nowLoadingPanel
       value: 
@@ -742,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 2337910977855537869, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689129968035270914, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
+      propertyPath: _playerTransform
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6491332444387501345, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: m_Name
