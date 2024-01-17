@@ -2,9 +2,10 @@ using SLib.Singleton;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-// �쐬 ����
+// Auth : Suganuma
 namespace SLib
 {
     namespace Systems
@@ -13,6 +14,7 @@ namespace SLib
         {
             [SerializeField]
             GameObject _nowLoadingPanel;
+
             public void LoadSceneByName(string sceneName)
             {
                 StartCoroutine(LoadSceneAcyncByName(sceneName));
