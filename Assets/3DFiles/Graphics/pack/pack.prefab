@@ -7245,6 +7245,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 2461565313699274069}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 291a5219992a8476daa7ed47146484ae, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1003.45764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 291a5219992a8476daa7ed47146484ae, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1003.4577
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 291a5219992a8476daa7ed47146484ae, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1003.45764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 291a5219992a8476daa7ed47146484ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
       objectReference: {fileID: 0}
@@ -8235,7 +8247,16 @@ PrefabInstance:
       value: BgMD_Building_07_01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2128679465704939112, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: 3531504196433366752, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: -8201805940848696598, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: -6822582045128078898, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: 8686959662456251666, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: 431033310057569065, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: 4450908951402061483, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: -1374370513243848400, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
+    - {fileID: -3310580972251299165, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3d91f3b7cbaf545c8a0a5e58b2e259d0, type: 3}
       insertIndex: -1
