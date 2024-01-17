@@ -21,7 +21,9 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
                     break;
                 case "Epilougue":
                     break;
-                default: break;
+                default:
+                    _hudManager.ToFront(0);
+                    break;
             }
         }
         else if (scene.name == "InGameTesters")

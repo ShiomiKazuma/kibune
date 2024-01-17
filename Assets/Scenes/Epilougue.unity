@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6423555030615612006, guid: 12c58cbc35c3ae84e80ee27ec3b71e83, type: 3}
       propertyPath: _sceneName
-      value: 
+      value: TitleScene
       objectReference: {fileID: 0}
     - target: {fileID: 6423555030615612006, guid: 12c58cbc35c3ae84e80ee27ec3b71e83, type: 3}
       propertyPath: _canvasGroup
