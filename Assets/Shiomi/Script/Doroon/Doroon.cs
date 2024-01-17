@@ -39,6 +39,7 @@ public class Doroon : MonoBehaviour
     //プレイヤーのレイヤーマスク
     LayerMask _layerMask = 1 << 7;
     Rigidbody _rb;
+    Collider _collider;
     public enum State
     {
         Serch,
@@ -57,6 +58,8 @@ public class Doroon : MonoBehaviour
         _state = State.Serch;
         _image = _imageObject.GetComponent<Image>();
         _rb = GetComponent<Rigidbody>();
+        _collider = GetComponent<Collider>();
+        _collider.enabled = false;
     }
 
     // Update is called once per frame
@@ -154,6 +157,7 @@ public class Doroon : MonoBehaviour
     {
         if(IsChase)
         {
+            _collider.enabled = true;
             _explosionTimer += Time.deltaTime;
             Debug.Log("追跡開始");
             //プレイヤーを追う
