@@ -36,6 +36,7 @@ public class Doroon : MonoBehaviour
     float _lookTimer;
     //プレイヤーのレイヤーマスク
     LayerMask _layerMask = 1 << 7;
+    Rigidbody _rb;
     public enum State
     {
         Serch,
@@ -51,6 +52,7 @@ public class Doroon : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
         _state = State.Serch;
         _image = _imageObject.GetComponent<Image>();
+        _rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -94,7 +96,7 @@ public class Doroon : MonoBehaviour
     {
         Debug.Log("凝視しています");
         //プレイヤーの方向に向く
-        Vector3 dir = _player.transform.position - this.transform.position;
+        Vector3 dir = (_player.transform.position - this.transform.position).normalized;
         Quaternion quaternion = Quaternion.LookRotation(dir);
         this.transform.rotation = Quaternion.Lerp(transform.rotation, quaternion, 0.1f);
         RaycastHit hit;
@@ -105,6 +107,7 @@ public class Doroon : MonoBehaviour
             //凝視タイマーを超えていたら、追跡モードに移行する
             if (_lookTimer > _lookTime)
             {
+                StartCoroutine("ChaseWait");
                 _state = State.Chase;
                 _image = _biltukuri;  
             }
@@ -114,6 +117,7 @@ public class Doroon : MonoBehaviour
             //凝視時間をリセットする
             _lookTimer = 0;
             _image = null;
+            _state = State.Serch;
         }        
     }
 
@@ -134,9 +138,12 @@ public class Doroon : MonoBehaviour
             _explosionTimer += Time.deltaTime;
             Debug.Log("追跡開始");
             //プレイヤーを追う
-
+            Vector3 dir = (_player.transform.position - this.transform.position).normalized;
+            Quaternion quaternion = Quaternion.LookRotation(dir);
+            this.transform.rotation = Quaternion.Lerp(transform.rotation, quaternion, 0.1f);
+            _rb.AddForce(dir * _doroonSpeed);
             //自爆時間を過ぎるかプレイヤーに近づくと爆発する
-            if(_explosionTime < _explosionTimer || Vector3.Distance(this.transform.position, _player.transform.position) < 1)
+            if (_explosionTime < _explosionTimer || Vector3.Distance(this.transform.position, _player.transform.position) < 1)
             {
                 Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
