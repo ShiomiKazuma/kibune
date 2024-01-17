@@ -12,7 +12,14 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
 
     public void OnSceneTransitComplete(Scene scene)
     {
-        
+        if (scene.name == _gameInfo.TitleSceneName)
+        {
+
+        }
+        else if(scene.name == "InGameTesters")
+        {
+            
+        }
     }
 
     protected override void ToDoAtAwakeSingleton()

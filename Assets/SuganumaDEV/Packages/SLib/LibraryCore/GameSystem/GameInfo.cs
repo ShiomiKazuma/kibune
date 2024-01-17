@@ -11,7 +11,6 @@ namespace SLib
         {
             [SerializeField]
             string _titleSceneName;
-
             public string TitleSceneName { get { return _titleSceneName; } }
 
             protected override void ToDoAtAwakeSingleton() { }

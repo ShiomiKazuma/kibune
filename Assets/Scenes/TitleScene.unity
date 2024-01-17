@@ -754,10 +754,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3689129968035270914, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
-      propertyPath: _playerTransform
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6491332444387501345, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: m_Name
       value: System
@@ -766,10 +762,6 @@ PrefabInstance:
       propertyPath: _allHUDParent
       value: 
       objectReference: {fileID: 1691971168}
-    - target: {fileID: 8588303543508267819, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
-      propertyPath: _huds.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8588303543508267819, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: _huds.Array.data[0]
       value: 
@@ -782,10 +774,6 @@ PrefabInstance:
       propertyPath: _huds.Array.data[2]
       value: 
       objectReference: {fileID: 5074346518284899790}
-    - target: {fileID: 8588303543508267819, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
-      propertyPath: _huds.Array.data[3]
-      value: 
-      objectReference: {fileID: 992271072}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
