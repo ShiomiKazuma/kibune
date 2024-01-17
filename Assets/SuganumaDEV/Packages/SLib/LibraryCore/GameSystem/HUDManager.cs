@@ -1,3 +1,4 @@
+using SLib.Singleton;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ namespace SLib
     namespace Systems
     {
         /// <summary> list “o˜^‚³‚ê‚½HUD‚ğŠÇ—‚·‚é </summary>
-        public class HUDManager : MonoBehaviour     // list ÅŒã”ö‚ªˆê”ÔŒã‚ë
+        public class HUDManager : SingletonBaseClass<HUDManager>     // list ÅŒã”ö‚ªˆê”ÔŒã‚ë
         {
             [SerializeField]
             List<GameObject> _huds;
@@ -16,7 +17,10 @@ namespace SLib
             {
                 _huds[index].transform.SetAsLastSibling();
             }
-                
+
+            protected override void ToDoAtAwakeSingleton()
+            {
+            }
         }
     }
 }
