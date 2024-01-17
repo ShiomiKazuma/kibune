@@ -2,6 +2,7 @@ using SLib.Singleton;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,10 @@ public class ApplicationQuitter : SingletonBaseClass<ApplicationQuitter>
 
     public void QuitApplication()
     {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
         _playerSaveDataCreator.SavePlayerData(_playerTransform, SceneManager.GetActiveScene().name);
+        Application.Quit();
     }
-
 }
