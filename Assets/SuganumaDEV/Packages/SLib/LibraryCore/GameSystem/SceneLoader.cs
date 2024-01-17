@@ -21,6 +21,7 @@ namespace SLib
             protected override void ToDoAtAwakeSingleton()
             {
                 _nowLoadingPanel.SetActive(false);
+                _nowLoadingPanel.transform.SetAsFirstSibling();
             }
 
             IEnumerator LoadSceneAcyncByName(string sceneName)
@@ -28,10 +29,9 @@ namespace SLib
                 AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
                 while (!asyncLoad.isDone)
                 {
-                    _nowLoadingPanel.transform.SetSiblingIndex(this.gameObject.transform.parent.childCount - 1);
+                    _nowLoadingPanel.transform.SetAsLastSibling();
                     _nowLoadingPanel.SetActive(!false);
                     yield return null;
-                    _nowLoadingPanel.SetActive(false);
                 }
             }
         }
