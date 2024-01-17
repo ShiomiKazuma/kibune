@@ -62,6 +62,10 @@ namespace SLib
                     case GameInfo.SceneTransitStatus.To_TitleScene:
                         break;
                     case GameInfo.SceneTransitStatus.To_InGameScene:
+                        if (_playerTransform == null)
+                        {
+                            _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+                        }
                         SavePlayerData(_playerTransform, SceneManager.GetActiveScene().name);
                         break;
                 }
