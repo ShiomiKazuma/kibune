@@ -4,12 +4,21 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using SLib.Systems; // <-
 public class Fade : MonoBehaviour
 {
     [SerializeField, Header("フェードさせるCanvas")] Image _canvasGroup;
     [SerializeField, Header("フェードする時間")] float _fadeTime;
     [SerializeField, Header("遷移させたいシーン名")] string _sceneName;
+
+    SceneLoader _sceneLoader;   // <-
+
+    #region AddedCodes
+    private void Awake()
+    {
+        _sceneLoader = GameObject.FindFirstObjectByType<SceneLoader>();
+    }
+    #endregion  // <-
 
     public void FadeIn()
     {
@@ -27,6 +36,7 @@ public class Fade : MonoBehaviour
 
     void MoveScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneName);
+        //UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneName);
+        _sceneLoader.LoadSceneByName("InGameTesters");  // <-
     }
 }
