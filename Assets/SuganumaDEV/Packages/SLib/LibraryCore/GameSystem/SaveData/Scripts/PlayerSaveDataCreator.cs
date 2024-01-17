@@ -21,6 +21,7 @@ namespace SLib
         enum SceneStatus
         {
             Title,
+            UniqueScene,
             InGame,
         }
 
@@ -30,7 +31,7 @@ namespace SLib
             [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
             [SerializeField, Header("タイトルかインゲームかの選択をする")]
-            SceneStatus _sceneStatus;
+            GameInfo.SceneTransitStatus _sceneStatus;
 
             GameInfo _gameInfo;
             protected override void ToDoAtAwakeSingleton()
@@ -41,9 +42,13 @@ namespace SLib
 
             void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
             {
-                if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
+                if (arg1.name == "Prolougue" || arg1.name == "Epilougue")
                 {
-                    _sceneStatus = SceneStatus.InGame;
+                    _sceneStatus = GameInfo.SceneTransitStatus.To_UniqueScene;
+                }
+                else if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
+                {
+                    _sceneStatus = GameInfo.SceneTransitStatus.To_InGameScene;
                     SavePlayerDataAutomatically();
                 }
             }
@@ -54,9 +59,9 @@ namespace SLib
             {
                 switch (_sceneStatus)
                 {
-                    case SceneStatus.Title:
+                    case GameInfo.SceneTransitStatus.To_TitleScene:
                         break;
-                    case SceneStatus.InGame:
+                    case GameInfo.SceneTransitStatus.To_InGameScene:
                         SavePlayerData(_playerTransform, SceneManager.GetActiveScene().name);
                         break;
                 }
