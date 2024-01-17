@@ -13,19 +13,20 @@ public class DialogueFeeder : MonoBehaviour
     [SerializeField, Header("表示させるTextUI")] Text _uiText;
     [SerializeField, Range(0.001f, 0.3f), Header("1文字の表示にかかる時間")] float _intervalForCharacterDisplay = 0.05f;
     [SerializeField, Range(0.1f, 5f), Header("テキストの切り替えにかかる時間")] float _switchScenarioTime = 1f;
-    [SerializeField] bool _canInterrupt = false;
+    [SerializeField, Header("割り込みの可否")] bool _canInterrupt = false;
 
     string _currentText = string.Empty;      // 現在の文字列
     float _timeUntilDisplay = 0;             // 表示にかかる時間
     float _switchScenarioTimer = 0;          // テキストの切り替え用タイマー
     float _timeElapsed = 1;                  // 文字列の表示を開始した時間
-    float _stopTime = 0;
+    float _pauseTime = 0;                     // 一時停止時のタイマー
     int _currentLine = 0;                    // 現在の行番号
     int _lastUpdateCharacter = -1;           // 表示中の文字数
     bool _isUpdatingText = false;            // テキスト更新中かどうか
-    bool _isStop = false;
-    Coroutine _coroutine = null;
+    bool _isPause = false;                   // 一時停止中かどうか
+    Coroutine _coroutine = null;             // 起動中のTextUpdateを格納する
 
+    /// <summary>文字の更新中かどうか</summary>
     public bool IsUpdatingText => _isUpdatingText;
 
     /// <summary>文字の表示が完了しているかどうか</summary>
@@ -56,8 +57,8 @@ public class DialogueFeeder : MonoBehaviour
 
             _currentLine = 0;
             _switchScenarioTimer = 0;
-            _stopTime = 0;
-            _isStop = false;
+            _pauseTime = 0;
+            _isPause = false;
             SetNextLine();
             _coroutine = StartCoroutine(TextUpdate());
         }
@@ -73,9 +74,9 @@ public class DialogueFeeder : MonoBehaviour
 
         while (_currentText != string.Empty)
         {
-            while (_isStop == true)
+            while (_isPause == true)
             {
-                _stopTime += Time.deltaTime;
+                _pauseTime += Time.deltaTime;
                 yield return null;
             }
 
@@ -91,11 +92,11 @@ public class DialogueFeeder : MonoBehaviour
             {
                 SetNextLine();
                 _switchScenarioTimer = 0;
-                _stopTime = 0;
+                _pauseTime = 0;
             }
 
             // クリックから経過した時間が想定表示時間の何%か確認し、表示文字数を出す
-            int displayCharacterCount = (int)(Mathf.Clamp01((Time.time - _timeElapsed - _stopTime) / _timeUntilDisplay) * _currentText.Length);
+            int displayCharacterCount = (int)(Mathf.Clamp01((Time.time - _timeElapsed - _pauseTime) / _timeUntilDisplay) * _currentText.Length);
 
             // 表示文字数が前回の表示文字数と異なるならテキストを更新する
             if (displayCharacterCount != _lastUpdateCharacter)
@@ -135,24 +136,33 @@ public class DialogueFeeder : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 文字送りを一時停止します。
+    /// </summary>
     public void PauseFeedText()
     {
         if (_coroutine != null)
         {
             _isUpdatingText = false;
-            _isStop = true;
+            _isPause = true;
         }
     }
 
+    /// <summary>
+    /// 文字送りを再開します。
+    /// </summary>
     public void RestartFeedText()
     {
         if (_coroutine != null)
         {
             _isUpdatingText = true;
-            _isStop = false;
+            _isPause = false;
         }
     }
 
+    /// <summary>
+    /// 文字送りを停止します。
+    /// </summary>
     public void StopFeedText()
     {
         if (_coroutine != null)
