@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-// �쐬 ����
+// Auth : SUganuma
 namespace SLib
 {
     namespace Systems
