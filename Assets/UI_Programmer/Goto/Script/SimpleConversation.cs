@@ -51,18 +51,18 @@ public class SimpleConversation : MonoBehaviour
                 _convPanel.interactable = true;
                 _dialogueFeeder.TextStart();
             }
-            else if (!_dialogueFeeder.IsUpdatingText)　// 会話終了したら会話ボックスを閉じる
-            {
-                _convPanel.alpha = 0;
-                _convPanel.blocksRaycasts = false;
-                _convPanel.interactable = false;
-                _isConversible = false;
-                _dialogueFeeder.StopFeedText();
-            }
+            //else if (!_dialogueFeeder.IsUpdatingText)　// 会話終了したら会話ボックスを閉じる
+            //{
+            //    _convPanel.alpha = 0;
+            //    _convPanel.blocksRaycasts = false;
+            //    _convPanel.interactable = false;
+            //    _isConversible = false;
+            //    _dialogueFeeder.StopFeedText();
+            //}
         }
 
-        // 会話可能範囲の外に出たら会話ボックスを閉じる
-        if (!canSpeak)
+        // 会話終了または会話可能範囲の外に出たら会話ボックスを閉じる
+        if (!canSpeak|| !_dialogueFeeder.IsUpdatingText)
         {
             _convPanel.alpha = 0;
             _convPanel.blocksRaycasts = false;
