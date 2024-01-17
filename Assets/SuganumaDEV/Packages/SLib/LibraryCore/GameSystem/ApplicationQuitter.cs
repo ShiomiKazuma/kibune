@@ -24,10 +24,20 @@ namespace SLib
             AppQuitStatus _appStatus;
 
             PlayerSaveDataCreator _playerSaveDataCreator;
+            GameInfo _gameInfo;
 
             protected override void ToDoAtAwakeSingleton()
             {
+                SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
                 _playerSaveDataCreator = GameObject.FindFirstObjectByType<PlayerSaveDataCreator>();
+                _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
+            }
+            void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
+            {
+                if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
+                {
+                    _appStatus = AppQuitStatus.InGame;
+                }
             }
 
             public void QuitApplication()

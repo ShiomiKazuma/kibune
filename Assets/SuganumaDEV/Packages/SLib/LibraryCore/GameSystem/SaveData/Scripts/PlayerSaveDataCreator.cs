@@ -27,13 +27,25 @@ namespace SLib
         /// <summary> 渡されたフィールドの値をもとにScriptableObjectを生成、DataPath直下へ格納。 </summary>
         public class PlayerSaveDataCreator : SingletonBaseClass<PlayerSaveDataCreator>  // セーブデータの保存
         {
-            [SerializeField]
+            [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
-            [SerializeField]
+            [SerializeField, Header("タイトルかインゲームかの選択をする")]
             SceneStatus _sceneStatus;
+
+            GameInfo _gameInfo;
             protected override void ToDoAtAwakeSingleton()
             {
+                _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
+                SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
                 SavePlayerDataAutomatically();
+            }
+
+            void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
+            {
+                if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
+                {
+                    _sceneStatus = SceneStatus.InGame;
+                }
             }
 
             string _playerDataPath = Application.dataPath + "/PlayerSavedData.json";
