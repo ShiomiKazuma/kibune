@@ -762,6 +762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: System
       objectReference: {fileID: 0}
+    - target: {fileID: 8427265154444186332, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
+      propertyPath: _signalAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 775342a512662874c9b9a31d9138df4d, type: 2}
     - target: {fileID: 8588303543508267819, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: _allHUDParent
       value: 

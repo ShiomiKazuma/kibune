@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 645c25ea8df735e438dd689539961903
   - enabled: 1
     path: Assets/Scenes/Prolougue.unity
-    guid: d02162fec5d7f3944a0dde626f5b67eb
+    guid: 03eb01be7a59abc40ba2599e026ac362
   - enabled: 1
     path: Assets/Scenes/InGameTesters.unity
     guid: 7d767df98cd71b649907ed4850efe2c8
