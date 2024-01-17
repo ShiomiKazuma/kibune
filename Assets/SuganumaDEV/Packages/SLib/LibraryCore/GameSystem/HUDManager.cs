@@ -10,8 +10,10 @@ namespace SLib
         /// <summary> list 登録されたHUDを管理する </summary>
         public class HUDManager : SingletonBaseClass<HUDManager>     // list 最後尾が一番後ろ
         {
-            [SerializeField]
+            [SerializeField, Header("各HUDモジュール")]
             List<GameObject> _huds;
+            [SerializeField, Header("各HUDの親オブジェクト")]
+            GameObject _allHUDParent;
 
             public void ToFront(int index)
             {
@@ -20,6 +22,7 @@ namespace SLib
 
             protected override void ToDoAtAwakeSingleton()
             {
+                GameObject.DontDestroyOnLoad(_allHUDParent);
             }
         }
     }

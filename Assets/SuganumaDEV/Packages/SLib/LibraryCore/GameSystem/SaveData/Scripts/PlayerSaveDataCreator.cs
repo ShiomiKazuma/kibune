@@ -37,6 +37,10 @@ namespace SLib
             {
                 _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
                 SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+            }
+
+            private void Start()
+            {
                 SavePlayerDataAutomatically();
             }
 
