@@ -7,18 +7,9 @@ using UnityEngine.Timeline;
 // auth suganuma
 public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IOnSceneTransit
 {
-    [SerializeField, Header("フェードアウトのシグナルアセット")]
-    SignalAsset _signalAsset;
-
     GameInfo _gameInfo;
     SceneLoader _sceneLoader;
-    GameObject _player;
-
-    void CallInGameScene()
-    {
-        _sceneLoader.LoadSceneByName("InGameTesters");
-        throw new System.Exception("あとで本当のインゲームのシーンに変えること");
-    }
+    HUDManager _hudManager;
 
     public void OnSceneTransitComplete(Scene scene)
     {
@@ -35,7 +26,7 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
         }
         else if (scene.name == "InGameTesters")
         {
-            _player = GameObject.FindGameObjectWithTag("Player");
+            _hudManager.ToFront(2);
         }
     }
 
@@ -44,5 +35,6 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
         _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
         _sceneLoader = GameObject.FindFirstObjectByType<SceneLoader>();
         _sceneLoader._eventOnSceneLoaded.AddListener(OnSceneTransitComplete);
+        _hudManager = GameObject.FindFirstObjectByType<HUDManager>();
     }
 }

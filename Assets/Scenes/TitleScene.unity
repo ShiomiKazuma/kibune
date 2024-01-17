@@ -496,10 +496,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1297673945271949163, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2131862072860347597, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -600,6 +596,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129912211870020675, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7570550232458478889, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
       propertyPath: m_Name
       value: HUD_Primary_Game
@@ -692,7 +692,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 157147300534836689, guid: 3d8dd294657fbe845926ccd47883ac17, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
