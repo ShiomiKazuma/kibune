@@ -3,17 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-
+// 作成 菅沼
 public class PlayerSaveDataSerializer : SingletonBaseClass<PlayerSaveDataSerializer> // セーブデータの展開
 {
     protected override void ToDoAtAwakeSingleton() { }
-
-    public void ReadFuckingData()
-    {
-        var data = ReadSaveData();
-        Debug.Log($"{data._lastStandingTransform.position.ToString()}," +
-            $"{data._lastStandingTransform.rotation.ToString()} = {data._sceneName}");
-    }
 
     public SaveDataTemplate ReadSaveData()
     {
