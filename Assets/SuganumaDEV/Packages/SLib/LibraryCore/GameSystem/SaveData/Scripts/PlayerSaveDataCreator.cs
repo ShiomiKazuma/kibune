@@ -17,15 +17,7 @@ public class PlayerSaveDataCreator : SingletonBaseClass<PlayerSaveDataCreator>  
 {
     protected override void ToDoAtAwakeSingleton() { }
 
-    [SerializeField] Transform _tr;
-    [SerializeField] string _sceneName;
-
     string _playerDataPath = Application.dataPath + "/PlayerSavedData.json";
-
-    public void SaveDatas()
-    {
-        SavePlayerData(_tr, _sceneName);
-    }
 
     public void SavePlayerData(Transform playerStandingTransform, string sceneName)
     {
