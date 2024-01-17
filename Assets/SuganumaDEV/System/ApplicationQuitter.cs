@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+// ì¬ ‚·‚ª‚Ê‚Ü
 public class ApplicationQuitter : SingletonBaseClass<ApplicationQuitter>
 {
     [SerializeField]

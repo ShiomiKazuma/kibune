@@ -4,11 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-
+//çÏê¨ êõè¿
 [Serializable]
 public class SaveDataTemplate
 {
-    public Transform _lastStandingTransform;       // Transform
+    public Vector3 _lastStandingPosition;       // Pos
+    public Quaternion _lastStandingRotation;       // Rot
     public string _sceneName;                      // Scene Name
 }
 
@@ -22,7 +23,8 @@ public class PlayerSaveDataCreator : SingletonBaseClass<PlayerSaveDataCreator>  
     public void SavePlayerData(Transform playerStandingTransform, string sceneName)
     {
         SaveDataTemplate template = new SaveDataTemplate();
-        template._lastStandingTransform = playerStandingTransform;
+        template._lastStandingPosition = playerStandingTransform.position;
+        template._lastStandingRotation = playerStandingTransform.rotation;
         template._sceneName = sceneName;
 
         string jsonStr = JsonUtility.ToJson(template);
