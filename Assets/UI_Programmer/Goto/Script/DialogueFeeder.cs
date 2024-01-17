@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+// 作成　五島
 /// <summary>
 /// テキストの文字送りを行う
 /// </summary>
@@ -12,26 +13,54 @@ public class DialogueFeeder : MonoBehaviour
     [SerializeField, Header("表示させるTextUI")] Text _uiText;
     [SerializeField, Range(0.001f, 0.3f), Header("1文字の表示にかかる時間")] float _intervalForCharacterDisplay = 0.05f;
     [SerializeField, Range(0.1f, 5f), Header("テキストの切り替えにかかる時間")] float _switchScenarioTime = 1f;
+    [SerializeField] bool _canInterrupt = false;
 
     string _currentText = string.Empty;      // 現在の文字列
     float _timeUntilDisplay = 0;             // 表示にかかる時間
     float _switchScenarioTimer = 0;          // テキストの切り替え用タイマー
     float _timeElapsed = 1;                  // 文字列の表示を開始した時間
+    float _stopTime = 0;
     int _currentLine = 0;                    // 現在の行番号
     int _lastUpdateCharacter = -1;           // 表示中の文字数
+    bool _isUpdatingText = false;            // テキスト更新中かどうか
+    bool _isStop = false;
+    Coroutine _coroutine = null;
+
+    public bool IsUpdatingText => _isUpdatingText;
 
     /// <summary>文字の表示が完了しているかどうか</summary>
     public bool IsCompleteDisplayText => Time.time > _timeElapsed + _timeUntilDisplay;
+
+    /// <summary>1文字の表示にかかる時間を設定します</summary>
+    public void SetIntervalForCharacterDisplay(float time) => _intervalForCharacterDisplay = time;
+
+    /// <summary>テキストの切り替えにかかる時間を設定します</summary>
+    public void SetSwitchScenarioTime(float time) => _switchScenarioTime = time;
 
     /// <summary>
     /// 文字送りを始める
     /// </summary>
     public void TextStart()
     {
-        _currentLine = 0;
-        _switchScenarioTimer = 0;
-        SetNextLine();
-        StartCoroutine(TextUpdate());
+        if (_canInterrupt && _coroutine != null)
+        {
+            PauseFeedText();
+        }
+
+        if (!_isUpdatingText)
+        {
+            if (_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+            }
+
+            _currentLine = 0;
+            _switchScenarioTimer = 0;
+            _stopTime = 0;
+            _isStop = false;
+            SetNextLine();
+            _coroutine = StartCoroutine(TextUpdate());
+        }
     }
 
     /// <summary>
@@ -40,12 +69,19 @@ public class DialogueFeeder : MonoBehaviour
     /// <returns></returns>
     IEnumerator TextUpdate()
     {
+        _isUpdatingText = true;
+
         while (_currentText != string.Empty)
         {
+            while (_isStop == true)
+            {
+                _stopTime += Time.deltaTime;
+                yield return null;
+            }
+
             if (IsCompleteDisplayText && _currentText != string.Empty)
             {
                 //Debug.Log((int)_switchScenarioTimer);
-                // TODO:時間のカウントの仕方がおかしいので直す
                 //時間経過で次のテキストに切り替わるようにする
                 _switchScenarioTimer += Time.deltaTime;
             }
@@ -53,24 +89,13 @@ public class DialogueFeeder : MonoBehaviour
             // 文字の表示が完了してるかつ切り替え時間に達したなら次の行を表示する
             if (IsCompleteDisplayText && _switchScenarioTimer > _switchScenarioTime && _currentText != string.Empty)
             {
-                // 現在の行番号がラストまで行ってない状態でクリックすると、テキストを更新する
-                //if (_currentLine < _scenarios.Length && Input.GetMouseButtonDown(0))
-                //{
                 SetNextLine();
                 _switchScenarioTimer = 0;
-                //}
+                _stopTime = 0;
             }
-            //else
-            //{
-                // 完了してないなら文字をすべて表示する
-                //if (Input.GetMouseButtonDown(0))
-                //{
-                //    _timeUntilDisplay = 0;
-                //}
-            //}
 
             // クリックから経過した時間が想定表示時間の何%か確認し、表示文字数を出す
-            int displayCharacterCount = (int)(Mathf.Clamp01((Time.time - _timeElapsed) / _timeUntilDisplay) * _currentText.Length);
+            int displayCharacterCount = (int)(Mathf.Clamp01((Time.time - _timeElapsed - _stopTime) / _timeUntilDisplay) * _currentText.Length);
 
             // 表示文字数が前回の表示文字数と異なるならテキストを更新する
             if (displayCharacterCount != _lastUpdateCharacter)
@@ -81,6 +106,8 @@ public class DialogueFeeder : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+
+        StopFeedText();
     }
 
     /// <summary>
@@ -106,5 +133,33 @@ public class DialogueFeeder : MonoBehaviour
             // 文字カウントを初期化
             _lastUpdateCharacter = -1;
         }
+    }
+
+    public void PauseFeedText()
+    {
+        if (_coroutine != null)
+        {
+            _isUpdatingText = false;
+            _isStop = true;
+        }
+    }
+
+    public void RestartFeedText()
+    {
+        if (_coroutine != null)
+        {
+            _isUpdatingText = true;
+            _isStop = false;
+        }
+    }
+
+    public void StopFeedText()
+    {
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+        }
+
+        _isUpdatingText = false;
     }
 }
