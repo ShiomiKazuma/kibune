@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SuganumaDEV/MockUps/TestScene.unity
-    guid: 6901b8265df352d40a139a5665c14763
+    path: Assets/Scenes/TitleScene.unity
+    guid: 645c25ea8df735e438dd689539961903
+  - enabled: 1
+    path: Assets/Scenes/InGameTesters.unity
+    guid: 7d767df98cd71b649907ed4850efe2c8
   m_configObjects: {}
