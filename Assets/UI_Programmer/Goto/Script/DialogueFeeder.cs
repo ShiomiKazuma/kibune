@@ -19,7 +19,7 @@ public class DialogueFeeder : MonoBehaviour
     float _timeUntilDisplay = 0;             // 表示にかかる時間
     float _switchScenarioTimer = 0;          // テキストの切り替え用タイマー
     float _timeElapsed = 1;                  // 文字列の表示を開始した時間
-    float _pauseTime = 0;                     // 一時停止時のタイマー
+    float _pauseTime = 0;                    // 一時停止時のタイマー
     int _currentLine = 0;                    // 現在の行番号
     int _lastUpdateCharacter = -1;           // 表示中の文字数
     bool _isUpdatingText = false;            // テキスト更新中かどうか
@@ -130,7 +130,7 @@ public class DialogueFeeder : MonoBehaviour
         else
         {
             // シナリオデータがなくなったらテキストは表示しない
-            _currentText = string.Empty;
+            //_currentText = string.Empty;
             // 文字カウントを初期化
             _lastUpdateCharacter = -1;
         }
