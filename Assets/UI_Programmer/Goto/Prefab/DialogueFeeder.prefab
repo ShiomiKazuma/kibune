@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2486867630167670101}
   - component: {fileID: 189809789939038993}
   - component: {fileID: 2972028783893459996}
+  - component: {fileID: 3034114640388324046}
   m_Layer: 5
   m_Name: DialogueFeeder
   m_TagString: Untagged
@@ -110,6 +111,36 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &3034114640388324046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311209865301769421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 15ed1d1c833ad174f96e5f3fdf32ebe0, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1864782850592328369}
+          m_TargetAssemblyTypeName: DialogueFeeder, Assembly-CSharp
+          m_MethodName: TextStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1795824611876898902
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,4 +219,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
