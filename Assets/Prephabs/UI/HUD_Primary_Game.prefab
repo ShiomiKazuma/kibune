@@ -180,7 +180,6 @@ GameObject:
   - component: {fileID: 9211687151293605750}
   - component: {fileID: 3985075758856128553}
   - component: {fileID: 4421648119725428803}
-  - component: {fileID: 157147300534836689}
   m_Layer: 5
   m_Name: HUD_Primary_Game
   m_TagString: Untagged
@@ -274,18 +273,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &157147300534836689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7570550232458478889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14209e360c8af904bb20dc2dbd2e4968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &26130557125671202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,6 +420,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1641556886881199805, guid: ab52cb38779360b41a296d0091e85242, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719119385864430449, guid: ab52cb38779360b41a296d0091e85242, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719119385864430449, guid: ab52cb38779360b41a296d0091e85242, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719119385864430449, guid: ab52cb38779360b41a296d0091e85242, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719119385864430449, guid: ab52cb38779360b41a296d0091e85242, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719119385864430449, guid: ab52cb38779360b41a296d0091e85242, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719119385864430449, guid: ab52cb38779360b41a296d0091e85242, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
