@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/InGameTesters.unity
     guid: 7d767df98cd71b649907ed4850efe2c8
   - enabled: 1
-    path: Assets/Scenes/Epilougue.unity
-    guid: 7c6fd66c1d58989468d4b9d2e8b59721
-  - enabled: 1
     path: Assets/Scenes/FramedInGame_LastEvent.unity
     guid: 9d0f9b7f2cbe15047bd565df925ee80b
+  - enabled: 1
+    path: Assets/Scenes/Epilougue.unity
+    guid: 1253748335f6435419ae43eb7fb26904
   m_configObjects: {}

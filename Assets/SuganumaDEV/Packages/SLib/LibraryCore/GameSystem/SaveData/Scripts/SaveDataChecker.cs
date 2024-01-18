@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.Events;
 // auth Suganuma
 namespace SLib
 {
@@ -14,26 +15,30 @@ namespace SLib
         public class SaveDataChecker : SingletonBaseClass<SaveDataChecker>
         {
             [SerializeField]
-            Text _startGameButtonsText;
+            Button _continueButton;
             [SerializeField]
             PlayerSaveDataSerializer _dataSerializer;
 
             GameInfo _gameInfo;
+            SceneLoader _sceneLoader;
+
             protected override void ToDoAtAwakeSingleton()
             {
                 _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
+                _sceneLoader = GameObject.FindFirstObjectByType<SceneLoader>();
+
                 if (_gameInfo.TitleSceneName != SceneManager.GetActiveScene().name) return; // If Active Scene Is NOT TitleScene, DoNothing
 
                 try
                 {
-                    if (_dataSerializer.ReadSaveData() != null)
+                    if (_dataSerializer.ReadSaveData() != null) // If SavedData Couldn't found , Exception Will Threw
                     {
-                        _startGameButtonsText.text = "Continue Saga";
+                        _continueButton.interactable = true;
                     }
                 }
                 catch (FileNotFoundException)
                 {
-                    _startGameButtonsText.text = "Start Saga";
+                    _continueButton.interactable = false;
                 }
             }
         }
