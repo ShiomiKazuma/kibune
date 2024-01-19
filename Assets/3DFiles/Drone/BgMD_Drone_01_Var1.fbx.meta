@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21fae39c26da7a14d949aec37b672382
+guid: a2b844b364aba224f9b65777b16e4b55
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BgMIi_Drone_01
-    second: {fileID: 2100000, guid: 6afbee7473688a344922b14b7802fc03, type: 2}
+    second: {fileID: 2100000, guid: 638226562593e9a4fb9dd80cb2f12723, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
