@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21fae39c26da7a14d949aec37b672382
+guid: d59959dffd47bd34fa164838abbd2e47
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BgMIi_Drone_01
-    second: {fileID: 2100000, guid: 6afbee7473688a344922b14b7802fc03, type: 2}
+      name: BgMIi_DronePropeller_01
+    second: {fileID: 2100000, guid: 98023eab6ef8099488de2fdc48a82c18, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 4
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -95,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 4
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
