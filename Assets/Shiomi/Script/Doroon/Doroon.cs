@@ -22,12 +22,11 @@ public class Doroon : MonoBehaviour
     [SerializeField, Header("ドローンのステート")]
     State _state;
     [SerializeField, Header("画像データを入れる用のゲームオブジェクト")]
-    GameObject _imageObject;
+    Image _image;       //  <-
     [SerializeField, Header("？マーク")]
     Sprite _hatena;
     [SerializeField, Header("!マーク")]
     Sprite _biltukuri;
-    Image _image;
     [SerializeField, Header("自爆するまでの時間")]
     float _explosionTime;
     [SerializeField, Header("どこまで近づけば爆発するか")]
@@ -35,7 +34,7 @@ public class Doroon : MonoBehaviour
     float _explosionTimer;
     bool IsChase = false;
     //プレイヤーのゲームオブジェクト
-    [SerializeField, Header("プレイヤー")]GameObject _player;
+    [SerializeField, Header("プレイヤー")] GameObject _player;
     //現在の凝視時間
     float _lookTimer;
     //プレイヤーのレイヤーマスク
@@ -58,7 +57,6 @@ public class Doroon : MonoBehaviour
         _lookTimer = 0;
         _explosionTimer = 0;
         _state = State.Serch;
-        _image = _imageObject.GetComponent<Image>();
         _rb = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
         _collider.enabled = false;
@@ -70,12 +68,12 @@ public class Doroon : MonoBehaviour
         if (_state == State.Serch)
         {
             Serch();
-        }    
+        }
         else if (_state == State.Look)
         {
             Look();
         }
-        else if(_state == State.Chase)
+        else if (_state == State.Chase)
         {
             Chase();
         }
@@ -88,18 +86,18 @@ public class Doroon : MonoBehaviour
         //回転をリセットする
         //this.transform.rotation = Quaternion.identity;
         //索敵範囲内にプレイヤーがいる場合の処理
-        if(Vector3.Distance(this.transform.position, _player.transform.position) < _sarchRange)
+        if (Vector3.Distance(this.transform.position, _player.transform.position) < _sarchRange)
         {
             RaycastHit hit;
             Vector3 dir = (_player.transform.position - this.transform.position).normalized;
             if (Physics.Raycast(this.transform.position, dir, out hit, _sarchRange))
             {
-                if(hit.collider.gameObject.tag == "Player")
+                if (hit.collider.gameObject.tag == "Player")
                 {
                     _state = State.Look;
                     _image.sprite = _hatena;
                 }
-            }  
+            }
         }
     }
 
@@ -119,6 +117,8 @@ public class Doroon : MonoBehaviour
                 this.transform.rotation = Quaternion.Lerp(transform.rotation, quaternion, 0.1f);
                 //凝視タイマーを増やしていく
                 _lookTimer += Time.deltaTime;
+                // 画像のFill具合を更新
+                _image.fillAmount = (_lookTimer / _lookTime);       // <-
                 //凝視タイマーを超えていたら、追跡モードに移行する
                 if (_lookTimer > _lookTime)
                 {
@@ -128,7 +128,7 @@ public class Doroon : MonoBehaviour
                     IsChase = true;
                 }
             }
-            else if(!(hit.collider.gameObject.tag == "Player"))
+            else if (!(hit.collider.gameObject.tag == "Player"))
             {
                 //凝視時間をリセットする
                 _lookTimer = 0;
@@ -142,7 +142,7 @@ public class Doroon : MonoBehaviour
             _lookTimer = 0;
             _image.sprite = null;
             _state = State.Serch;
-        }        
+        }
     }
 
     /// <summary> 突撃時の処理 </summary>
@@ -157,7 +157,7 @@ public class Doroon : MonoBehaviour
     /// <summary> 突撃時の処理 </summary>
     void Chase()
     {
-        if(IsChase)
+        if (IsChase)
         {
             _collider.enabled = true;
             _explosionTimer += Time.deltaTime;
