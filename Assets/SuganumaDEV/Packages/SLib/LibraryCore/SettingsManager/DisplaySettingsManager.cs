@@ -21,6 +21,13 @@ namespace SLib
             [SerializeField]
             Dropdown _refreshRateDD;
 
+            int _resolutionIndex;
+            public int ResolutionIndex => _resolutionIndex;
+            int _refreshRateIndex;
+            public int RefreshRateIndex => _refreshRateIndex;
+            int _displayIndex;
+            public int DisplayIndex => _displayIndex;
+
             /// <summary> 解像度の一覧。Key -> 表示するのに取得、Value -> 関数に渡す </summary>
             Dictionary<string, string> ResolutionsList = new()
         {
@@ -99,6 +106,7 @@ namespace SLib
                 var displays = GetDisplays();
                 var display = displays[displayIndex];
 
+                _displayIndex = displayIndex;
                 Screen.MoveMainWindowTo(display, display.workArea.position);
             }
 
@@ -108,6 +116,7 @@ namespace SLib
                 var resolutionRaw = ResolutionsList.Values.ToList();
                 var resolution = resolutionRaw[resolutionIndex];
 
+                _resolutionIndex = resolutionIndex;
                 SetDisplayResolutions(resolution);
             }
 
@@ -117,6 +126,7 @@ namespace SLib
                 var rateRaw = RefreshRateList.Values.ToList();
                 var rate = rateRaw[rateIndex];
 
+                _refreshRateIndex = rateIndex;
                 SetRefreshRate(rate);
             }
 
