@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 381032092509691160}
   - component: {fileID: 1979064098242866069}
   - component: {fileID: 350145143565801443}
-  - component: {fileID: 8588303543508267819}
   - component: {fileID: 3832636959184040968}
   - component: {fileID: 8427265154444186332}
   m_Layer: 0
@@ -121,25 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b7e65f6423777439e61ffbe2c4e966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startGameButtonsText: {fileID: 0}
+  _continueButton: {fileID: 0}
   _dataSerializer: {fileID: 3817377266956631674}
---- !u!114 &8588303543508267819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6491332444387501345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b7ca3fe9087ac47ba1ece8c94750f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _allHUDParent: {fileID: 0}
-  _huds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &3832636959184040968
 MonoBehaviour:
   m_ObjectHideFlags: 0
