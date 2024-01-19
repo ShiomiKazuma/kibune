@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5103600170540931633}
   - component: {fileID: 5094807217052603047}
   m_Layer: 0
-  m_Name: EpilogueTimeLine
+  m_Name: EpilogueTimeLine_OnTxtFeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,6 +60,14 @@ PlayableDirector:
   - key: {fileID: -6799275244214255465, guid: 5f1ec65356f96254db2666afe3d65029, type: 2}
     value: {fileID: 0}
   - key: {fileID: -3270018650927697247, guid: 5f1ec65356f96254db2666afe3d65029, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -570196033573166547, guid: 5f1ec65356f96254db2666afe3d65029, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1461856115066904352, guid: 5f1ec65356f96254db2666afe3d65029, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 9203141181525383140, guid: 5f1ec65356f96254db2666afe3d65029, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4365336270154943199, guid: 5f1ec65356f96254db2666afe3d65029, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
