@@ -5,6 +5,11 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BgMIi_Car_01
+    second: {fileID: 2100000, guid: 79ed74c7bd04ab94e90cea5b70b32676, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: BgTX_Car_01_cl
