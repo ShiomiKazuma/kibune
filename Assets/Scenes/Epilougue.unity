@@ -694,6 +694,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1827769397}
     m_Modifications:
     - target: {fileID: 2841218873408447890, guid: cf7c354c2882fba4a9ef014b5c136dff, type: 3}
+      propertyPath: _sceneName
+      value: TitleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841218873408447890, guid: cf7c354c2882fba4a9ef014b5c136dff, type: 3}
       propertyPath: _canvasGroup
       value: 
       objectReference: {fileID: 1827769400}
