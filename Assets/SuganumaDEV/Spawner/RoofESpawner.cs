@@ -88,11 +88,6 @@ public class RoofESpawner : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(_playerTag))
