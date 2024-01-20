@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour
+public class PauseManager : MonoBehaviour   // 院ゲームのみのインスタンスシングルトンである必要なし
 {
     /// <summary> ポーズ画面に入ったときに呼ばれるメソッド </summary>
     public static Action BeginPause;
@@ -47,6 +47,8 @@ public class PauseManager : MonoBehaviour
                 BeginPause();
             }
         }
+
+        // （菅沼） 設定画面用の入力が入った時の処理をこれ以降にはさむ予定
     }
 
     void StartPause()
