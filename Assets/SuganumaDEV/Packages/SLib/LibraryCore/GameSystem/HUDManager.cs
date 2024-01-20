@@ -29,6 +29,15 @@ namespace SLib
                 _huds[index].gameObject.SetActive(true);
             }
 
+            public void KillAll()
+            {
+                var huds = _allHUDParent.GetChildObjects();
+                foreach (var hud in huds)
+                {
+                    hud.gameObject.SetActive(false);
+                }
+            }
+
             protected override void ToDoAtAwakeSingleton()
             {
                 GameObject.DontDestroyOnLoad(_allHUDParent);

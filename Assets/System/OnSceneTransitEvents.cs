@@ -10,9 +10,12 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
     GameInfo _gameInfo;
     SceneLoader _sceneLoader;
     HUDManager _hudManager;
+    StaffRollAnimation _staffRollAnim;
 
     public void OnSceneTransitComplete(Scene scene)
     {
+        _hudManager = GameObject.FindFirstObjectByType<HUDManager>();
+        _staffRollAnim = GameObject.FindFirstObjectByType<StaffRollAnimation>();
         if (scene.name == _gameInfo.TitleSceneName || scene.name == "Prolougue" || scene.name == "Epilougue")
         {
             switch (scene.name)
@@ -21,7 +24,7 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
                     break;
                 case "Epilougue":
                     break;
-                default:
+                default:// title scene
                     _hudManager.ToFront(0);
                     break;
             }
@@ -30,6 +33,11 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
         {
             _hudManager.ToFront(2);
         }
+        else if (scene.name == "StaffRoll")
+        {
+            _hudManager.KillAll();
+            _staffRollAnim.Invoke(nameof(_staffRollAnim.StartStaffRollAnimation), 1);
+        }
     }
 
     protected override void ToDoAtAwakeSingleton()
@@ -37,6 +45,6 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
         _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
         _sceneLoader = GameObject.FindFirstObjectByType<SceneLoader>();
         _sceneLoader._eventOnSceneLoaded.AddListener(OnSceneTransitComplete);
-        _hudManager = GameObject.FindFirstObjectByType<HUDManager>();
     }
+
 }
