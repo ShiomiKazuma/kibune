@@ -1,3 +1,4 @@
+using SLib.Systems;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,27 +11,13 @@ public class PauseManager : MonoBehaviour   // ‰@ƒQ[ƒ€‚Ì‚İ‚ÌƒCƒ“ƒXƒ^ƒ“ƒXƒVƒ“ƒOƒ
     /// <summary> ƒ|[ƒY‰æ–Ê‚ªI‚í‚Á‚½‚ÉŒÄ‚Î‚ê‚éƒƒ\ƒbƒh </summary>
     public static Action EndPause;
     /// <summary> ƒ|[ƒYó‘Ô‚Å‚ ‚é‚©‚Ìƒtƒ‰ƒO </summary>
-    bool IsPause;
+    bool _isPaused;
+    public bool IsPaused => _isPaused;
+
     [SerializeField] GameObject _inventoryUI;
+    HUDManager _hudMan;
 
-    private void OnEnable()
-    {
-        //ƒfƒŠƒQ[ƒg“o˜^
-        BeginPause += StartPause;
-        EndPause += PauseEnd;
-    }
-
-    private void OnDisable()
-    {
-        //ƒfƒŠƒQ[ƒg‰ğœ
-        BeginPause -= StartPause;
-        EndPause -= PauseEnd;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        IsPause = false;
-    }
+    private void Awake() => _hudMan = GameObject.FindObjectOfType<HUDManager>();
 
     // Update is called once per frame
     void Update()
@@ -38,26 +25,37 @@ public class PauseManager : MonoBehaviour   // ‰@ƒQ[ƒ€‚Ì‚İ‚ÌƒCƒ“ƒXƒ^ƒ“ƒXƒVƒ“ƒOƒ
         //ƒ|[ƒYƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½‚çAˆ—‚ª‘–‚é
         if (Input.GetButtonDown("Inventory"))
         {
-            if(IsPause)
+            _isPaused = !_isPaused;
+
+            if (IsPaused)
             {
                 EndPause();
+                _inventoryUI.SetActive(!_isPaused);
+                _inventoryUI.transform.SetAsFirstSibling();
             }
             else
             {
                 BeginPause();
+                _inventoryUI.SetActive(_isPaused);
+                _inventoryUI.transform.SetAsLastSibling();
             }
         }
 
         // i›Àj İ’è‰æ–Ê—p‚Ì“ü—Í‚ª“ü‚Á‚½‚Ìˆ—‚ğ‚±‚êˆÈ~‚É‚Í‚³‚Ş—\’è
-    }
+        if (Input.GetKeyDown("Settings"))
+        {
+            _isPaused = !_isPaused;
 
-    void StartPause()
-    {
-         _inventoryUI.SetActive(!_inventoryUI.activeSelf);
-    }
-
-    void PauseEnd()
-    {
-        _inventoryUI.SetActive(!_inventoryUI.activeSelf);
+            if (IsPaused)
+            {
+                EndPause();
+                _hudMan.ToFront(2);
+            }
+            else
+            {
+                BeginPause();
+                _hudMan.ToFront(1);
+            }
+        }
     }
 }
