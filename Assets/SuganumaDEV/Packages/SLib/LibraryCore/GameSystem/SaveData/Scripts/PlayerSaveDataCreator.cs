@@ -42,7 +42,7 @@ namespace SLib
 
             void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
             {
-                if (arg1.name == "Prolougue" || arg1.name == "Epilougue")
+                if (arg1.name == "Prolougue" || arg1.name == "Epilougue" || arg1.name == "StaffRoll")
                 {
                     _sceneStatus = GameInfo.SceneTransitStatus.To_UniqueScene;
                 }
