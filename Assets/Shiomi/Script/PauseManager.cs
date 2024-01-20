@@ -1,36 +1,23 @@
+using SLib.Systems;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour
+public class PauseManager : MonoBehaviour   // 院ゲームのみのインスタンスシングルトンである必要なし
 {
     /// <summary> ポーズ画面に入ったときに呼ばれるメソッド </summary>
     public static Action BeginPause;
     /// <summary> ポーズ画面が終わった時に呼ばれるメソッド </summary>
     public static Action EndPause;
     /// <summary> ポーズ状態であるかのフラグ </summary>
-    bool IsPause;
+    bool _isPaused;
+    public bool IsPaused => _isPaused;
+
     [SerializeField] GameObject _inventoryUI;
+    HUDManager _hudMan;
 
-    private void OnEnable()
-    {
-        //デリゲート登録
-        BeginPause += StartPause;
-        EndPause += PauseEnd;
-    }
-
-    private void OnDisable()
-    {
-        //デリゲート解除
-        BeginPause -= StartPause;
-        EndPause -= PauseEnd;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        IsPause = false;
-    }
+    private void Awake() => _hudMan = GameObject.FindObjectOfType<HUDManager>();
 
     // Update is called once per frame
     void Update()
@@ -38,24 +25,37 @@ public class PauseManager : MonoBehaviour
         //ポーズボタンを押したら、処理が走る
         if (Input.GetButtonDown("Inventory"))
         {
-            if(IsPause)
+            _isPaused = !_isPaused;
+
+            if (IsPaused)
             {
                 EndPause();
+                _inventoryUI.SetActive(!_isPaused);
+                _inventoryUI.transform.SetAsFirstSibling();
             }
             else
             {
                 BeginPause();
+                _inventoryUI.SetActive(_isPaused);
+                _inventoryUI.transform.SetAsLastSibling();
             }
         }
-    }
 
-    void StartPause()
-    {
-         _inventoryUI.SetActive(!_inventoryUI.activeSelf);
-    }
+        // （菅沼） 設定画面用の入力が入った時の処理をこれ以降にはさむ予定
+        if (Input.GetKeyDown("Settings"))
+        {
+            _isPaused = !_isPaused;
 
-    void PauseEnd()
-    {
-        _inventoryUI.SetActive(!_inventoryUI.activeSelf);
+            if (IsPaused)
+            {
+                EndPause();
+                _hudMan.ToFront(2);
+            }
+            else
+            {
+                BeginPause();
+                _hudMan.ToFront(1);
+            }
+        }
     }
 }

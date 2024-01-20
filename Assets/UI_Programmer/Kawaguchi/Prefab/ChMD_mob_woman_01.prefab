@@ -281,7 +281,7 @@ MonoBehaviour:
   _targetLayerNum: 7
   _patrolingPath: {fileID: 0}
   _health: 1
-  _gazingTime: 5
+  _gazingTime: 10
   _sprtGazing: {fileID: 21300000, guid: bcbfbc3578a386445a988a62eb043e84, type: 3}
   _sprtFound: {fileID: 21300000, guid: 69625ee7f1b27284c9b7a22f6e0ff3e9, type: 3}
   _indicator: {fileID: 2163066943019198513}

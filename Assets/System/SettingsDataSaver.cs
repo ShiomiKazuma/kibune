@@ -2,11 +2,11 @@ using SLib.Singleton;
 using SLib.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-
 // Auth suganuma
 public class SettingsDataSaver : SingletonBaseClass<SettingsDataSaver>
 {
@@ -27,7 +27,7 @@ public class SettingsDataSaver : SingletonBaseClass<SettingsDataSaver>
 
     protected override void ToDoAtAwakeSingleton()
     {
-       
+
     }
 
     public void SaveSettingsData()  // 設定項目ウィンドウが閉じられたときこれを呼び出す
@@ -49,6 +49,8 @@ public class SettingsDataSaver : SingletonBaseClass<SettingsDataSaver>
         sw.Flush();
         sw.Close();
 
+#if UNITY_EDITOR
         AssetDatabase.Refresh();    // これで変更が即時に可視化できそう
+#endif
     }
 }
