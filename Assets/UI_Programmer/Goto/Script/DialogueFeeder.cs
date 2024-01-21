@@ -55,6 +55,8 @@ public class DialogueFeeder : MonoBehaviour
                 StopCoroutine(_coroutine);
             }
 
+            // 子オブジェクトの最後尾に配置することで複数あっても一番上に見えます。
+            this.gameObject.transform.SetAsLastSibling();
             _currentLine = 0;
             _switchScenarioTimer = 0;
             _pauseTime = 0;
