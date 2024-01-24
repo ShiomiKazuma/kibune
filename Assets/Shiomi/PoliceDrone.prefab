@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bfd04e76217394fabd3ecc2ef8f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionGameObject: {fileID: 654432200047281054, guid: 20b52c4b79d76a8469ee908105d9b9b2, type: 3}
+  _explosionGameObject: {fileID: 0}
   _sarchRange: 10
   _lookTime: 2
   _doroonSpeed: 1

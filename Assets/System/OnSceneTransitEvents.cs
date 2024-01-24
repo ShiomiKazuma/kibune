@@ -16,6 +16,7 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
     {
         _hudManager = GameObject.FindFirstObjectByType<HUDManager>();
         _staffRollAnim = GameObject.FindFirstObjectByType<StaffRollAnimation>();
+
         if (scene.name == _gameInfo.TitleSceneName || scene.name == "Prolougue" || scene.name == "Epilougue")
         {
             switch (scene.name)
@@ -46,5 +47,4 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
         _sceneLoader = GameObject.FindFirstObjectByType<SceneLoader>();
         _sceneLoader._eventOnSceneLoaded.AddListener(OnSceneTransitComplete);
     }
-
 }

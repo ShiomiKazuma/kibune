@@ -1,3 +1,4 @@
+using SLib.Systems;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,8 +21,10 @@ namespace SLib
             Dropdown _resolutionsDD;
             [SerializeField]
             Dropdown _refreshRateDD;
-            [SerializeField]
+            [SerializeField, Header("一時停止中（インゲームのみの表示）")]
             Text _pauseText;
+            [SerializeField, Header("一時停止中（インゲームのみの非表示）")]
+            Button _exitSettingsBtn;
 
             int _resolutionIndex;
             public int ResolutionIndex => _resolutionIndex;
