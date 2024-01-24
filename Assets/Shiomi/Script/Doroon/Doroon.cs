@@ -1,10 +1,10 @@
 //////////////////////
 ///管理者：塩見和真///
 /////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 
 public class Doroon : MonoBehaviour
@@ -37,16 +37,16 @@ public class Doroon : MonoBehaviour
     [SerializeField, Header("プレイヤー")] GameObject _player;
     //現在の凝視時間
     float _lookTimer;
-    //プレイヤーのレイヤーマスク
-    LayerMask _layerMask = 1 << 7;
     Rigidbody _rb;
     Collider _collider;
+
     public enum State
     {
         Serch,
         Look,
         Chase
     }
+
     private void Awake()
     {
         //_player = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
@@ -173,7 +173,7 @@ public class Doroon : MonoBehaviour
             {
                 Debug.Log("爆発");
                 Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, .5f);
             }
         }
     }

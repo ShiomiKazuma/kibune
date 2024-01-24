@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+
 // 担当 菅沼
 // ディスプレイのデバイス名とリフレッシュレートの変更はできたっぽい ← ここまでは動作確認できている
 // アクティブなディスプレイ切り替え機能 実装 OK ← 動作確認 OK
 // Player設定 ＞ FullScreen モード 、 Default Is Native Resolution = false この設定は必ずすること
+
 namespace SLib
 {
     namespace UI

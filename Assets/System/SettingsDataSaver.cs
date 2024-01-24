@@ -7,7 +7,9 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+
 // Auth suganuma
+
 public class SettingsDataSaver : SingletonBaseClass<SettingsDataSaver>
 {
     [SerializeField]
