@@ -172,8 +172,9 @@ public class Doroon : MonoBehaviour
             if (_explosionTime < _explosionTimer || Vector3.Distance(this.transform.position, _player.transform.position) < _explosionPos)
             {
                 Debug.Log("”š”­");
-                Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
+                var dest = Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
                 Destroy(this.gameObject, .5f);
+                Destroy(dest, .5f);
             }
         }
     }
