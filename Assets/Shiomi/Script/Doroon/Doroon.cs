@@ -173,8 +173,7 @@ public class Doroon : MonoBehaviour
             {
                 Debug.Log("”š”­");
                 var dest = Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject, .5f);
-                Destroy(dest, .5f);
+                Destroy(this.gameObject);
             }
         }
     }
