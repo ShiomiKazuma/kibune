@@ -4,7 +4,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 
 public class Doroon : MonoBehaviour
@@ -37,8 +36,6 @@ public class Doroon : MonoBehaviour
     [SerializeField, Header("プレイヤー")] GameObject _player;
     //現在の凝視時間
     float _lookTimer;
-    //プレイヤーのレイヤーマスク
-    LayerMask _layerMask = 1 << 7;
     Rigidbody _rb;
     Collider _collider;
     public enum State
