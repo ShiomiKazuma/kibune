@@ -4,60 +4,66 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent (typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController))]
 public class CharacterMove : MonoBehaviour
 {
-    const float _normalFov = 60f;
-    const float _hookshotFov = 100f;
     [SerializeField] float _mouseSensitivity = 1f;
     [SerializeField] float _moveSpeed = 10f;
     [SerializeField] float _jumpPower = 20f;
     [SerializeField] float _gravityDownForce = -60f;
+    [SerializeField] float _grapDis = 30f;
     [SerializeField] Transform _hitPointTransform;
     [SerializeField] Transform _hookshotTransform;
     [SerializeField] ParticleSystem _hookparticleSystem;
     [SerializeField] GameObject _aim;
-    [SerializeField] float _grapDis = 30f;
+
+    const float _normalFov = 60f;
+    const float _hookshotFov = 100f;
+
     Image _aimImage;
     CharacterController _characterController;
-    float _cameraVerticalAngle;
-    float _characterVelocityY;
     Camera _playerCamera;
-    State _state;
+    CameraFov _cameraFov;
+
     Vector3 _hookShotPos;
     Vector3 _characterVecMomentum;
+    State _state;
+
+    float _cameraVerticalAngle;
+    float _characterVelocityY;
     float _hockshotSize;
-    CameraFov _cameraFov;
+
     /// <summary> ポーズフラグ </summary>
-    bool IsPause;
+    bool _isPaused;
+
     enum State
     {
         Normal,
         HookshotFlying,
         HookshotThrown,
-
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        _characterController = GetComponent<CharacterController> ();
-        _playerCamera = transform.Find("Camera").GetComponent<Camera>();
-        _cameraFov = _playerCamera.GetComponent<CameraFov> ();
+        _characterController = GetComponent<CharacterController>();
+        _playerCamera = Camera.main.GetComponent<Camera>(); // Camera.main は Tag = "MainCamera"のカメラを返す
+        _cameraFov = _playerCamera.GetComponent<CameraFov>();
         Cursor.lockState = CursorLockMode.Locked;
         _state = State.Normal;
         _aimImage = _aim.GetComponent<Image>();
         _hookshotTransform.gameObject.SetActive(false);
-        IsPause = false;
+        _isPaused = false;
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //ポーズ中なら処理を実行しない
-        if(!IsPause)
-            return;
+        if (!_isPaused) return;
 
-        switch(_state)
+        switch (_state)
         {
             case State.Normal:
                 HandleCharacterLook();
@@ -78,14 +84,9 @@ public class CharacterMove : MonoBehaviour
         //エイムカーソルを変化させる
         RaycastHit hitAim;
         if (Physics.Raycast(this.transform.position, _playerCamera.transform.forward, out hitAim, _grapDis))
-        {
             _aimImage.color = Color.black;
-        }
         else
-        {
             _aimImage.color = Color.red;
-        }
-
     }
 
     void HandleCharacterLook()
@@ -93,6 +94,7 @@ public class CharacterMove : MonoBehaviour
         //マウスの移動
         float lookX = Input.GetAxisRaw("Mouse X");
         float lookY = Input.GetAxisRaw("Mouse Y");
+
         //横方向のカメラの調整
         transform.Rotate(new Vector3(0f, lookX * _mouseSensitivity, 0f), Space.Self);
         //縦方向のカメラの調整
@@ -109,14 +111,12 @@ public class CharacterMove : MonoBehaviour
 
         Vector3 characterVelocity = transform.right * moveX * _moveSpeed + transform.forward * moveZ * _moveSpeed;
 
-        if(_characterController.isGrounded)
+        if (_characterController.isGrounded)
         {
             _characterVelocityY = 0f;
 
-            if(InputJump())
-            {
+            if (InputJump())
                 _characterVelocityY = _jumpPower;
-            }
         }
 
         _characterVelocityY += _gravityDownForce * Time.deltaTime;
@@ -124,27 +124,30 @@ public class CharacterMove : MonoBehaviour
         characterVelocity += _characterVecMomentum;
         _characterController.Move(characterVelocity * Time.deltaTime);
 
-        if(_characterVecMomentum.magnitude >= 0f)
+        if (_characterVecMomentum.magnitude >= 0f)
         {
             float momentumDrag = 3f;
             _characterVecMomentum -= _characterVecMomentum * momentumDrag * Time.deltaTime;
-            if(_characterVecMomentum.magnitude < .0f)
+            if (_characterVecMomentum.magnitude < .0f)
             {
                 _characterVecMomentum = Vector3.zero;
             }
         }
     }
-    
+
     void ResetGravity()
     {
         _characterVelocityY = 0f;
     }
+
     //グラップリング始めの処理
     void HandleHookshotStart()
     {
-        if(InputDownHookshot())
+        if (InputDownHookshot())
         {
-            if(Physics.Raycast(_playerCamera.transform.position, _playerCamera.transform.forward, out RaycastHit raycastHit, _grapDis))
+            if (Physics.Raycast(_playerCamera.transform.position
+                , _playerCamera.transform.forward
+                , out RaycastHit raycastHit, _grapDis))
             {
                 //ヒットした場合の処理
                 _hitPointTransform.forward = _playerCamera.transform.forward; //フックポイントを正面にする
@@ -166,7 +169,7 @@ public class CharacterMove : MonoBehaviour
         _hockshotSize += hockshotThrowSpeed * Time.deltaTime;
         _hookshotTransform.localScale = new Vector3(1, 1, _hockshotSize);
 
-        if(_hockshotSize >= Vector3.Distance(transform.position, _hookShotPos))
+        if (_hockshotSize >= Vector3.Distance(transform.position, _hookShotPos))
         {
             _state = State.HookshotFlying;
             _cameraFov.SetCameraFov(_hookshotFov);
@@ -180,21 +183,22 @@ public class CharacterMove : MonoBehaviour
         Vector3 hookDir = (_hookShotPos - transform.position).normalized;
         float hookshotSpeedMax = 40f;
         float hookshotSpeedMin = 10f;
-        float hookshotSpeed = Mathf.Clamp(Vector3.Distance(transform.position, _hookShotPos), hookshotSpeedMin, hookshotSpeedMax);
+        float hookshotSpeed = Mathf.Clamp(Vector3.Distance(transform.position, _hookShotPos)
+            , hookshotSpeedMin, hookshotSpeedMax);
         float hookshotMultiplier = 2f; //フックショットの加速度
         _characterController.Move(hookDir * hookshotSpeed * hookshotMultiplier * Time.deltaTime);
 
-        if(Vector3.Distance(transform.position, _hookShotPos) < 1f)
+        if (Vector3.Distance(transform.position, _hookShotPos) < 1f)
         {
             StopHookshot();
         }
 
-        if(InputDownHookshot())
+        if (InputDownHookshot())
         {
             StopHookshot();
         }
 
-        if(InputJump())
+        if (InputJump())
         {
             //ジャンプキャンセル
             float momentumExtraSpeed = 7f;
@@ -213,6 +217,7 @@ public class CharacterMove : MonoBehaviour
         _cameraFov.SetCameraFov(_normalFov);
         _hookparticleSystem.Stop();
     }
+
     bool InputDownHookshot()
     {
         return Input.GetMouseButtonDown(0);
@@ -241,12 +246,12 @@ public class CharacterMove : MonoBehaviour
     void StartPause()
     {
         Cursor.lockState = CursorLockMode.None;
-        IsPause = true;
+        _isPaused = true;
     }
 
     void PauseEnd()
     {
-        IsPause = false;
+        _isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }

@@ -20,6 +20,8 @@ namespace SLib
             Dropdown _resolutionsDD;
             [SerializeField]
             Dropdown _refreshRateDD;
+            [SerializeField]
+            Text _pauseText;
 
             int _resolutionIndex;
             public int ResolutionIndex => _resolutionIndex;
@@ -177,6 +179,16 @@ namespace SLib
                 SetupActiveDisplaysDropdown();
                 SetupResolutionsDropDown();
                 SetupRefreshRateDropDown();
+                // Set When Pause Process
+                PauseManager.BeginPause += () =>
+                {
+                    _pauseText.gameObject.SetActive(true);
+                };
+                PauseManager.EndPause += () =>
+                {
+                    _pauseText.gameObject.SetActive(false);
+                };
+                _pauseText.gameObject.SetActive(false);
             }
 
             private void Start()
