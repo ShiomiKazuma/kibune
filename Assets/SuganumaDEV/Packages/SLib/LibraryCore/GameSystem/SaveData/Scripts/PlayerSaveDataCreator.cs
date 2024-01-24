@@ -18,46 +18,23 @@ namespace SLib
             public string _sceneName;                      // Scene Name
         }
 
-        enum SceneStatus
-        {
-            Title,
-            UniqueScene,
-            InGame,
-        }
-
         /// <summary> 渡されたフィールドの値をもとにScriptableObjectを生成、DataPath直下へ格納。 </summary>
         public class PlayerSaveDataCreator : SingletonBaseClass<PlayerSaveDataCreator>  // セーブデータの保存
         {
             [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
-            [SerializeField, Header("タイトルかインゲームかの選択をする")]
-            GameInfo.SceneTransitStatus _sceneStatus;
 
             GameInfo _gameInfo;
             protected override void ToDoAtAwakeSingleton()
             {
                 _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
-                SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
-            }
-
-            void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
-            {
-                if (arg1.name == "Prolougue" || arg1.name == "Epilougue" || arg1.name == "StaffRoll")
-                {
-                    _sceneStatus = GameInfo.SceneTransitStatus.To_UniqueScene;
-                }
-                else if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
-                {
-                    _sceneStatus = GameInfo.SceneTransitStatus.To_InGameScene;
-                    SavePlayerDataAutomatically();
-                }
             }
 
             string _playerDataPath = Application.dataPath + "/PlayerSavedData.json";
 
             public void SavePlayerDataAutomatically()
             {
-                switch (_sceneStatus)
+                switch (_gameInfo.SceneStatus)
                 {
                     case GameInfo.SceneTransitStatus.To_TitleScene:
                         break;

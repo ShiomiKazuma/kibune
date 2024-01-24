@@ -14,30 +14,15 @@ namespace SLib
         {
             [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
-            [SerializeField, Header("タイトルかインゲームかの選択をする")]
-            GameInfo.SceneTransitStatus _appStatus;
 
             PlayerSaveDataCreator _playerSaveDataCreator;
             GameInfo _gameInfo;
 
             protected override void ToDoAtAwakeSingleton()
             {
-                SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
                 _playerSaveDataCreator = GameObject.FindFirstObjectByType<PlayerSaveDataCreator>();
                 _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
             }
-            void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
-            {
-                if (arg1.name == "Prolougue" || arg1.name == "Epilougue")
-                {
-                    _appStatus = GameInfo.SceneTransitStatus.To_UniqueScene;
-                }
-                else if (arg1.name != _gameInfo.TitleSceneName || arg0.name == _gameInfo.TitleSceneName)
-                {
-                    _appStatus = GameInfo.SceneTransitStatus.To_InGameScene;
-                }
-            }
-
             public void QuitApplication()
             {
                 #region PreProcess
@@ -46,7 +31,7 @@ namespace SLib
 #endif
                 #endregion
 
-                switch (_appStatus)
+                switch (_gameInfo.SceneStatus)
                 {
                     case GameInfo.SceneTransitStatus.To_InGameScene:
                         if (_playerTransform == null)

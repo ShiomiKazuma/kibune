@@ -1,27 +1,42 @@
+using SLib.Singleton;
 using SLib.Systems;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour   // ‰@ƒQ[ƒ€‚Ì‚İ‚ÌƒCƒ“ƒXƒ^ƒ“ƒXƒVƒ“ƒOƒ‹ƒgƒ“‚Å‚ ‚é•K—v‚È‚µ
+public class PauseManager : SingletonBaseClass<PauseManager>   // ‰@ƒQ[ƒ€‚Ì‚İ‚ÌƒCƒ“ƒXƒ^ƒ“ƒXƒVƒ“ƒOƒ‹ƒgƒ“‚Å‚ ‚é•K—v‚È‚µ
 {
+    [SerializeField] GameObject _inventoryUI;
     /// <summary> ƒ|[ƒY‰æ–Ê‚É“ü‚Á‚½‚Æ‚«‚ÉŒÄ‚Î‚ê‚éƒƒ\ƒbƒh </summary>
     public static Action BeginPause;
     /// <summary> ƒ|[ƒY‰æ–Ê‚ªI‚í‚Á‚½‚ÉŒÄ‚Î‚ê‚éƒƒ\ƒbƒh </summary>
     public static Action EndPause;
+
+    HUDManager _hudMan;
+    GameInfo _gInfo;
+
     /// <summary> ƒ|[ƒYó‘Ô‚Å‚ ‚é‚©‚Ìƒtƒ‰ƒO </summary>
     bool _isPaused;
     public bool IsPaused => _isPaused;
 
-    [SerializeField] GameObject _inventoryUI;
-    HUDManager _hudMan;
 
-    private void Awake() => _hudMan = GameObject.FindObjectOfType<HUDManager>();
+    protected override void ToDoAtAwakeSingleton()
+    {
+        BeginPause += () => { };
+        EndPause += () => { };
+        _hudMan = GameObject.FindObjectOfType<HUDManager>();
+        _gInfo = GameObject.FindObjectOfType<GameInfo>();
+    }
 
     // Update is called once per frame
     void Update()
     {
+        // Only InGame Scene This Will Be Processed
+        if (_gInfo.SceneStatus == GameInfo.SceneTransitStatus.To_TitleScene
+            || _gInfo.SceneStatus == GameInfo.SceneTransitStatus.To_UniqueScene)
+            return;
+
         //ƒ|[ƒYƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½‚çAˆ—‚ª‘–‚é
         if (Input.GetButtonDown("Inventory"))
         {
@@ -42,7 +57,7 @@ public class PauseManager : MonoBehaviour   // ‰@ƒQ[ƒ€‚Ì‚İ‚ÌƒCƒ“ƒXƒ^ƒ“ƒXƒVƒ“ƒOƒ
         }
 
         // i›Àj İ’è‰æ–Ê—p‚Ì“ü—Í‚ª“ü‚Á‚½‚Ìˆ—‚ğ‚±‚êˆÈ~‚É‚Í‚³‚Ş—\’è
-        if (Input.GetKeyDown("Settings"))
+        if (Input.GetButtonDown("Settings"))
         {
             _isPaused = !_isPaused;
 

@@ -1,3 +1,4 @@
+using SLib.Singleton;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 namespace SLib
 {
-    public class PlayerInputBinder : MonoBehaviour
+    public class PlayerInputBinder : SingletonBaseClass<PlayerInputBinder>
     {
         [SerializeField] InputActionAsset _inputAction;
 
@@ -84,6 +85,11 @@ namespace SLib
             var actionMap = _inputAction.FindActionMap(actionMapName);
             var action = actionMap.FindAction(actionName);
             return action.IsPressed();
+        }
+
+        protected override void ToDoAtAwakeSingleton()
+        {
+            
         }
     }
 
