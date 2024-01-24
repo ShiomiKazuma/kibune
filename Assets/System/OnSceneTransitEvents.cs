@@ -3,8 +3,9 @@ using SLib.Systems;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.Timeline;
+
 // auth suganuma
+
 public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IOnSceneTransit
 {
     GameInfo _gameInfo;

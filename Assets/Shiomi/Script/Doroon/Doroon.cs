@@ -1,6 +1,7 @@
 //////////////////////
 ///ä«óùé“ÅFâñå©òaê^///
 /////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,12 +39,14 @@ public class Doroon : MonoBehaviour
     float _lookTimer;
     Rigidbody _rb;
     Collider _collider;
+
     public enum State
     {
         Serch,
         Look,
         Chase
     }
+
     private void Awake()
     {
         //_player = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
@@ -170,7 +173,7 @@ public class Doroon : MonoBehaviour
             {
                 Debug.Log("îöî≠");
                 Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, .5f);
             }
         }
     }
