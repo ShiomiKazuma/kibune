@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Image _icon;
+    [Header("アイテムののアイコンを表示させるImage")] public Image _icon;
     Item _item;
-    public Button _removeButton;
-    [SerializeField] Text _textBox;
+    [Header("削除ボタン")] public Button _removeButton;
+    [SerializeField, Header("アイテムの説明を表示させるText")] Text _textBox;
 
     public void AddItem(Item newItem)
     {

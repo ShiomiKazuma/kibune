@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PlayerUIPointer : MonoBehaviour
 {
-    /// <summary>マウスポインターを投影するCanvasの参照</summary>
-    [SerializeField] private Canvas _canvas;
-    /// <summary>マウスポインターを投影するCanvasのRectTransformの参照</summary>
-    [SerializeField] private RectTransform _canvasTransform;
-    /// <summary>マウスポインターのRectTransformの参照</summary>
-    [SerializeField] private RectTransform _cursorTransform;
+    /// <summary>UIPointerを投影するCanvasの参照</summary>
+    [SerializeField, Header("UIPointerを投影するCanvas")] private Canvas _canvas;
+    /// <summary>UIPointerを投影するCanvasのRectTransformの参照</summary>
+    [SerializeField, Header("UIPointerを投影するInventoryのRectTransform")] private RectTransform _canvasTransform;
+    /// <summary>UIPointerのRectTransformの参照</summary>
+    [SerializeField, Header("UIPointerのRectTransform")] private RectTransform _cursorTransform;
 
     void Update()
     {
