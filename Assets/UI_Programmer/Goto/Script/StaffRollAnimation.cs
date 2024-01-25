@@ -1,4 +1,5 @@
 using DG.Tweening;
+using SLib.Systems;
 using UnityEngine;
 
 public class StaffRollAnimation : MonoBehaviour
@@ -21,6 +22,10 @@ public class StaffRollAnimation : MonoBehaviour
         _staffRollCanvasGroup.alpha = 1;
         _staffRollCanvasGroup.interactable = true;
         _staffRollCanvasGroup.blocksRaycasts = true;
-        _staffRollPanelRectTransform.DOAnchorPos(new Vector2(0, _endPositionY), _animationTime).SetLink(this.gameObject);
+        _staffRollPanelRectTransform.DOAnchorPos(new Vector2(0, _endPositionY), _animationTime).SetLink(this.gameObject).OnComplete(() => 
+        {
+            SceneLoader loader = GameObject.FindObjectOfType<SceneLoader>();
+            loader.LoadSceneByName(GameObject.FindAnyObjectByType<GameInfo>().TitleSceneName);
+        });
     }
 }
