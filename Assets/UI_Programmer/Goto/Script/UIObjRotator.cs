@@ -21,10 +21,11 @@ public class UIObjRotator : MonoBehaviour
         foreach (var obj in _targetObjects)
         {
             _initialRotation = obj.transform.rotation;
+            MeshRenderer[] meshRenderer = obj.GetComponentsInChildren<MeshRenderer>();
+            meshRenderer[0].enabled = false;
         }
 
         _mainCamera = Camera.main;
-        SetTarget(0);
     }
 
     public void SetTarget(int id)
@@ -43,7 +44,7 @@ public class UIObjRotator : MonoBehaviour
 
     private void Update()
     {
-        if (_canRotation)
+        if (_canRotation && _currentTargetObject != null)
         {
             if (Input.GetMouseButtonDown(1))
             {
