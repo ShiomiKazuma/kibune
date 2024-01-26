@@ -1008,6 +1008,10 @@ PrefabInstance:
       value: Item0
       objectReference: {fileID: 0}
     - target: {fileID: 676555926509232014, guid: edaa213e9f43eb04a8a951728d9bc6aa, type: 3}
+      propertyPath: _text
+      value: "\u3053\u308C\u306F\u3001\u30CA\u30A4\u30D5\u3067\u3059"
+      objectReference: {fileID: 0}
+    - target: {fileID: 676555926509232014, guid: edaa213e9f43eb04a8a951728d9bc6aa, type: 3}
       propertyPath: _textBox
       value: 
       objectReference: {fileID: 1775978401169666843}
