@@ -29,11 +29,11 @@ public class InventoryUI : MonoBehaviour
         {
             if(i < _inventory._itemList.Count)
             {
-                _inventorySlots[i].AddItem(_inventory._itemList[i]);
+                //_inventorySlots[i].AddItem(_inventory._itemList[i]);
             }
             else
             {
-                _inventorySlots[i].ClearSlot();
+                //_inventorySlots[i].ClearSlot();
             }
         }
     }
