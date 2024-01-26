@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    [Header("アイテムののアイコンを表示させるImage")] public Image _icon;
+    [Header("アイテムのアイコンを表示させるImage")] public Image _icon;
     Item _item;
     [Header("削除ボタン")] public Button _removeButton;
     [SerializeField, Header("アイテムの説明を表示させるText")] Text _textBox;

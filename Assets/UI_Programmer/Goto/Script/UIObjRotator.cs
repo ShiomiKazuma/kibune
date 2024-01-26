@@ -3,13 +3,14 @@ using UnityEngine;
 public class UIObjRotator : MonoBehaviour
 {
     /// <summary>回転させるオブジェクト</summary>
-    [SerializeField, Header("回転させるオブジェクト")] GameObject _targetObject;
+    [SerializeField, Header("回転させる証拠品")] GameObject[] _targetObjects;
     /// <summary>回転のスピード</summary>
     [SerializeField, Header("回転のスピード\nX：縦方向　Y：横方向")] Vector2 _rotationSpeed = new Vector2(0.1f, 0.2f);
     /// <summary>動きの反転のフラグ</summary>
     [SerializeField, Header("動きの反転のフラグ")] bool _reverse;
 
     Camera _mainCamera;
+    GameObject _currentTargetObject;
     Vector2 _lastMousePosition;
     /// <summary>初期角度</summary>
     Quaternion _initialRotation;
@@ -17,8 +18,27 @@ public class UIObjRotator : MonoBehaviour
 
     void Start()
     {
+        foreach (var obj in _targetObjects)
+        {
+            _initialRotation = obj.transform.rotation;
+        }
+
         _mainCamera = Camera.main;
-        _initialRotation = _targetObject.transform.rotation;
+        SetTarget(0);
+    }
+
+    public void SetTarget(int id)
+    {
+        foreach (var obj in _targetObjects)
+        {
+            MeshRenderer[] meshRenderer = obj.GetComponentsInChildren<MeshRenderer>();
+            meshRenderer[0].enabled = false;
+        }
+
+        _currentTargetObject = _targetObjects[id];
+        _currentTargetObject.transform.rotation = _initialRotation;
+        MeshRenderer[] targetMeshRenderer = _currentTargetObject.GetComponentsInChildren<MeshRenderer>();
+        targetMeshRenderer[0].enabled = true;
     }
 
     private void Update()
@@ -28,8 +48,7 @@ public class UIObjRotator : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 // 右クリックで角度のリセット
-                _targetObject.transform.rotation = _initialRotation;
-                Debug.Log("reset");
+                _currentTargetObject.transform.rotation = _initialRotation;
             }
             // 左クリックを押している間マウスドラッグで回転
             else if (Input.GetMouseButtonDown(0))
@@ -47,7 +66,7 @@ public class UIObjRotator : MonoBehaviour
                     newAngle.x = x * _rotationSpeed.x;
                     newAngle.y = y * _rotationSpeed.y;
 
-                    _targetObject.transform.Rotate(newAngle);
+                    _currentTargetObject.transform.Rotate(newAngle);
                     _lastMousePosition = Input.mousePosition;
                 }
                 else
@@ -59,7 +78,7 @@ public class UIObjRotator : MonoBehaviour
                     newAngle.x = x * _rotationSpeed.x;
                     newAngle.y = y * _rotationSpeed.y;
 
-                    _targetObject.transform.Rotate(newAngle);
+                    _currentTargetObject.transform.Rotate(newAngle);
                     _lastMousePosition = Input.mousePosition;
                 }
             }
