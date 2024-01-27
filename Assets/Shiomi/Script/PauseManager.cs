@@ -45,14 +45,12 @@ public class PauseManager : SingletonBaseClass<PauseManager>   // â@ÉQÅ[ÉÄÇÃÇ›ÇÃ
             if (IsPaused)
             {
                 EndPause();
-                _inventoryUI.SetActive(!_isPaused);
-                _inventoryUI.transform.SetAsFirstSibling();
+                _hudMan.ToFront(2);
             }
             else
             {
                 BeginPause();
-                _inventoryUI.SetActive(_isPaused);
-                _inventoryUI.transform.SetAsLastSibling();
+                _hudMan.ToFront(3);
             }
         }
 
