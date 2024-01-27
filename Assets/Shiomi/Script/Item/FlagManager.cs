@@ -19,7 +19,7 @@ public class FlagManager : MonoBehaviour
     /// アイテムフラグのtrue
     /// </summary>
     /// <param name="Id"> アイテムID </param>
-    void AddItem(int Id)
+    public void AddItem(int Id)
     {
         IsItemFlag[Id] = true;
         _items[Id].SetActive(true);  
