@@ -30,7 +30,6 @@ public class SwingGrap : MonoBehaviour
         CheckForSwingPoints();
         if (_joint != null) OdmGearMoveMent();
 
-        _crossHair.SetGrappling(_pm._swinging);
         if (_pm._swinging)
         {
             _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
@@ -53,7 +52,8 @@ public class SwingGrap : MonoBehaviour
         Physics.SphereCast(_cam.position, _predictionSphereCastRadius, _cam.forward, out sphereCastHit, _maxSwingDistance, IsGrappleable);
         RaycastHit raycastHit;
         // グラップルできるかのフラグ
-        Physics.Raycast(_cam.position, _cam.forward, out raycastHit, _maxSwingDistance, IsGrappleable);
+        var stat = Physics.Raycast(_cam.position, _cam.forward, out raycastHit, _maxSwingDistance, IsGrappleable);
+        _crossHair.SetGrappling(stat);
 
         Vector3 realHitPoint;
         if(raycastHit.point != Vector3.zero)
