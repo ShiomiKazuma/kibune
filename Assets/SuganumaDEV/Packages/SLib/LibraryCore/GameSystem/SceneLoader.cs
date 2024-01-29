@@ -1,12 +1,8 @@
 using SLib.Singleton;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using DG;
-using DG.Tweening;
 // Auth : Suganuma
 namespace SLib
 {

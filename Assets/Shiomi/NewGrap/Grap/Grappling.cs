@@ -30,48 +30,10 @@ public class Grappling : MonoBehaviour
     ParticleSystem _particle;
 
     PlayerCrossHair _crossHair; // Players Cross Hair
+    PauseManager _pMan;
 
-    void Start()
-    {
-        _pm = GetComponent<PlayerMovementGrappling>();
-        _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
-    }
+    bool _pausedOverride;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(grappleKey))
-            StartGrapple();
-        //クールダウンタイマーを減らす処理
-        if (_grapplingCTTimer > 0)
-            _grapplingCTTimer -= Time.deltaTime;
-
-        // グラップル可能かの判定
-        RaycastHit hit;
-        var stat = Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable);
-        _crossHair.SetGrappling(stat);
-
-        if (Isgrappling)
-        {
-            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
-            _particle.Play();
-        }
-        else
-        {
-            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
-            _particle.Stop();
-        }
-    }
-
-    private void LateUpdate()
-    {
-        if (Isgrappling)
-        {
-            Vector3 temp = _cam.position;
-            temp.y = _cam.position.y - 2;
-            _lr.SetPosition(0, temp);
-        }
-
-    }
     void StartGrapple()
     {
         if (_grapplingCTTimer > 0) return;
@@ -120,5 +82,75 @@ public class Grappling : MonoBehaviour
     public Vector3 GetGrapplePoint()
     {
         return _grapplePoint;
+    }
+
+    void OnPaused()
+    {
+        _pausedOverride = true;
+    }
+
+    void OnEndPaused()
+    {
+        _pausedOverride = false;
+    }
+
+    private void Awake()
+    {
+        _pMan = GameObject.FindFirstObjectByType<PauseManager>();
+    }
+
+    private void OnEnable()
+    {
+        _pMan.BeginPause += OnPaused;
+        _pMan.EndPause += OnEndPaused;
+    }
+
+    private void OnDisable()
+    {
+        _pMan.BeginPause -= OnPaused;
+        _pMan.EndPause -= OnEndPaused;
+    }
+
+    void Start()
+    {
+        _pm = GetComponent<PlayerMovementGrappling>();
+        _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+    }
+
+    void Update()
+    {
+        if (_pausedOverride) return;
+
+        if (Input.GetKeyDown(grappleKey))
+            StartGrapple();
+        //クールダウンタイマーを減らす処理
+        if (_grapplingCTTimer > 0)
+            _grapplingCTTimer -= Time.deltaTime;
+
+        // グラップル可能かの判定
+        RaycastHit hit;
+        var stat = Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable);
+        _crossHair.SetGrappling(stat);
+
+        if (Isgrappling)
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
+            _particle.Play();
+        }
+        else
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
+            _particle.Stop();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (Isgrappling)
+        {
+            Vector3 temp = _cam.position;
+            temp.y = _cam.position.y - 2;
+            _lr.SetPosition(0, temp);
+        }
     }
 }

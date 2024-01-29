@@ -1,17 +1,15 @@
 using SLib.Singleton;
 using SLib.Systems;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseManager : SingletonBaseClass<PauseManager>   // 院ゲームのみのインスタンスシングルトンである必要なし
 {
     [SerializeField] GameObject _inventoryUI;
     /// <summary> ポーズ画面に入ったときに呼ばれるメソッド </summary>
-    public static Action BeginPause;
+    public Action BeginPause;
     /// <summary> ポーズ画面が終わった時に呼ばれるメソッド </summary>
-    public static Action EndPause;
+    public Action EndPause;
 
     HUDManager _hudMan;
     GameInfo _gInfo;

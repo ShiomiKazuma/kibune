@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-
 public class PlayerMovementGrappling : MonoBehaviour
 {
+    // true = paused
+    bool _pauseOverride = false;
+
     //移動スピード
     float _moveSpeed;
     public float _walkSpeed;
@@ -33,7 +31,7 @@ public class PlayerMovementGrappling : MonoBehaviour
     public float _playerHeight;
     public LayerMask _layerMask;
     bool _isGrounded;
-    public bool IsGrounded =>_isGrounded;
+    public bool IsGrounded => _isGrounded;
 
     //傾斜判定
     public float _maxSlopeAngle;
@@ -50,6 +48,9 @@ public class PlayerMovementGrappling : MonoBehaviour
     Vector3 _moveDirection;
     Rigidbody _rb;
     public MovementState _state;
+
+    PauseManager _pMan;
+
     public enum MovementState
     {
         freeze,
@@ -65,42 +66,13 @@ public class PlayerMovementGrappling : MonoBehaviour
     public bool _activeGrapple;
     public bool _swinging;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-        _rb.freezeRotation = true;
-        readyToJump = true;
-
-        _startYScale = transform.localScale.y;
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //向きを設定
-        this.transform.rotation = _orientation.rotation;
-        //接地判定
-        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, _layerMask);
-        MyInput();
-        SpeedControl();
-        StateHandler();
-        //抵抗を設定
-        if (_isGrounded && !_activeGrapple)
-            _rb.drag = _groundDrag;
-        else
-            _rb.drag = 0;
-        MovePlayer();
-        //TextStuff();
-    }
-
     void MyInput()
     {
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
 
         //ジャンプインプット
-        if(Input.GetKey(_jumpKey) && readyToJump && _isGrounded)
+        if (Input.GetKey(_jumpKey) && readyToJump && _isGrounded)
         {
             readyToJump = false;
             Jump();
@@ -124,20 +96,20 @@ public class PlayerMovementGrappling : MonoBehaviour
     void StateHandler()
     {
         //Freeze
-        if(_freeze)
+        if (_freeze)
         {
-           _state = MovementState.freeze;
+            _state = MovementState.freeze;
             _moveSpeed = 0;
             _rb.velocity = Vector3.zero;
         }
         //Grappling
-        else if(_activeGrapple)
+        else if (_activeGrapple)
         {
             _state = MovementState.grappling;
             _moveSpeed = _sprintSpeed;
         }
         //Swinging
-        else if(_swinging)
+        else if (_swinging)
         {
             _state = MovementState.swinging;
             _moveSpeed = _swingSpeed;
@@ -149,13 +121,13 @@ public class PlayerMovementGrappling : MonoBehaviour
         //    _moveSpeed = _crouchSpeed;
         //}
         //Sprinting
-        else if(_isGrounded && Input.GetKey(_sprintKey))
+        else if (_isGrounded && Input.GetKey(_sprintKey))
         {
             _state = MovementState.sprinting;
             _moveSpeed = _sprintSpeed;
         }
         //Walking
-        else if(_isGrounded)
+        else if (_isGrounded)
         {
             _state = MovementState.walking;
             _moveSpeed = _walkSpeed;
@@ -169,23 +141,23 @@ public class PlayerMovementGrappling : MonoBehaviour
 
     void MovePlayer()
     {
-        if(_activeGrapple) return;
+        if (_activeGrapple) return;
         if (_swinging) return;
         //移動方向
         _moveDirection = _orientation.forward * _verticalInput + _orientation.right * _horizontalInput;
 
         //傾斜
-        if(OnSlope() && !exitingSlope)
+        if (OnSlope() && !exitingSlope)
         {
             _rb.AddForce(GetSlopeMoveDirection() * _moveSpeed * 20f, ForceMode.Force);
             if (_rb.velocity.y > 0)
                 _rb.AddForce(Vector3.down * 80f, ForceMode.Force);
         }
         //地面
-        else if(_isGrounded)
+        else if (_isGrounded)
             _rb.AddForce(_moveDirection.normalized * _moveSpeed * 10f, ForceMode.Force);
         //空中
-        else if(!_isGrounded)
+        else if (!_isGrounded)
             _rb.AddForce(_moveDirection.normalized * _moveSpeed * 10f * _airMultiplier, ForceMode.Force);
         //傾斜の間、重力を無くす
         _rb.useGravity = !OnSlope();
@@ -195,9 +167,9 @@ public class PlayerMovementGrappling : MonoBehaviour
     {
         if (_activeGrapple) return;
         //傾斜でのスピードを制限する
-        if(OnSlope() && !exitingSlope)
+        if (OnSlope() && !exitingSlope)
         {
-            if(_rb.velocity.magnitude > _moveSpeed)
+            if (_rb.velocity.magnitude > _moveSpeed)
                 _rb.velocity = _rb.velocity.normalized * _moveSpeed;
         }
         //地面と空中でのスピード制限
@@ -316,4 +288,63 @@ public class PlayerMovementGrappling : MonoBehaviour
     //}
 
     #endregion
+
+    void OnPaused()
+    {
+        _pauseOverride = true;
+    }
+
+    void OnEndPaused()
+    {
+        _pauseOverride = false;
+    }
+
+    private void Awake()
+    {
+        _pMan = GameObject.FindObjectOfType<PauseManager>();
+    }
+
+    private void OnEnable()
+    {
+        _pMan.BeginPause += OnPaused;
+        _pMan.EndPause += OnEndPaused;
+    }
+
+    private void OnDisable()
+    {
+        _pMan.BeginPause -= OnPaused;
+        _pMan.EndPause -= OnEndPaused;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+        _rb.freezeRotation = true;
+        readyToJump = true;
+
+        _startYScale = transform.localScale.y;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (_pauseOverride) return;
+
+        //向きを設定
+        this.transform.rotation = _orientation.rotation;
+        //接地判定
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, _layerMask);
+        MyInput();
+        SpeedControl();
+        StateHandler();
+        //抵抗を設定
+        if (_isGrounded && !_activeGrapple)
+            _rb.drag = _groundDrag;
+        else
+            _rb.drag = 0;
+        MovePlayer();
+        //TextStuff();
+    }
+
 }

@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using SLib.Systems;
 public class TesterScript_Framed_Sg : MonoBehaviour
 {
     FramedInputBuffer _iBuff;
+    PauseManager _pMan;
 
     private void OnEnable()
     {
-        PauseManager.BeginPause += () => { Debug.Log("Start Pause"); };
-        PauseManager.EndPause += () => { Debug.Log("End Pause"); };
+        _pMan.BeginPause += () => { Debug.Log("Start Pause"); };
+        _pMan.EndPause += () => { Debug.Log("End Pause"); };
     }
 
     private void Awake()

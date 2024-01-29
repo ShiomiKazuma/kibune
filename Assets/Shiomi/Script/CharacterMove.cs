@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,57 +33,13 @@ public class CharacterMove : MonoBehaviour
     /// <summary> ポーズフラグ </summary>
     bool _isPaused;
 
+    PauseManager _pMan;
+
     enum State
     {
         Normal,
         HookshotFlying,
         HookshotThrown,
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _characterController = GetComponent<CharacterController>();
-        _playerCamera = Camera.main.GetComponent<Camera>(); // Camera.main は Tag = "MainCamera"のカメラを返す
-        _cameraFov = _playerCamera.GetComponent<CameraFov>();
-        Cursor.lockState = CursorLockMode.Locked;
-        _state = State.Normal;
-        _aimImage = _aim.GetComponent<Image>();
-        _hookshotTransform.gameObject.SetActive(false);
-        _isPaused = false;
-
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //ポーズ中なら処理を実行しない
-        if (!_isPaused) return;
-
-        switch (_state)
-        {
-            case State.Normal:
-                HandleCharacterLook();
-                HandleCaracterMovement();
-                HandleHookshotStart();
-                break;
-            case State.HookshotThrown:
-                HookshotThrow();
-                HandleCharacterLook();
-                HandleCaracterMovement();
-                break;
-            case State.HookshotFlying:
-                HandleCharacterLook();
-                HandHookshotMovement();
-                break;
-        }
-
-        //エイムカーソルを変化させる
-        RaycastHit hitAim;
-        if (Physics.Raycast(this.transform.position, _playerCamera.transform.forward, out hitAim, _grapDis))
-            _aimImage.color = Color.black;
-        else
-            _aimImage.color = Color.red;
     }
 
     void HandleCharacterLook()
@@ -228,19 +181,54 @@ public class CharacterMove : MonoBehaviour
         return Input.GetButtonDown("Jump");
     }
 
-    //デリゲート登録、解除処理
-    private void OnEnable()
+    private void Awake()
     {
-        //デリゲート登録
-        PauseManager.BeginPause += StartPause;
-        PauseManager.EndPause += PauseEnd;
+        _pMan = GameObject.FindAnyObjectByType<PauseManager>();
     }
 
-    private void OnDisable()
+    // Start is called before the first frame update
+    void Start()
     {
-        //デリゲート解除
-        PauseManager.BeginPause -= StartPause;
-        PauseManager.EndPause -= PauseEnd;
+        _characterController = GetComponent<CharacterController>();
+        _playerCamera = Camera.main.GetComponent<Camera>(); // Camera.main は Tag = "MainCamera"のカメラを返す
+        _cameraFov = _playerCamera.GetComponent<CameraFov>();
+        Cursor.lockState = CursorLockMode.Locked;
+        _state = State.Normal;
+        _aimImage = _aim.GetComponent<Image>();
+        _hookshotTransform.gameObject.SetActive(false);
+        _isPaused = false;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        //ポーズ中なら処理を実行しない
+        if (!_isPaused) return;
+
+        switch (_state)
+        {
+            case State.Normal:
+                HandleCharacterLook();
+                HandleCaracterMovement();
+                HandleHookshotStart();
+                break;
+            case State.HookshotThrown:
+                HookshotThrow();
+                HandleCharacterLook();
+                HandleCaracterMovement();
+                break;
+            case State.HookshotFlying:
+                HandleCharacterLook();
+                HandHookshotMovement();
+                break;
+        }
+
+        //エイムカーソルを変化させる
+        RaycastHit hitAim;
+        if (Physics.Raycast(this.transform.position, _playerCamera.transform.forward, out hitAim, _grapDis))
+            _aimImage.color = Color.black;
+        else
+            _aimImage.color = Color.red;
     }
 
     void StartPause()
@@ -254,4 +242,20 @@ public class CharacterMove : MonoBehaviour
         _isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    //デリゲート登録、解除処理
+    private void OnEnable()
+    {
+        //デリゲート登録
+        _pMan.BeginPause += StartPause;
+        _pMan.EndPause += PauseEnd;
+    }
+
+    private void OnDisable()
+    {
+        //デリゲート解除
+        _pMan.BeginPause -= StartPause;
+        _pMan.EndPause -= PauseEnd;
+    }
+
 }
