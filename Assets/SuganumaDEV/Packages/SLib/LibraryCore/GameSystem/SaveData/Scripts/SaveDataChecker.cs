@@ -34,11 +34,13 @@ namespace SLib
                     if (_dataSerializer.ReadSaveData() != null) // If SavedData Couldn't found , Exception Will Threw
                     {
                         _continueButton.interactable = true;
+                        _continueButton.gameObject.SetActive(true);
                     }
                 }
                 catch (FileNotFoundException)
                 {
                     _continueButton.interactable = false;
+                    _continueButton.gameObject.SetActive(false);
                 }
             }
         }

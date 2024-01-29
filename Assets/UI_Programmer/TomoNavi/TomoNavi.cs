@@ -5,16 +5,33 @@ using SLib.Tweening;
 using DG;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.Events;
 // ver 1 菅沼
 //
 public class TomoNavi : MonoBehaviour   // v-1
 {
+    enum Behaviour
+    {
+        DontDestroyOnComplete,
+        DestroyOnComplete,
+    }
+
+    enum CallbackBehaviour
+    {
+        CallBack,
+        None,
+    }
+
     [SerializeField]
     float _displayingTime;
     [SerializeField]
     float _fadeOutDuration;
     [SerializeField]
     Behaviour OnCompleted;
+    [SerializeField]
+    CallbackBehaviour OnCompletedCallback;
+    [SerializeField]
+    int _callingObjectIndex;
     [SerializeField]
     UITween _uiTween;
     [SerializeField]
@@ -23,15 +40,14 @@ public class TomoNavi : MonoBehaviour   // v-1
     Image _tomoNaviBG;
     [SerializeField]
     Text _tomoNaviText;
+    [SerializeField, Header("消えるときに呼び出すイベント")]
+    UnityEvent _onDestroyed;
 
-    enum Behaviour
-    {
-        DontDestroyOnComplete,
-        DestroyOnComplete,
-    }
+    TomoNaviManager _tomoMan;
 
     private void Start()
     {
+        _tomoMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
         _uiTween.StartTween();
     }
 
@@ -51,8 +67,20 @@ public class TomoNavi : MonoBehaviour   // v-1
             {
                 switch (OnCompleted)
                 {
-                    case Behaviour.DestroyOnComplete: GameObject.Destroy(transform.parent.gameObject); break;
-                        default: break;
+                    case Behaviour.DestroyOnComplete: 
+                        switch(OnCompletedCallback)
+                        {
+                            case CallbackBehaviour.CallBack:
+                                _tomoMan.PopNavi(_callingObjectIndex);
+                                break;
+                                default: break;
+                        }
+                        _onDestroyed.Invoke();
+                        GameObject.Destroy(transform.parent.gameObject); 
+                        break;
+                        default: 
+                        _onDestroyed.Invoke();
+                        break;
                 }
             }
             );
