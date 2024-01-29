@@ -17,38 +17,13 @@ public class SwingGrap : MonoBehaviour
     public Transform _predictionPoint;
 
     PlayerCrossHair _crossHair; // Players Cross Hair
+    PauseManager _pMan;
 
-    private void Start()
-    {
-        _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
-        _lr.positionCount = 0;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(_swingKey)) StartSwing();
-        if (Input.GetKeyUp(_swingKey)) StopSwing();
-        CheckForSwingPoints();
-        if (_joint != null) OdmGearMoveMent();
-
-        if (_pm._swinging)
-        {
-            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
-        }
-        else
-        {
-            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
-        }
-    }
-
-    void LateUpdate()
-    {
-        DrawRope();
-    }
+    bool _pausedOverride;
 
     void CheckForSwingPoints()
     {
-        if(_joint != null) return;
+        if (_joint != null) return;
         RaycastHit sphereCastHit;
         Physics.SphereCast(_cam.position, _predictionSphereCastRadius, _cam.forward, out sphereCastHit, _maxSwingDistance, IsGrappleable);
         RaycastHit raycastHit;
@@ -57,14 +32,14 @@ public class SwingGrap : MonoBehaviour
         _crossHair.SetGrappling(stat);
 
         Vector3 realHitPoint;
-        if(raycastHit.point != Vector3.zero)
+        if (raycastHit.point != Vector3.zero)
             realHitPoint = raycastHit.point;
-        else if(sphereCastHit.point != Vector3.zero)
+        else if (sphereCastHit.point != Vector3.zero)
             realHitPoint = sphereCastHit.point;
         else
             realHitPoint = Vector3.zero;
 
-        if(realHitPoint != Vector3.zero)
+        if (realHitPoint != Vector3.zero)
         {
             _predictionPoint.gameObject.SetActive(true);
             _predictionPoint.position = realHitPoint;
@@ -76,15 +51,16 @@ public class SwingGrap : MonoBehaviour
 
         _predictionHit = raycastHit.point == Vector3.zero ? sphereCastHit : raycastHit;
     }
+
     void StartSwing()
     {
         if (_predictionHit.point == Vector3.zero) return;
-        if(GetComponent<Grappling>() != null)
+        if (GetComponent<Grappling>() != null)
             GetComponent<Grappling>().StopGrapple();
         _pm.ResetRestrictions();
 
         _pm._swinging = true;
-        
+
         _swingPoint = _predictionHit.point;
         _joint = _player.gameObject.AddComponent<SpringJoint>();
         _joint.autoConfigureConnectedAnchor = false;
@@ -97,7 +73,7 @@ public class SwingGrap : MonoBehaviour
         _joint.spring = 4.5f;
         _joint.damper = 7f;
         _joint.massScale = 4.5f;
-        
+
         _lr.positionCount = 2;
         _currentGrapplePosition = _gunTip.position;
     }
@@ -129,13 +105,13 @@ public class SwingGrap : MonoBehaviour
     void OdmGearMoveMent()
     {
         //right
-        if(Input.GetKey(KeyCode.D)) _rb.AddForce(_orientation.right * _horizontalThrustForce * Time.deltaTime);
+        if (Input.GetKey(KeyCode.D)) _rb.AddForce(_orientation.right * _horizontalThrustForce * Time.deltaTime);
         //left
         if (Input.GetKey(KeyCode.A)) _rb.AddForce(-_orientation.right * _horizontalThrustForce * Time.deltaTime);
         //forward
         if (Input.GetKey(KeyCode.W)) _rb.AddForce(_orientation.forward * _horizontalThrustForce * Time.deltaTime);
         //’Z‚­‚·‚é
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Vector3 directionToPoint = _swingPoint - transform.position;
             _rb.AddForce(directionToPoint.normalized * _horizontalThrustForce * Time.deltaTime);
@@ -144,11 +120,69 @@ public class SwingGrap : MonoBehaviour
             _joint.minDistance = distanceFromPoint * 0.25f;
         }
         //’·‚­‚·‚é
-        if(Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             float extendedDistanceromPoint = Vector3.Distance(transform.position, _swingPoint) + _extendCableSpeed;
             _joint.maxDistance = extendedDistanceromPoint * 0.8f;
             _joint.minDistance = extendedDistanceromPoint * 0.25f;
         }
+    }
+
+    void OnPaused()
+    {
+        _pausedOverride = true;
+    }
+
+    void OnEndPaused()
+    {
+        _pausedOverride = false;
+    }
+
+    private void Awake()
+    {
+        _pMan = GameObject.FindFirstObjectByType<PauseManager>();
+    }
+
+    private void OnEnable()
+    {
+        _pMan.BeginPause += OnPaused;
+        _pMan.EndPause += OnEndPaused;
+    }
+
+    private void OnDisable()
+    {
+        _pMan.BeginPause -= OnPaused;
+        _pMan.EndPause -= OnEndPaused;
+    }
+
+    private void Start()
+    {
+        _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+        _lr.positionCount = 0;
+    }
+
+    private void Update()
+    {
+
+        if (_pausedOverride) return;
+
+        if (Input.GetKeyDown(_swingKey)) StartSwing();
+        if (Input.GetKeyUp(_swingKey)) StopSwing();
+        CheckForSwingPoints();
+        if (_joint != null) OdmGearMoveMent();
+
+        if (_pm._swinging)
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
+        }
+        else
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
+        }
+    }
+
+    void LateUpdate()
+    {
+        DrawRope();
     }
 }

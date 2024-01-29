@@ -23,10 +23,6 @@ namespace SLib
             Dropdown _resolutionsDD;
             [SerializeField]
             Dropdown _refreshRateDD;
-            [SerializeField, Header("一時停止中（インゲームのみの表示）")]
-            Text _pauseText;
-            [SerializeField, Header("一時停止中（インゲームのみの非表示）")]
-            Button _exitSettingsBtn;
 
             int _resolutionIndex;
             public int ResolutionIndex => _resolutionIndex;
@@ -34,6 +30,8 @@ namespace SLib
             public int RefreshRateIndex => _refreshRateIndex;
             int _displayIndex;
             public int DisplayIndex => _displayIndex;
+
+            
 
             /// <summary> 解像度の一覧。Key -> 表示するのに取得、Value -> 関数に渡す </summary>
             Dictionary<string, string> ResolutionsList = new()
@@ -184,16 +182,6 @@ namespace SLib
                 SetupActiveDisplaysDropdown();
                 SetupResolutionsDropDown();
                 SetupRefreshRateDropDown();
-                // Set When Pause Process
-                PauseManager.BeginPause += () =>
-                {
-                    _pauseText.gameObject.SetActive(true);
-                };
-                PauseManager.EndPause += () =>
-                {
-                    _pauseText.gameObject.SetActive(false);
-                };
-                _pauseText.gameObject.SetActive(false);
             }
 
             private void Start()
