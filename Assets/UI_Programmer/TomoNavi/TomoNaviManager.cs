@@ -6,18 +6,6 @@ public class TomoNaviManager : MonoBehaviour
 {
     [SerializeField, Header("ポップさせる友ナビのオブジェクトをここにアタッチ")] List<GameObject> _objects;
 
-    GameInfo _ginfo;
-
-    private void Start()
-    {
-        _ginfo = GameObject.FindFirstObjectByType<GameInfo>();
-
-        if (_ginfo.SceneStatus == GameInfo.SceneTransitStatus.To_InGameScene)
-        {
-            PopNavi(0);
-        }
-    }
-
     public void PopNavi(int index)
     {
         GameObject go = GameObject.Instantiate(_objects[index]);
