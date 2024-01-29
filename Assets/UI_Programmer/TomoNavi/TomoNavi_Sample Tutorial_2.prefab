@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1208526209319779091, guid: 47940bd22938e844ba71f7b30df22562, type: 3}
       propertyPath: _callingObjectIndex
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1495394789165042821, guid: 47940bd22938e844ba71f7b30df22562, type: 3}
       propertyPath: _onTweeningEnd.m_PersistentCalls.m_Calls.Array.size

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1208526209319779091, guid: 47940bd22938e844ba71f7b30df22562, type: 3}
       propertyPath: _callingObjectIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3134571946547548708, guid: 47940bd22938e844ba71f7b30df22562, type: 3}
       propertyPath: m_Name

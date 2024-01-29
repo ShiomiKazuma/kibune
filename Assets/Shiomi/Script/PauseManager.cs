@@ -65,7 +65,7 @@ public class PauseManager : SingletonBaseClass<PauseManager>   // â@ÉQÅ[ÉÄÇÃÇ›ÇÃ
             else
             {
                 BeginPause();
-                _hudMan.ToFront(1);
+                _hudMan.ToFront(0);
             }
         }
     }

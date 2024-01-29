@@ -6,25 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class InGameUIManager : SingletonBaseClass<InGameUIManager>
 {
-    [SerializeField]
-    Text _pausedText;
-    [SerializeField]
-    Button _settingsExit;
-
     PauseManager _pMan;
     GameInfo _gInfo;
     HUDManager _hudMan;
-
-    void OnPaused()
-    {
-        _pausedText.text = "Paused...";
-        _settingsExit.gameObject.SetActive(false);
-    }
-
-    void OnEndPaused()
-    {
-        _pausedText.text = " ";
-    }
+    TomoNaviManager _tMan;
 
     protected override void ToDoAtAwakeSingleton()
     {
@@ -35,21 +20,17 @@ public class InGameUIManager : SingletonBaseClass<InGameUIManager>
     {
         _gInfo = GameObject.FindFirstObjectByType<GameInfo>();
         _hudMan = GameObject.FindFirstObjectByType<HUDManager>();
+        _tMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
+
         if (_gInfo.SceneStatus == GameInfo.SceneTransitStatus.To_InGameScene)
         {
             _hudMan.ToFront(2);
+            Invoke(nameof(TomoNavi), 1);
         }
     }
 
-    private void OnEnable()
+    void TomoNavi()
     {
-        _pMan.BeginPause += OnPaused;
-        _pMan.EndPause += OnEndPaused;
-    }
-
-    private void OnDisable()
-    {
-        _pMan.BeginPause -= OnPaused;
-        _pMan.EndPause -= OnEndPaused;
+        _tMan.PopNavi(0);
     }
 }
