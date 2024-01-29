@@ -87,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc71b71560fc7ea43a6b78cc25797e85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 21.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc71b71560fc7ea43a6b78cc25797e85, type: 3}
       propertyPath: m_LocalPosition.z
@@ -121,9 +121,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cc71b71560fc7ea43a6b78cc25797e85, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cec86598211791c4399a47c2f0481d99, type: 2}
     - target: {fileID: 919132149155446097, guid: cc71b71560fc7ea43a6b78cc25797e85, type: 3}
       propertyPath: m_Name
       value: BgMD_MAPBuilding_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc71b71560fc7ea43a6b78cc25797e85, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
