@@ -26,8 +26,11 @@ public class Grappling : MonoBehaviour
     public KeyCode grappleKey = KeyCode.Mouse1;
     bool Isgrappling;
 
+    [SerializeField, Header("カザキリパーティクル")]
+    ParticleSystem _particle;
+
     PlayerCrossHair _crossHair; // Players Cross Hair
-   
+
     void Start()
     {
         _pm = GetComponent<PlayerMovementGrappling>();
@@ -36,20 +39,26 @@ public class Grappling : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(grappleKey))
+        if (Input.GetKeyDown(grappleKey))
             StartGrapple();
         //クールダウンタイマーを減らす処理
-        if(_grapplingCTTimer > 0)
+        if (_grapplingCTTimer > 0)
             _grapplingCTTimer -= Time.deltaTime;
 
-        _crossHair.SetGrappling(Isgrappling);
+        // グラップル可能かの判定
+        RaycastHit hit;
+        var stat = Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable);
+        _crossHair.SetGrappling(stat);
+
         if (Isgrappling)
         {
             _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
+            _particle.Play();
         }
         else
         {
             _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
+            _particle.Stop();
         }
     }
 
@@ -66,23 +75,23 @@ public class Grappling : MonoBehaviour
     void StartGrapple()
     {
         if (_grapplingCTTimer > 0) return;
-        //GetComponent<SwingGrap>().StopSwing();
         Isgrappling = true;
         _pm._freeze = true;
         RaycastHit hit;
-        if(Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable))
+        var stat = Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable);
+        if (stat)
         {
             _grapplePoint = hit.point;
+            _lr.SetPosition(1, _grapplePoint);
+            //フックを出現させる
+            _lr.enabled = true;
             Invoke(nameof(ExecuteGrapple), _grappleDelayTime);
         }
         else
         {
-            _grapplePoint = _cam.position + _cam.forward * _maxGrappleDistance;
+            //_grapplePoint = _cam.position + _cam.forward * _maxGrappleDistance;
             Invoke(nameof(StopGrapple), _grappleDelayTime);
         }
-        //フックを出現させる
-        _lr.enabled = true;
-        _lr.SetPosition(1, _grapplePoint);
     }
 
     void ExecuteGrapple()
@@ -106,11 +115,6 @@ public class Grappling : MonoBehaviour
         Isgrappling = false;
         _grapplingCTTimer = _grapplingCT;
         _lr.enabled = false;
-    }
-
-    public bool IsGrappling()
-    {
-        return Isgrappling;
     }
 
     public Vector3 GetGrapplePoint()

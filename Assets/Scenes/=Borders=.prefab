@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962536683300494591}
   - component: {fileID: 462761926437468426}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 800, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1709640700934104341
 GameObject:
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028388987514273315}
   - component: {fileID: 4233365923243550511}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Border (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 800, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1826523169889746699
 GameObject:
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1065481115059409412}
   - component: {fileID: 243560878765366804}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Border (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 800, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6997277240154371371
 GameObject:
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4622265811287379556}
   - component: {fileID: 4612763932740995997}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Border (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 800, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7981484237681034203
 GameObject:
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8236662186631423609}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: =Borders=
   m_TagString: Untagged
   m_Icon: {fileID: 0}
