@@ -290,6 +290,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6229052960592413365, guid: 2576d84fa89a9fc4698621cb150a9534, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8058662986694814003, guid: 2576d84fa89a9fc4698621cb150a9534, type: 3}
     - {fileID: 78910003581581531, guid: 2576d84fa89a9fc4698621cb150a9534, type: 3}
