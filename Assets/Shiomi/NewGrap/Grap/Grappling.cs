@@ -29,6 +29,9 @@ public class Grappling : MonoBehaviour
     [SerializeField, Header("カザキリパーティクル")]
     ParticleSystem _particle;
 
+    [SerializeField, Header("グラップリングフック")]
+    GameObject _hook;
+
     PlayerCrossHair _crossHair; // Players Cross Hair
     PauseManager _pMan;
 
@@ -69,6 +72,11 @@ public class Grappling : MonoBehaviour
 
         _pm.JumpToPosition(_grapplePoint, highestPointOnArc);
         Invoke(nameof(StopGrapple), 1f);
+
+        _hook.SetActive(true);
+        _hook.transform.position = _grapplePoint;
+        _hook.transform.LookAt((_grapplePoint - this.transform.position).normalized);
+        _hook.transform.position = _hook.transform.position - ((_grapplePoint - this.transform.position).normalized * 1);
     }
 
     public void StopGrapple()
@@ -77,6 +85,9 @@ public class Grappling : MonoBehaviour
         Isgrappling = false;
         _grapplingCTTimer = _grapplingCT;
         _lr.enabled = false;
+
+        _hook.SetActive(false);
+        _hook.transform.position = this.transform.position;
     }
 
     public Vector3 GetGrapplePoint()
@@ -115,6 +126,7 @@ public class Grappling : MonoBehaviour
     {
         _pm = GetComponent<PlayerMovementGrappling>();
         _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+        _hook.SetActive(false);
     }
 
     void Update()
