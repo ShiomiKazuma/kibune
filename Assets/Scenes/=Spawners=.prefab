@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (71)
@@ -205,6 +213,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (28)
@@ -279,6 +295,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (79)
@@ -353,6 +377,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (9)
@@ -423,6 +455,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (70)
@@ -497,6 +537,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (22)
@@ -571,6 +619,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (19)
@@ -645,6 +701,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (15)
@@ -715,6 +779,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (87)
@@ -789,6 +861,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (5)
@@ -859,6 +939,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (74)
@@ -933,6 +1021,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (51)
@@ -1007,6 +1103,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (14)
@@ -1077,6 +1181,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (64)
@@ -1151,6 +1263,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (41)
@@ -1225,6 +1345,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof
@@ -1295,6 +1423,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (21)
@@ -1369,6 +1505,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (66)
@@ -1443,6 +1587,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (77)
@@ -1517,6 +1669,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (85)
@@ -1591,6 +1751,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (24)
@@ -1665,6 +1833,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (26)
@@ -1739,6 +1915,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (63)
@@ -1813,6 +1997,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (54)
@@ -1887,6 +2079,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (35)
@@ -1961,6 +2161,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (53)
@@ -2035,6 +2243,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (3)
@@ -2105,6 +2321,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (69)
@@ -2179,6 +2403,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (7)
@@ -2249,6 +2481,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (84)
@@ -2323,6 +2563,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (25)
@@ -2397,6 +2645,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (39)
@@ -2471,6 +2727,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (1)
@@ -2541,6 +2805,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (67)
@@ -2615,6 +2887,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (17)
@@ -2689,6 +2969,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (27)
@@ -2763,6 +3051,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (43)
@@ -2837,6 +3133,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (80)
@@ -2911,6 +3215,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (2)
@@ -2981,6 +3293,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (8)
@@ -3051,6 +3371,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (72)
@@ -3125,6 +3453,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (31)
@@ -3199,6 +3535,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (58)
@@ -3273,6 +3617,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (73)
@@ -3347,6 +3699,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (47)
@@ -3421,6 +3781,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (91)
@@ -3495,6 +3863,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (40)
@@ -3569,6 +3945,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (32)
@@ -3643,6 +4027,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (49)
@@ -3717,6 +4109,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (88)
@@ -3791,6 +4191,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (42)
@@ -3865,6 +4273,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (90)
@@ -3939,6 +4355,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (44)
@@ -4013,6 +4437,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (62)
@@ -4087,6 +4519,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (34)
@@ -4161,6 +4601,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (23)
@@ -4235,6 +4683,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (46)
@@ -4309,6 +4765,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (82)
@@ -4383,6 +4847,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (86)
@@ -4457,6 +4929,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (50)
@@ -4531,6 +5011,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (61)
@@ -4605,6 +5093,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (6)
@@ -4675,6 +5171,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (29)
@@ -4749,6 +5253,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (56)
@@ -4823,6 +5335,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (65)
@@ -4897,6 +5417,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (48)
@@ -4971,6 +5499,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (13)
@@ -5041,6 +5577,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (30)
@@ -5115,6 +5659,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (12)
@@ -5189,6 +5741,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (83)
@@ -5263,6 +5823,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (10)
@@ -5333,6 +5901,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (16)
@@ -5407,6 +5983,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (59)
@@ -5481,6 +6065,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (78)
@@ -5555,6 +6147,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (52)
@@ -5629,6 +6229,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (60)
@@ -5703,6 +6311,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (45)
@@ -5777,6 +6393,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (75)
@@ -5851,6 +6475,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (11)
@@ -5925,6 +6557,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (57)
@@ -5999,6 +6639,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (81)
@@ -6073,6 +6721,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (18)
@@ -6147,6 +6803,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (33)
@@ -6221,6 +6885,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (89)
@@ -6295,6 +6967,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (20)
@@ -6369,6 +7049,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (68)
@@ -6443,6 +7131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (55)
@@ -6517,6 +7213,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (37)
@@ -6591,6 +7295,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (76)
@@ -6665,6 +7377,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (4)
@@ -6735,6 +7455,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (36)
@@ -6809,6 +7537,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2948525620887773152}
     m_Modifications:
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _maxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198498133769469337, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: _enemyObject
+      value: 
+      objectReference: {fileID: 6246427876558699045, guid: 60d5f583c5c34c04faf99d151f664d01, type: 3}
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (38)
