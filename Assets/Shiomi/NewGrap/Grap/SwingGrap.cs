@@ -21,6 +21,7 @@ public class SwingGrap : MonoBehaviour
     private void Start()
     {
         _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+        _lr.positionCount = 0;
     }
 
     private void Update()

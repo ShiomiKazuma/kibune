@@ -26,6 +26,9 @@ public class Grappling : MonoBehaviour
     public KeyCode grappleKey = KeyCode.Mouse1;
     bool Isgrappling;
 
+    [SerializeField, Header("カザキリパーティクル")]
+    ParticleSystem _particle;
+
     PlayerCrossHair _crossHair; // Players Cross Hair
 
     void Start()
@@ -50,10 +53,12 @@ public class Grappling : MonoBehaviour
         if (Isgrappling)
         {
             _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
+            _particle.Play();
         }
         else
         {
             _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
+            _particle.Stop();
         }
     }
 

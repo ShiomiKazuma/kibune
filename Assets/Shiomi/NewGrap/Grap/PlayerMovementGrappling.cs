@@ -32,7 +32,8 @@ public class PlayerMovementGrappling : MonoBehaviour
     //接地判定
     public float _playerHeight;
     public LayerMask _layerMask;
-    bool IsGround;
+    bool _isGrounded;
+    public bool IsGrounded =>_isGrounded;
 
     //傾斜判定
     public float _maxSlopeAngle;
@@ -75,34 +76,31 @@ public class PlayerMovementGrappling : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //向きを設定
         this.transform.rotation = _orientation.rotation;
         //接地判定
-        IsGround = Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, _layerMask);
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, _layerMask);
         MyInput();
         SpeedControl();
         StateHandler();
         //抵抗を設定
-        if (IsGround && !_activeGrapple)
+        if (_isGrounded && !_activeGrapple)
             _rb.drag = _groundDrag;
         else
             _rb.drag = 0;
-        //TextStuff();
-    }
-
-    void FixedUpdate()
-    {
         MovePlayer();
+        //TextStuff();
     }
 
     void MyInput()
     {
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
+
         //ジャンプインプット
-        if(Input.GetKey(_jumpKey) && readyToJump && IsGround)
+        if(Input.GetKey(_jumpKey) && readyToJump && _isGrounded)
         {
             readyToJump = false;
             Jump();
@@ -151,13 +149,13 @@ public class PlayerMovementGrappling : MonoBehaviour
         //    _moveSpeed = _crouchSpeed;
         //}
         //Sprinting
-        else if(IsGround && Input.GetKey(_sprintKey))
+        else if(_isGrounded && Input.GetKey(_sprintKey))
         {
             _state = MovementState.sprinting;
             _moveSpeed = _sprintSpeed;
         }
         //Walking
-        else if(IsGround)
+        else if(_isGrounded)
         {
             _state = MovementState.walking;
             _moveSpeed = _walkSpeed;
@@ -184,10 +182,10 @@ public class PlayerMovementGrappling : MonoBehaviour
                 _rb.AddForce(Vector3.down * 80f, ForceMode.Force);
         }
         //地面
-        else if(IsGround)
+        else if(_isGrounded)
             _rb.AddForce(_moveDirection.normalized * _moveSpeed * 10f, ForceMode.Force);
         //空中
-        else if(!IsGround)
+        else if(!_isGrounded)
             _rb.AddForce(_moveDirection.normalized * _moveSpeed * 10f * _airMultiplier, ForceMode.Force);
         //傾斜の間、重力を無くす
         _rb.useGravity = !OnSlope();

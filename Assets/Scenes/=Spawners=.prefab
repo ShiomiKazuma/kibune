@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2948525620887773152}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: =Spawners=
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +143,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
       value: 24.65454
@@ -195,6 +203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -224,6 +236,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -277,6 +297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -306,6 +330,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -359,6 +391,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -388,6 +424,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -437,6 +481,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -466,6 +514,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -519,6 +575,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -548,6 +608,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -601,6 +669,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -630,6 +702,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -683,6 +763,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -712,6 +796,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -761,6 +853,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -790,6 +886,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -843,6 +947,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -872,6 +980,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -921,6 +1037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -950,6 +1070,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1003,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1032,6 +1164,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1085,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1114,6 +1258,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1163,6 +1315,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1192,6 +1348,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1245,6 +1409,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1274,6 +1442,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1327,6 +1503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1356,6 +1536,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1405,6 +1593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1434,6 +1626,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1487,6 +1687,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1516,6 +1720,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1569,6 +1781,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1598,6 +1814,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1651,6 +1875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1680,6 +1908,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1733,6 +1969,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1762,6 +2002,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1815,6 +2063,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1844,6 +2096,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1897,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1926,6 +2190,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -1979,6 +2251,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2008,6 +2284,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2061,6 +2345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2090,6 +2378,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2143,6 +2439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2172,6 +2472,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2225,6 +2533,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2254,6 +2566,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2303,6 +2623,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2332,6 +2656,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2385,6 +2717,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2414,6 +2750,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2463,6 +2807,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2492,6 +2840,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2545,6 +2901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2574,6 +2934,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2627,6 +2995,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2656,6 +3028,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2709,6 +3089,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2738,6 +3122,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2787,6 +3179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2816,6 +3212,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2869,6 +3273,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2898,6 +3306,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -2951,6 +3367,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2980,6 +3400,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3033,6 +3461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3062,6 +3494,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3115,6 +3555,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3144,6 +3588,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3197,6 +3649,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3226,6 +3682,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3275,6 +3739,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3304,6 +3772,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3353,6 +3829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3382,6 +3862,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3435,6 +3923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3464,6 +3956,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3517,6 +4017,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3546,6 +4050,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3599,6 +4111,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3628,6 +4144,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3681,6 +4205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3710,6 +4238,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3763,6 +4299,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3792,6 +4332,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3845,6 +4393,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3874,6 +4426,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -3927,6 +4487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3956,6 +4520,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4009,6 +4581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4038,6 +4614,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4091,6 +4675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4120,6 +4708,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4173,6 +4769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4202,6 +4802,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4255,6 +4863,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4284,6 +4896,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4337,6 +4957,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4366,6 +4990,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4419,6 +5051,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4448,6 +5084,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4501,6 +5145,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4530,6 +5178,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4583,6 +5239,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4612,6 +5272,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4665,6 +5333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4694,6 +5366,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4747,6 +5427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4776,6 +5460,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4829,6 +5521,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4858,6 +5554,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4911,6 +5615,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4940,6 +5648,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -4993,6 +5709,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5022,6 +5742,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5075,6 +5803,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5104,6 +5836,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5153,6 +5893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5182,6 +5926,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5235,6 +5987,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5264,6 +6020,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5317,6 +6081,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5346,6 +6114,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5399,6 +6175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5428,6 +6208,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5481,6 +6269,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5510,6 +6302,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5559,6 +6359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5588,6 +6392,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5641,6 +6453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5670,6 +6486,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5723,6 +6547,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5752,6 +6580,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5805,6 +6641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5834,6 +6674,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5883,6 +6731,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5912,6 +6764,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -5965,6 +6825,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5994,6 +6858,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6047,6 +6919,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6076,6 +6952,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6129,6 +7013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6158,6 +7046,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6211,6 +7107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6240,6 +7140,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6293,6 +7201,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6322,6 +7234,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6375,6 +7295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6404,6 +7328,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6457,6 +7389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6486,6 +7422,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6539,6 +7483,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6568,6 +7516,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6621,6 +7577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6650,6 +7610,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6703,6 +7671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6732,6 +7704,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6785,6 +7765,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6814,6 +7798,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6867,6 +7859,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6896,6 +7892,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -6949,6 +7953,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6978,6 +7986,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7031,6 +8047,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7060,6 +8080,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7113,6 +8141,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7142,6 +8174,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7195,6 +8235,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7224,6 +8268,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7277,6 +8329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7306,6 +8362,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7359,6 +8423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7388,6 +8456,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7437,6 +8513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7466,6 +8546,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7519,6 +8607,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7548,6 +8640,14 @@ PrefabInstance:
     - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_Name
       value: EnemySpawnerAtRoof (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206480317444582436, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384461792759211477, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalScale.x
@@ -7599,6 +8699,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6191563533902744722, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749632141657210310, guid: ac8008ce12db0d140aefa8576dde0310, type: 3}
+      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
