@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwingGrap : MonoBehaviour
@@ -17,12 +15,30 @@ public class SwingGrap : MonoBehaviour
     public RaycastHit _predictionHit;
     public float _predictionSphereCastRadius;
     public Transform _predictionPoint;
+
+    PlayerCrossHair _crossHair; // Players Cross Hair
+
+    private void Start()
+    {
+        _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(_swingKey)) StartSwing();
         if (Input.GetKeyUp(_swingKey)) StopSwing();
         CheckForSwingPoints();
         if (_joint != null) OdmGearMoveMent();
+
+        _crossHair.SetGrappling(_pm._swinging);
+        if (_pm._swinging)
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
+        }
+        else
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
+        }
     }
 
     void LateUpdate()
@@ -36,6 +52,7 @@ public class SwingGrap : MonoBehaviour
         RaycastHit sphereCastHit;
         Physics.SphereCast(_cam.position, _predictionSphereCastRadius, _cam.forward, out sphereCastHit, _maxSwingDistance, IsGrappleable);
         RaycastHit raycastHit;
+        // グラップルできるかのフラグ
         Physics.Raycast(_cam.position, _cam.forward, out raycastHit, _maxSwingDistance, IsGrappleable);
 
         Vector3 realHitPoint;

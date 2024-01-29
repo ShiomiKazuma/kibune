@@ -49,7 +49,7 @@ public class Doroon : MonoBehaviour
 
     private void Awake()
     {
-        //_player = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
     // Start is called before the first frame update
     void Start()

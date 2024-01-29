@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Build;
 using UnityEngine;
 
 public class Grappling : MonoBehaviour
@@ -29,10 +25,13 @@ public class Grappling : MonoBehaviour
     [Header("グラップリングするインプットキー")]
     public KeyCode grappleKey = KeyCode.Mouse1;
     bool Isgrappling;
+
+    PlayerCrossHair _crossHair; // Players Cross Hair
    
     void Start()
     {
         _pm = GetComponent<PlayerMovementGrappling>();
+        _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
     }
 
     void Update()
@@ -42,6 +41,16 @@ public class Grappling : MonoBehaviour
         //クールダウンタイマーを減らす処理
         if(_grapplingCTTimer > 0)
             _grapplingCTTimer -= Time.deltaTime;
+
+        _crossHair.SetGrappling(Isgrappling);
+        if (Isgrappling)
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Close);
+        }
+        else
+        {
+            _crossHair.SetCrossHairStatus(PlayerCrossHair.CrossHairStatus.Deploy);
+        }
     }
 
     private void LateUpdate()
