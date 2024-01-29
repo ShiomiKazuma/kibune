@@ -33,8 +33,9 @@ public class Doroon : MonoBehaviour
     float _explosionPos = 2f;
     float _explosionTimer;
     bool IsChase = false;
-    //プレイヤーのゲームオブジェクト
-    [SerializeField, Header("プレイヤー")] GameObject _player;
+    ////プレイヤーのゲームオブジェクト
+    //[SerializeField, Header("プレイヤー")]
+    GameObject _player;
     //現在の凝視時間
     float _lookTimer;
     Rigidbody _rb;
@@ -42,7 +43,7 @@ public class Doroon : MonoBehaviour
 
     public enum State
     {
-        Serch,
+        Search,
         Look,
         Chase
     }
@@ -56,7 +57,7 @@ public class Doroon : MonoBehaviour
     {
         _lookTimer = 0;
         _explosionTimer = 0;
-        _state = State.Serch;
+        _state = State.Search;
         _rb = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
         _collider.enabled = false;
@@ -65,9 +66,9 @@ public class Doroon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_state == State.Serch)
+        if (_state == State.Search)
         {
-            Serch();
+            Search();
         }
         else if (_state == State.Look)
         {
@@ -80,7 +81,7 @@ public class Doroon : MonoBehaviour
     }
 
     /// <summary> サーチ状態の処理 </summary>
-    private void Serch()
+    private void Search()
     {
         Debug.Log("探しています");
         //回転をリセットする
@@ -127,13 +128,17 @@ public class Doroon : MonoBehaviour
                     _image.sprite = _biltukuri;
                     IsChase = true;
                 }
+                var c = _image.color;
+                _image.color = new Color(c.r, c.g, c.b, 255);
             }
             else if (!(hit.collider.gameObject.tag == "Player"))
             {
                 //凝視時間をリセットする
                 _lookTimer = 0;
                 _image.sprite = null;
-                _state = State.Serch;
+                _state = State.Search;
+                var c = _image.color;
+                _image.color = new Color(c.r, c.g, c.b, 0);
             }
         }
         else
@@ -141,7 +146,9 @@ public class Doroon : MonoBehaviour
             //凝視時間をリセットする
             _lookTimer = 0;
             _image.sprite = null;
-            _state = State.Serch;
+            _state = State.Search;
+            var c = _image.color;
+            _image.color = new Color(c.r, c.g, c.b, 0);
         }
     }
 

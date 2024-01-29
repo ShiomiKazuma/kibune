@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 6246427876558699045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.235115, y: 32.11118, z: -121.805084}
+  m_LocalPosition: {x: -34.685116, y: 48.571186, z: -377.14508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -91,7 +91,6 @@ MonoBehaviour:
   _biltukuri: {fileID: 21300000, guid: 69625ee7f1b27284c9b7a22f6e0ff3e9, type: 3}
   _explosionTime: 17.1
   _explosionPos: 2
-  _player: {fileID: 0}
 --- !u!54 &3015826024199048957
 Rigidbody:
   m_ObjectHideFlags: 0

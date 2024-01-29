@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _titleSceneName: TitleScene
-  _sceneStat: 2
+  _sceneStat: 0
 --- !u!114 &8427265154444186332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e6d5505bd87204498bef80c040c5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverName: GameOverScene
+  _gameOverSceneName: GameOver
 --- !u!114 &5930560542068095500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,3 +297,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausedText: {fileID: 0}
+  _settingsExit: {fileID: 0}

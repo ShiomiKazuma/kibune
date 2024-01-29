@@ -22,9 +22,10 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
         {
             switch (scene.name)
             {
-                case "Prolougue":
-                    break;
                 case "Epilougue":
+                case "Prolougue":
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
                     break;
                 default:// title scene
                     _hudManager.ToFront(0);

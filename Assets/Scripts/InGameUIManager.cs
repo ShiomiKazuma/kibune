@@ -2,6 +2,7 @@ using SLib.Singleton;
 using SLib.Systems;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InGameUIManager : SingletonBaseClass<InGameUIManager>
 {
@@ -12,11 +13,14 @@ public class InGameUIManager : SingletonBaseClass<InGameUIManager>
 
     PauseManager _pMan;
     GameInfo _gInfo;
+    HUDManager _hudMan;
 
     void OnPaused()
     {
         _pausedText.text = "Paused...";
+        _settingsExit.gameObject.SetActive(false);
     }
+
     void OnEndPaused()
     {
         _pausedText.text = " ";
@@ -25,10 +29,15 @@ public class InGameUIManager : SingletonBaseClass<InGameUIManager>
     protected override void ToDoAtAwakeSingleton()
     {
         _pMan = GameObject.FindFirstObjectByType<PauseManager>();
+    }
+
+    private void Start()
+    {
         _gInfo = GameObject.FindFirstObjectByType<GameInfo>();
+        _hudMan = GameObject.FindFirstObjectByType<HUDManager>();
         if (_gInfo.SceneStatus == GameInfo.SceneTransitStatus.To_InGameScene)
         {
-            _settingsExit.gameObject.SetActive(false);
+            _hudMan.ToFront(2);
         }
     }
 
