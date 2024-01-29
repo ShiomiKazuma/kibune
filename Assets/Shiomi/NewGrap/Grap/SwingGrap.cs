@@ -16,6 +16,9 @@ public class SwingGrap : MonoBehaviour
     public float _predictionSphereCastRadius;
     public Transform _predictionPoint;
 
+    [SerializeField, Header("グラップリングフック")]
+    GameObject _hook;
+
     PlayerCrossHair _crossHair; // Players Cross Hair
     PauseManager _pMan;
 
@@ -62,6 +65,10 @@ public class SwingGrap : MonoBehaviour
         _pm._swinging = true;
 
         _swingPoint = _predictionHit.point;
+
+        _hook.SetActive(true);
+        _hook.transform.position = _swingPoint;
+
         _joint = _player.gameObject.AddComponent<SpringJoint>();
         _joint.autoConfigureConnectedAnchor = false;
         _joint.connectedAnchor = _swingPoint;
@@ -83,6 +90,9 @@ public class SwingGrap : MonoBehaviour
         _pm._swinging = false;
         _lr.positionCount = 0;
         Destroy(_joint);
+
+        _hook.SetActive(false);
+        _hook.transform.position = this.transform.position;
     }
 
     Vector3 _currentGrapplePosition;
