@@ -5,16 +5,16 @@ using UnityEngine.UI;
 // 加工 五島
 public class SimpleConversation : MonoBehaviour
 {
-    [SerializeField] Text _convText; // 会話のテキスト表示
-    [SerializeField] CanvasGroup _convPanel; // テキストのBGパネル
+    [SerializeField,Header("会話の表示させるText")] Text _convText; // 会話のテキスト表示
+    [SerializeField, Header("テキストパネルのCanvasGroup")] CanvasGroup _convPanel; // テキストパネルのCanvasGroup
     //[SerializeField] Button _convStartButton; // ”会話をする”ボタン
     //[SerializeField] Button _convNextButton; // ”次へ”ボタン
-    [SerializeField] Transform _speakerTransform; // 会話者
-    [SerializeField] DialogueFeeder _dialogueFeeder; // 使用するDialogueFeeder
+    [SerializeField, Header("指名手配ポスターのTransform")] Transform _speakerTransform; // 指名手配ポスターのTransform
+    [SerializeField, Header("使用するDialogueFeeder")] DialogueFeeder _dialogueFeeder; // 使用するDialogueFeeder
 
-    [SerializeField] LayerMask _playerLayer; // プレイヤーレイヤ
+    [SerializeField, Header("プレイヤーのレイヤー")] LayerMask _playerLayer; // プレイヤーのレイヤー
 
-    [SerializeField, Range(1f, 5f)] float _conversationRange; // 会話可能距離
+    [SerializeField, Header("会話可能距離"), Range(1f, 5f)] float _conversationRange; // 会話可能距離
 
     bool _isConversible = false; // 会話スタートしたフラグ
 
