@@ -1,20 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 // 作成 菅沼
-// 加工 五島
+// 引継ぎ 五島
 public class SimpleConversation : MonoBehaviour
 {
-    [SerializeField,Header("会話の表示させるText")] Text _convText; // 会話のテキスト表示
-    [SerializeField, Header("テキストパネルのCanvasGroup")] CanvasGroup _convPanel; // テキストパネルのCanvasGroup
-    //[SerializeField] Button _convStartButton; // ”会話をする”ボタン
-    //[SerializeField] Button _convNextButton; // ”次へ”ボタン
-    [SerializeField, Header("指名手配ポスターのTransform")] Transform _speakerTransform; // 指名手配ポスターのTransform
-    [SerializeField, Header("使用するDialogueFeeder")] DialogueFeeder _dialogueFeeder; // 使用するDialogueFeeder
+    [SerializeField, Header("読ませるセリフ")]
+    List<string> _texts = new List<string>();
 
-    [SerializeField, Header("プレイヤーのレイヤー")] LayerMask _playerLayer; // プレイヤーのレイヤー
+    [SerializeField, Header("プレイヤーのレイヤー")] 
+    LayerMask _playerLayer; // プレイヤーのレイヤー
 
-    [SerializeField, Header("会話可能距離"), Range(1f, 5f)] float _conversationRange; // 会話可能距離
+    [SerializeField, Header("会話可能距離"), Range(1f, 10f)] 
+    float _conversationRange; // 会話可能距離
+
+    Text _convText; // 会話のテキスト表示
+    CanvasGroup _convPanel; // テキストパネルのCanvasGroup
+    DialogueFeeder _dFeeder; // 使用するDialogueFeeder
 
     bool _isConversible = false; // 会話スタートしたフラグ
 
@@ -24,10 +27,12 @@ public class SimpleConversation : MonoBehaviour
         _isConversible = true;
     }
 
-    private void Awake()
+    private void Start()
     {
-        //_convStartButton.gameObject.SetActive(false); // みえなくする
-        //_convPanel.gameObject.SetActive(false); // みえなくする
+        _dFeeder = GameObject.FindObjectOfType<DialogueFeeder>();
+        _convPanel = _dFeeder.gameObject.GetComponent<CanvasGroup>();
+        _convText = _dFeeder.gameObject.transform.GetChild(0).GetComponent<Text>();
+
         _convPanel.alpha = 0;
         _convPanel.blocksRaycasts = false;
         _convPanel.interactable = false;
@@ -36,53 +41,43 @@ public class SimpleConversation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool canSpeak = Physics.CheckSphere(_speakerTransform.position, _conversationRange, _playerLayer); // 会話可能圏内にいるなら
-        //_convPanel.gameObject.SetActive(canSpeak);
+        bool canSpeak = Physics.CheckSphere(transform.position, _conversationRange, _playerLayer); // 会話可能圏内にいるなら
 
         // 会話可能範囲の出入りを判定
-        if (_isConversible ^ canSpeak)
+        if (!_isConversible && canSpeak)
         {
-            _isConversible = canSpeak;
+            _isConversible = true;
 
             if (canSpeak && _convPanel) // 会話開始したら会話ボックスを開く
             {
                 _convPanel.alpha = 1f;
                 _convPanel.blocksRaycasts = true;
                 _convPanel.interactable = true;
-                _dialogueFeeder.TextStart();
+
+                _dFeeder.OverrideScenarios(_texts);
+                _dFeeder.TextStart();
             }
-            //else if (!_dialogueFeeder.IsUpdatingText)　// 会話終了したら会話ボックスを閉じる
-            //{
-            //    _convPanel.alpha = 0;
-            //    _convPanel.blocksRaycasts = false;
-            //    _convPanel.interactable = false;
-            //    _isConversible = false;
-            //    _dialogueFeeder.StopFeedText();
-            //}
         }
 
         // 会話終了または会話可能範囲の外に出たら会話ボックスを閉じる
-        if (!canSpeak|| !_dialogueFeeder.IsUpdatingText)
+        if ((!canSpeak || !_dFeeder.IsUpdatingText) && _isConversible)
         {
             _convPanel.alpha = 0;
             _convPanel.blocksRaycasts = false;
             _convPanel.interactable = false;
-            _dialogueFeeder.StopFeedText();
-        }
 
-        //_convStartButton.gameObject.SetActive(canSpeak); // 可視化
-        //if (!canSpeak && _isConversible)
-        //{
-        //    _convPanel.gameObject.SetActive(false); // みえなくする
-        //    _isConversible = false;
-        //}
+            _isConversible = false;
+
+            _dFeeder.OverrideScenarios(null);
+            _dFeeder.StopFeedText();
+        }
     }
 
 #if UNITY_EDITOR_64
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(_speakerTransform.position, _conversationRange);
+        Gizmos.DrawWireSphere(transform.position, _conversationRange);
     }
 #endif
 }

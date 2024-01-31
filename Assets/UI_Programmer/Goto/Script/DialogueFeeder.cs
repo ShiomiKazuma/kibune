@@ -39,6 +39,8 @@ public class DialogueFeeder : MonoBehaviour
     /// <summary>テキストの切り替えにかかる時間を設定します</summary>
     public void SetSwitchScenarioTime(float time) => _switchScenarioTime = time;
 
+    public void OverrideScenarios(List<string> texts) => _scenarios = texts;
+
     /// <summary>
     /// 文字送りを始める
     /// </summary>

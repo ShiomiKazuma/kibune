@@ -10,7 +10,7 @@ public class GameManager : SingletonBaseClass<GameManager>
     public void GameOver()  // ˆê’â~‚µ‚ÄGOˆ—
     {
         PauseManager pm = GameObject.FindObjectOfType<PauseManager>();
-        pm.BeginPause();
+        pm.CallBeginPause();
     }
 
     protected override void ToDoAtAwakeSingleton()

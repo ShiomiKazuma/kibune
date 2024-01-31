@@ -7,9 +7,9 @@ public class PauseManager : SingletonBaseClass<PauseManager>   // 院ゲームのみの
 {
     [SerializeField] GameObject _inventoryUI;
     /// <summary> ポーズ画面に入ったときに呼ばれるメソッド </summary>
-    public Action BeginPause;
+    public event Action BeginPause;
     /// <summary> ポーズ画面が終わった時に呼ばれるメソッド </summary>
-    public Action EndPause;
+    public event Action EndPause;
 
     HUDManager _hudMan;
     GameInfo _gInfo;
@@ -18,6 +18,15 @@ public class PauseManager : SingletonBaseClass<PauseManager>   // 院ゲームのみの
     bool _isPaused;
     public bool IsPaused => _isPaused;
 
+    public void CallBeginPause()
+    {
+        BeginPause();
+    }
+
+    public void CallEndPause()
+    {
+        EndPause();
+    }
 
     protected override void ToDoAtAwakeSingleton()
     {

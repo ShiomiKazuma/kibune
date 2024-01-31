@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &562906791782989372
+--- !u!1001 &7756809664104197212
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 83.014175
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 7.7595425
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -138.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6e848006cf79add4bb8cb56c9bcecb68, type: 2}
     - target: {fileID: 919132149155446097, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       propertyPath: m_Name
-      value: WantedPoster_01_02
+      value: WantedPoster_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62,26 +62,28 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 3682548570818829801}
+      addedObject: {fileID: 671321959600546523}
   m_SourcePrefab: {fileID: 100100000, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
---- !u!1 &796769275496629101 stripped
+--- !u!1 &7450309048507977997 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
-  m_PrefabInstance: {fileID: 562906791782989372}
+  m_PrefabInstance: {fileID: 7756809664104197212}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3682548570818829801
+--- !u!114 &671321959600546523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796769275496629101}
+  m_GameObject: {fileID: 7450309048507977997}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e28147bb54ece744b51ead3accde6e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texts: []
+  _texts:
+  - "\u3068\u3093\u3067\u3082\u306A\u3044\u30E9\u30AF\u30AC\u30AD\u3057\u3084\u304C\u3063\u3066"
+  - "\u30AF\u30BD\u3063\u771F\u72AF\u4EBA\u3092\u898B\u3064\u3051\u51FA\u3057\u3066\u3084\u308B\uFF01"
   _playerLayer:
     serializedVersion: 2
     m_Bits: 128
