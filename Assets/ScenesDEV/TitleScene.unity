@@ -404,6 +404,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SaveSettingsData
       objectReference: {fileID: 0}
+    - target: {fileID: 917876417533119465, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1483563912734258953, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -680,6 +684,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3789214905259904490, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3897369939281479171, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: _objects.Array.size
       value: 4
@@ -834,6 +842,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4447024625648643748, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559523618373417878, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
+      propertyPath: _scenarios.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220448869652591384, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}

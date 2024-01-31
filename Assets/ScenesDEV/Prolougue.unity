@@ -959,6 +959,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5309563796461362173, guid: 187df6e421c9ca44b89fa1f985cd151b, type: 3}
+      propertyPath: _scenarios.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309563796461362173, guid: 187df6e421c9ca44b89fa1f985cd151b, type: 3}
+      propertyPath: _scenarios.Array.data[0]
+      value: "\u6C11\u8846\uFF1A\u3048\u3001\u3042\u308C\u72AF\u4EBA\u3058\u3083\u306A\u3044...\uFF1F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309563796461362173, guid: 187df6e421c9ca44b89fa1f985cd151b, type: 3}
+      propertyPath: _scenarios.Array.data[1]
+      value: "(\u307E\u305A\u3044\u3063...)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309563796461362173, guid: 187df6e421c9ca44b89fa1f985cd151b, type: 3}
+      propertyPath: _scenarios.Array.data[2]
+      value: "(\u4EBA\u304C\u3044\u306A\u3044\u5834\u6240\u3078\u884C\u304B\u306A\u3051\u308C\u3070)"
+      objectReference: {fileID: 0}
     - target: {fileID: 5982927634435938129, guid: 187df6e421c9ca44b89fa1f985cd151b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
