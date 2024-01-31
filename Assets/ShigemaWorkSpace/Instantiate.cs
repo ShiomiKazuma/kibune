@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Instantiate : MonoBehaviour
@@ -35,6 +36,6 @@ public class Instantiate : MonoBehaviour
     void RandomInstantiate()
     {
         var index = Random.Range(0, _objects.Length);
-        Instantiate(_objects[index], gameObject.transform);
+        var go = Instantiate(_objects[index], gameObject.transform);
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 public class DialogueFeeder : MonoBehaviour
 {
     // おそらくここにシナリオデータが入るため変更される
-    [SerializeField, Header("シナリオを格納する")] string[] _scenarios;
+    [SerializeField, Header("シナリオを格納する")] List<string> _scenarios;
     [SerializeField, Header("表示させるTextUI")] Text _uiText;
     [SerializeField, Range(0.001f, 0.3f), Header("1文字の表示にかかる時間")] float _intervalForCharacterDisplay = 0.05f;
     [SerializeField, Range(0.1f, 5f), Header("テキストの切り替えにかかる時間")] float _switchScenarioTime = 1f;
@@ -119,7 +120,7 @@ public class DialogueFeeder : MonoBehaviour
     void SetNextLine()
     {
         // 配列の最後に達していないなら時刻等をキャッシュする
-        if (_currentLine < _scenarios.Length)
+        if (_currentLine < _scenarios.Count)
         {
             _currentText = _scenarios[_currentLine];
             // 想定表示時間と現在の時刻をキャッシュ

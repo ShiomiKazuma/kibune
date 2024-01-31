@@ -23,8 +23,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ScenesDEV/Epilougue.unity
     guid: 5e8a38dea019c6a418854a9fb256b6cf
-  - enabled: 1
-    path: Assets/ScenesDEV/GameOverScene.unity
-    guid: a9aedd3c5b0e02047a8ae318db1dca36
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b37c0db6958e52444bfeae2b6872da47, type: 2}
