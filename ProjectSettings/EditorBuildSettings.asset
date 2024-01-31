@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/ScenesDEV/Prolougue.unity
     guid: cf7067fa83c0c8a4bb72f336bcce4d2f
   - enabled: 1
-    path: Assets/ScenesDEV/InGameTesters.unity
+    path: Assets/ScenesDEV/InGame.unity
     guid: 7d767df98cd71b649907ed4850efe2c8
   - enabled: 1
     path: Assets/ScenesDEV/FramedInGame_LastEvent.unity
