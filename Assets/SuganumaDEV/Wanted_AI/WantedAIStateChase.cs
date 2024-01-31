@@ -1,5 +1,6 @@
 // ä«óùé“ êõè¿
 using SLib.StateSequencer;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,12 +17,14 @@ public class WantedAIStateChase : IState
     LayerMask _targetLayer;
     Transform _selfTransform;
     NavMeshAgent _agent;
-    public WantedAIStateChase(float sightRange, LayerMask targetLayer, Transform selfTransform, NavMeshAgent agent)
+    Action CB;
+    public WantedAIStateChase(float sightRange, LayerMask targetLayer, Transform selfTransform, NavMeshAgent agent, Action callBack)
     {
         _sightRange = sightRange;
         _targetLayer = targetLayer;
         _selfTransform = selfTransform;
         _agent = agent;
+        CB = callBack;
     }
 
     public void UpdateSelf(Transform selfTransform)
@@ -33,6 +36,7 @@ public class WantedAIStateChase : IState
     {
         Knock(__DEBUG__,
         () => Debug.Log("í«Ç§ÇºÅI"));
+        CB();
     }
 
     public void Update()

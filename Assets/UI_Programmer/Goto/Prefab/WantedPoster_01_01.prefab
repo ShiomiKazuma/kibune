@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 937836f60f0ba0a4a92ed7a5f8ff9eda, type: 2}
     - target: {fileID: 919132149155446097, guid: f7054cb4aca0e304391c21b106b1834d, type: 3}
       propertyPath: m_Name
-      value: BgMD_Poster_01_01
+      value: WantedPoster_01_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -81,16 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e28147bb54ece744b51ead3accde6e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _convText: {fileID: 0}
-  _convPanel: {fileID: 0}
-  _speakerTransform: {fileID: 5551797401610009433}
-  _dialogueFeeder: {fileID: 0}
+  _texts: []
   _playerLayer:
     serializedVersion: 2
     m_Bits: 128
   _conversationRange: 3
---- !u!4 &5551797401610009433 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7054cb4aca0e304391c21b106b1834d, type: 3}
-  m_PrefabInstance: {fileID: 5368654896262012082}
-  m_PrefabAsset: {fileID: 0}

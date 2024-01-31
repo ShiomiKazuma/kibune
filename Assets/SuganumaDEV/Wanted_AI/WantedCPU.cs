@@ -62,6 +62,7 @@ public class WantedCPU : MonoBehaviour
 
     private void Awake()
     {
+        if (_target == null) _target = GameObject.FindGameObjectWithTag("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
         _selfTransform = transform;
 
@@ -69,7 +70,11 @@ public class WantedCPU : MonoBehaviour
         _stateMachine = new();
 
         // 各ステート初期化
-        _sDef = new(_agent, _selfTransform, _patrolingPath);
+        _sDef = new(_agent, _selfTransform, _patrolingPath, _indicator
+            , () =>
+            {
+
+            });
         _sGaze = new(_sightRange, _gazingTime, transform, _targetLayer, _agent
             , (tTransform) =>
             {
@@ -90,7 +95,11 @@ public class WantedCPU : MonoBehaviour
             } // On Target Found
             );
 
-        _sChase = new(_sightRange, _targetLayer, transform, _agent);
+        _sChase = new(_sightRange, _targetLayer, transform, _agent
+            , () =>
+            {
+
+            });
         _sAttack = new(_attackRange, transform, _targetLayer, _agent
             , () =>
             {

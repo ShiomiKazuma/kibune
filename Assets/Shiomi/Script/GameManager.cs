@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class GameManager : SingletonBaseClass<GameManager>
 {
-    public static GameManager instance;
-    [SerializeField, Header("ゲームオーバー画面")] string _gameOverSceneName;
-
     GameInfo _gInfo;
     HUDManager _hudManager;
 
-    public void GameOver()
+    public void GameOver()  // 一時停止してGO処理
     {
-        //ゲームオーバー画面に遷移
-        UnityEngine.SceneManagement.SceneManager.LoadScene(_gameOverSceneName);
+        PauseManager pm = GameObject.FindObjectOfType<PauseManager>();
+        pm.CallBeginPause();
     }
 
     protected override void ToDoAtAwakeSingleton()

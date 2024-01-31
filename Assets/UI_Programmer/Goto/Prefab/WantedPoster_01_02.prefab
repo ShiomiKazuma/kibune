@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6e848006cf79add4bb8cb56c9bcecb68, type: 2}
     - target: {fileID: 919132149155446097, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
       propertyPath: m_Name
-      value: BgMD_Poster_01_02
+      value: WantedPoster_01_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64,11 +64,6 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 3682548570818829801}
   m_SourcePrefab: {fileID: 100100000, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
---- !u!4 &19529267219814871 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
-  m_PrefabInstance: {fileID: 562906791782989372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &796769275496629101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 38481a6aec4e3894682e9f625d2949eb, type: 3}
@@ -86,10 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e28147bb54ece744b51ead3accde6e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _convText: {fileID: 0}
-  _convPanel: {fileID: 0}
-  _speakerTransform: {fileID: 19529267219814871}
-  _dialogueFeeder: {fileID: 0}
+  _texts: []
   _playerLayer:
     serializedVersion: 2
     m_Bits: 128
