@@ -71,6 +71,13 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         }
     }
 
+    #region Story
+    void Story(List<bool> progress)
+    {
+
+    }
+    #endregion
+
     protected override void ToDoAtAwakeSingleton()
     {
 
