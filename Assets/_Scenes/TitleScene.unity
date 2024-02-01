@@ -1332,6 +1332,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 98240487089762402, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
+      propertyPath: SceneName
+      value: LastScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 98240487089762402, guid: 6399caf49fe5c1a448c81f41f625cced, type: 3}
       propertyPath: Proofs.Array.size
       value: 3
       objectReference: {fileID: 0}
