@@ -81,14 +81,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionGameObject: {fileID: 5833211407987960556, guid: ccfdba59039d7c745b88f4fd43be4aeb, type: 3}
-  _sarchRange: 10
+  _searchRange: 10
   _lookTime: 2
-  _doroonSpeed: 1
-  _doroonLimitSpeed: 3
+  _moveSpeed: 1
+  _movingLimitSpeed: 5
   _state: 0
   _image: {fileID: 3752471989600128361}
-  _hatena: {fileID: 21300000, guid: f3a228d149645954d907f599e9f5a4e0, type: 3}
-  _biltukuri: {fileID: 21300000, guid: 69625ee7f1b27284c9b7a22f6e0ff3e9, type: 3}
+  _sptSearch: {fileID: 21300000, guid: f3a228d149645954d907f599e9f5a4e0, type: 3}
+  _sptFound: {fileID: 21300000, guid: 69625ee7f1b27284c9b7a22f6e0ff3e9, type: 3}
   _explosionTime: 17.1
   _explosionPos: 2
 --- !u!54 &3015826024199048957

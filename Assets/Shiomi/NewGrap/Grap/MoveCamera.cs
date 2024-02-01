@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
+    [SerializeField, Header("カメラの原点のポジションになるものをアタッチ")]
     public Transform _cameraPosition;
 
     private void Update()

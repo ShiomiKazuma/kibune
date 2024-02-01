@@ -11,6 +11,8 @@ public class PlayerCrossHair : MonoBehaviour
     [SerializeField]
     GameObject _imgTop;
     [SerializeField]
+    GameObject _imgTopSwing;
+    [SerializeField]
     Image _imgBtmLeft;
     [SerializeField]
     Image _imgBtmRight;
@@ -37,6 +39,8 @@ public class PlayerCrossHair : MonoBehaviour
     public bool IsGrappling => _isGrappling;
 
     public void SetGrappling(bool isGrappling) => _imgTop.SetActive(isGrappling);
+
+    public void SetSwingGrappling(bool isSGrappling) => _imgTopSwing.SetActive(isSGrappling);
 
     public void SetCrossHairStatus(CrossHairStatus crossHairStatus)
     {
