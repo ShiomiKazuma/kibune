@@ -25,7 +25,7 @@ namespace Shiomi
             transform.SetAsLastSibling();
         }
 
-        //public void AddItem(Item newItem)
+        //public void AddActiveItem(Item newItem)
         //{
         //    _item = newItem;
 
