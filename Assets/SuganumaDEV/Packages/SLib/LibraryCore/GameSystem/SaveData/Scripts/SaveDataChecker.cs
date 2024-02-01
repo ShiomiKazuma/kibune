@@ -17,6 +17,8 @@ namespace SLib
             [SerializeField]
             Button _continueButton;
             [SerializeField]
+            Button _toLastButton;
+            [SerializeField]
             PlayerSaveDataSerializer _dataSerializer;
 
             GameInfo _gameInfo;
@@ -26,6 +28,8 @@ namespace SLib
             {
                 _gameInfo = GameObject.FindFirstObjectByType<GameInfo>();
                 _sceneLoader = GameObject.FindFirstObjectByType<SceneLoader>();
+                var eman = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
+                var data = eman.ReadSaveData();
 
                 if (_gameInfo.TitleSceneName != SceneManager.GetActiveScene().name) return; // If Active Scene Is NOT TitleScene, DoNothing
 
@@ -41,6 +45,23 @@ namespace SLib
                 {
                     _continueButton.interactable = false;
                     _continueButton.gameObject.SetActive(false);
+                }
+
+                if (data.Finished[2])
+                {
+                    _toLastButton.interactable = true;
+                    _toLastButton.gameObject.SetActive(true);
+
+                    _continueButton.interactable = false;
+                    _continueButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    _toLastButton.interactable = false;
+                    _toLastButton.gameObject.SetActive(false);
+
+                    _continueButton.interactable = true;
+                    _continueButton.gameObject.SetActive(true);
                 }
             }
         }

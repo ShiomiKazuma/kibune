@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class FramedInGameEventProgressData
@@ -110,6 +111,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         else if (progress[2])
         {
             // ÅIŒˆí
+            Debug.Log("To FINAL!");
             var sceneLoader = GameObject.FindObjectOfType<SceneLoader>();
             sceneLoader.LoadSceneByName(SceneName);
         }

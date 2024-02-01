@@ -32,7 +32,7 @@ public class SwingGrap : MonoBehaviour
         RaycastHit raycastHit;
         // グラップルできるかのフラグ
         var stat = Physics.Raycast(_cam.position, _cam.forward, out raycastHit, _maxSwingDistance, IsGrappleable);
-        _crossHair.SetGrappling(stat);
+        _crossHair.SetSwingGrappling(stat);
 
         Vector3 realHitPoint;
         if (raycastHit.point != Vector3.zero)
