@@ -23,9 +23,6 @@ public class UiInventory : MonoBehaviour
 
     private void RefreshInventoryItems()
     {
-        int x = 0;
-        int y = 0;
-        
         //foreach(Item item in _inventory.GetItemsList())
         //{
         //    RectTransform itemSlotRectTransform = Instantiate(_itemSlotTemplate, _itemSlotContainer).GetComponent<RectTransform>();
