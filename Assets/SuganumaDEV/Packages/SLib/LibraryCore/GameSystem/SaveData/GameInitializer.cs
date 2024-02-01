@@ -3,19 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SLib.Systems;
+using UnityEditor;
 // çÏê¨ êõè¿
 public class GameInitializer : MonoBehaviour
 {
     PlayerSaveDataSerializer _dataSerializer;
 
-    void Awake()
-    {
-    }
-
-    private void Start()
-    {
-        InitializePlayer();
-    }
 
     public void InitializePlayer()      // ÉQÅ[ÉÄÉVÅ[Éìì«Ç›çûÇ›å„Ç…Ç±ÇÍÇì«Ç›çûÇﬁ
     {
@@ -28,5 +21,23 @@ public class GameInitializer : MonoBehaviour
         go.SetActive(true);
 
         Debug.Log("PLAYER POS");
+    }
+
+    void InitializeInventory()
+    {
+        var dataMan = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
+        var idata = dataMan.ReadSaveData();
+        var flagMan = GameObject.FindObjectOfType<FlagManager>();
+        flagMan.OverwriteProgress(idata.Finished);
+    }
+
+    void Awake()
+    {
+    }
+
+    private void Start()
+    {
+        InitializePlayer();
+        InitializeInventory();
     }
 }
