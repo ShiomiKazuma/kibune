@@ -22,7 +22,10 @@ public class UIObjRotator : MonoBehaviour
         {
             _initialRotation = obj.transform.rotation;
             MeshRenderer[] meshRenderer = obj.GetComponentsInChildren<MeshRenderer>();
-            meshRenderer[0].enabled = false;
+            foreach (var item in meshRenderer)
+            {
+                item.enabled = false; 
+            }
         }
 
         _mainCamera = Camera.main;
@@ -33,13 +36,19 @@ public class UIObjRotator : MonoBehaviour
         foreach (var obj in _targetObjects)
         {
             MeshRenderer[] meshRenderer = obj.GetComponentsInChildren<MeshRenderer>();
-            meshRenderer[0].enabled = false;
+            foreach (var item in meshRenderer)
+            {
+                item.enabled = false; 
+            }
         }
 
         _currentTargetObject = _targetObjects[id];
         _currentTargetObject.transform.rotation = _initialRotation;
         MeshRenderer[] targetMeshRenderer = _currentTargetObject.GetComponentsInChildren<MeshRenderer>();
-        targetMeshRenderer[0].enabled = true;
+        foreach (var item in targetMeshRenderer)
+        {
+            item.enabled = true; 
+        }
     }
 
     private void Update()

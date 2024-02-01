@@ -349,6 +349,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247728644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3819578666566263362, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+  m_PrefabInstance: {fileID: 1887131891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c62e1bc1351e11419edb23794815e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &293737326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,10 +1894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e28147bb54ece744b51ead3accde6e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _convText: {fileID: 4605095028106149872}
-  _convPanel: {fileID: 4605095028106149878}
-  _speakerTransform: {fileID: 909236247}
-  _dialogueFeeder: {fileID: 4605095028106149877}
+  _texts: []
   _playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3736,6 +3744,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 538069590}
     m_Modifications:
+    - target: {fileID: 1631157301846887227, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFlavourText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631157301846887227, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToFront
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631157301846887227, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shiomi.InventorySlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631157301846887227, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Shiomi.InventorySlot, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2049239699793646438, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3820,6 +3844,46 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 538069589}
+    - target: {fileID: 5097342839676944033, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFlavourText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097342839676944033, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToFront
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097342839676944033, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shiomi.InventorySlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097342839676944033, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Shiomi.InventorySlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591078608299818051, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 247728644}
+    - target: {fileID: 6591078608299818051, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 247728644}
+    - target: {fileID: 6591078608299818051, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFlavourText
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591078608299818051, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToFront
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591078608299818051, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shiomi.InventorySlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591078608299818051, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Shiomi.InventorySlot, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8079851098923611800, guid: 6f129b20a355fa94193aefaa79252542, type: 3}
       propertyPath: m_Name
       value: Inventory
@@ -4987,22 +5051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4605095028106149877 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7274400608070664984, guid: a65c6ab145aff8c43aedbe285a049630, type: 3}
-  m_PrefabInstance: {fileID: 4605095028106149870}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7526a7bd84703044cb39cabe2a88e65d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!225 &4605095028106149878 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 6065243405734084021, guid: a65c6ab145aff8c43aedbe285a049630, type: 3}
-  m_PrefabInstance: {fileID: 4605095028106149870}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5409536346649397954 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4884435483494688330, guid: c0bb696ea58cc524bb030f96d98b119d, type: 3}

@@ -14,12 +14,12 @@ namespace Shiomi
         [SerializeField, Header("アイテムの説明文")] string _text;
         [SerializeField, Header("アイテムのID")] int _itemId;
         //3dオブジェクトとテキストの表示
-        public void Hyouzi()
+        public void SetFlavourText()
         {
             _textBox.text = _text;
         }
 
-        public void Hierarchy()
+        public void ToFront()
         {
             //ヒエラルキー上の一番下に移動して、前面に表示される
             transform.SetAsLastSibling();
