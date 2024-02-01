@@ -4,23 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using SLib.Systems;
 // çÏê¨ êõè¿
-public class GameInitializer : SingletonBaseClass<GameInitializer>
+public class GameInitializer : MonoBehaviour
 {
-    [SerializeField]
-    Transform _playerTransform;
-
     PlayerSaveDataSerializer _dataSerializer;
 
-    protected override void ToDoAtAwakeSingleton()
+    void Awake()
     {
-       _dataSerializer = GameObject.FindObjectOfType<PlayerSaveDataSerializer>();
+    }
+
+    private void Start()
+    {
+        InitializePlayer();
     }
 
     public void InitializePlayer()      // ÉQÅ[ÉÄÉVÅ[Éìì«Ç›çûÇ›å„Ç…Ç±ÇÍÇì«Ç›çûÇﬁ
     {
-        SaveDataTemplate saveDataTemplate = _dataSerializer.ReadSaveData();
-        _playerTransform.position = saveDataTemplate._lastStandingPosition;
-        _playerTransform.rotation = saveDataTemplate._lastStandingRotation;
-        print($"{saveDataTemplate._lastStandingPosition.ToString()} : {saveDataTemplate._lastStandingRotation.ToString()}");
+       _dataSerializer = GameObject.FindObjectOfType<PlayerSaveDataSerializer>();
+        var saveDataTemplate = _dataSerializer.ReadSaveData();
+        var go = GameObject.FindGameObjectWithTag("Player");
+        go.SetActive(false);
+        go.transform.position = saveDataTemplate._lastStandingPosition;
+        go.transform.rotation = saveDataTemplate._lastStandingRotation;
+        go.SetActive(true);
+
+        Debug.Log("PLAYER POS");
     }
 }
