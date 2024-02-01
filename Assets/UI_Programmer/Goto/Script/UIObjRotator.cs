@@ -8,8 +8,9 @@ public class UIObjRotator : MonoBehaviour
     [SerializeField, Header("回転のスピード\nX：縦方向　Y：横方向")] Vector2 _rotationSpeed = new Vector2(0.1f, 0.2f);
     /// <summary>動きの反転のフラグ</summary>
     [SerializeField, Header("動きの反転のフラグ")] bool _reverse;
-
+    [SerializeField, Header("描写に使うカメラ")]
     Camera _mainCamera;
+
     GameObject _currentTargetObject;
     Vector2 _lastMousePosition;
     /// <summary>初期角度</summary>
@@ -27,8 +28,6 @@ public class UIObjRotator : MonoBehaviour
                 item.enabled = false; 
             }
         }
-
-        _mainCamera = Camera.main;
     }
 
     public void SetTarget(int id)
