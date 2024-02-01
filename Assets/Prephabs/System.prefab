@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 4897568262451316072}
   - component: {fileID: 6663932089687667124}
   - component: {fileID: 6518645366243819612}
+  - component: {fileID: 98240487089762402}
+  - component: {fileID: 840651405489890601}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -228,7 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e6d5505bd87204498bef80c040c5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverSceneName: GameOver
 --- !u!114 &5930560542068095500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,5 +297,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ed1bb3f3360d8409f2fb431f7709f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pausedText: {fileID: 0}
-  _settingsExit: {fileID: 0}
+--- !u!114 &98240487089762402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491332444387501345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d9c42491e185948b7fe85c3220e8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &840651405489890601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491332444387501345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e669c6b15f74ab44b0d03b358ac3047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsItemActive: 000000
+  _items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

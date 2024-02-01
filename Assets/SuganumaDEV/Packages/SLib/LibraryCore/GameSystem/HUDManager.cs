@@ -15,6 +15,8 @@ namespace SLib
             [SerializeField, Header("各HUDモジュール \n＃モジュールを＋で追加すること。絶対に並び変えない＃")]
             List<GameObject> _huds;
 
+            public List<GameObject> HUDs => _huds;
+
             SceneLoader _sceneLoader;
 
             public void ToFront(int index)
