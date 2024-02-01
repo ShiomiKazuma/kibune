@@ -31,6 +31,8 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
 
     [SerializeField, Header("証拠品")]
     List<GameObject> Proofs;
+    [SerializeField, Header("最終決戦シーン名")]
+    string SceneName;
 
     string DataPath = Application.dataPath + "/StoryProgressSavedData.json";
     GameInfo _info;
@@ -104,6 +106,12 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
             var tr = GameObject.FindGameObjectWithTag("ProofPic_Pos").transform;
             go.transform.position = tr.position;
             go.transform.rotation = tr.rotation;
+        }
+        else if (progress[2])
+        {
+            // 最終決戦
+            var sceneLoader = GameObject.FindObjectOfType<SceneLoader>();
+            sceneLoader.LoadSceneByName(SceneName);
         }
     }
     #endregion

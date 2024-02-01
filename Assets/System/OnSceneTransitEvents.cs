@@ -37,6 +37,8 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
             _hudManager.ToFront(2);
             var eventProgMan = GameObject.FindAnyObjectByType<FramedEventsInGameGeneralManager>();
             eventProgMan.TryGetSetProgressData();
+
+            var playerData = GameObject.FindAnyObjectByType<PlayerSaveDataSerializer>();
         }
         else if (scene.name == "StaffRoll")
         {

@@ -23,7 +23,6 @@ namespace SLib
         /// <summary> 渡されたフィールドの値をもとにScriptableObjectを生成、DataPath直下へ格納。 </summary>
         public class PlayerSaveDataCreator : SingletonBaseClass<PlayerSaveDataCreator>  // セーブデータの保存
         {
-            [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
 
             GameInfo _gameInfo;

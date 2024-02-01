@@ -54,14 +54,28 @@ public class WantedCPU : MonoBehaviour
 
     Transform _selfTransform;
 
+    PauseManager _pman;
+
     // AIトランジションフラグ
     bool _isInsideSightRange = false; // デフォルトから注視するまでの条件
     bool _isFoundTargetNow = false; // 注視が終わり、プレイヤーとして判定した場合　追跡するかの条件
     bool _isInsideAttackingRange = false; // 追跡をしていて攻撃可能圏内にプレイヤーが入った場合　攻撃するかの条件
     bool _isNoHealthNow = false;　// 死亡をした場合
 
+    void OnPause()
+    {
+        _stateMachine.PushStateMachine();
+    }
+
+    void OnEndPause()
+    {
+        _stateMachine.PopStateMachine();
+    }
+
     private void Awake()
     {
+        _pman = GameObject.FindAnyObjectByType<PauseManager>();
+
         if (_target == null) _target = GameObject.FindGameObjectWithTag("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
         _selfTransform = transform;
@@ -131,6 +145,18 @@ public class WantedCPU : MonoBehaviour
         _stateMachine.MakeTransitionFromAny(_sDeath, "DummyTransition");
 
         _stateMachine.PopStateMachine();
+    }
+
+    private void OnEnable()
+    {
+        _pman.BeginPause += OnPause;
+        _pman.EndPause += OnEndPause;
+    }
+
+    private void OnDisable()
+    {
+        _pman.BeginPause -= OnPause;
+        _pman.EndPause -= OnEndPause;
     }
 
     private void FixedUpdate()

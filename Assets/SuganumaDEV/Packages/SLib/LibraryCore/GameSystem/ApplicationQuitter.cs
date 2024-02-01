@@ -12,7 +12,6 @@ namespace SLib
     {
         public class ApplicationQuitter : SingletonBaseClass<ApplicationQuitter>
         {
-            [SerializeField, Header("タイトル画面ならここに何もアタッチしなくてもOK")]
             Transform _playerTransform;
 
             PlayerSaveDataCreator _playerSaveDataCreator;
