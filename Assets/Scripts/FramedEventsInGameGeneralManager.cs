@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
@@ -27,6 +28,9 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     /// 5. 実行犯へ接触
     /// 6．ラストシーンへ
     /// 
+
+    [SerializeField, Header("証拠品")]
+    List<GameObject> Proofs;
 
     string DataPath = Application.dataPath + "/StoryProgressSavedData.json";
     GameInfo _info;
@@ -68,18 +72,54 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
             data = ReadSaveData();
             var fMan = GameObject.FindObjectOfType<FlagManager>();
             fMan.OverwriteProgress(data.Finished);
+
+            // ストーリーをスタート
+            Story(data.Finished);
         }
     }
 
     #region Story
     void Story(List<bool> progress)
     {
+        var gos = GameObject.FindObjectsOfType<TheProofItem>().ToList();
+        gos.ForEach((x) =>
+        {
+            if (x.Index == 0) Proofs[0] = x.gameObject;
+            else if (x.Index == 1) Proofs[1] = x.gameObject;
+            else if (x.Index == 2) Proofs[2] = x.gameObject;
+        });
 
+        if (!progress[0])
+        {
+            // 目的地を監視カメラのところへ
+            foreach (var item in Proofs)
+            {
+                item.SetActive(false);
+            }
+            Proofs[0].SetActive(true);
+        }
+        else if (!progress[1])
+        {
+            // 目的地を凶器のとこへ
+            foreach (var item in Proofs)
+            {
+                item.SetActive(false);
+            }
+            Proofs[1].SetActive(true);
+        }
+        else if (!progress[2])
+        {
+            // 目的地を友人宅へ
+            foreach (var item in Proofs)
+            {
+                item.SetActive(false);
+            }
+            Proofs[2].SetActive(true);
+        }
     }
     #endregion
 
     protected override void ToDoAtAwakeSingleton()
     {
-
     }
 }
