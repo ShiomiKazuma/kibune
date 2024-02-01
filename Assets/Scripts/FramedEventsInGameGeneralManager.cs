@@ -34,8 +34,8 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     public void SaveData()
     {
         FramedInGameEventProgressData template = new FramedInGameEventProgressData();
-        var progress = GameObject.FindObjectOfType<FlagManager>().Progress;
-        template.Finished = progress;
+        var progress = GameObject.FindObjectOfType<FlagManager>();
+        template.Finished = progress.Progress;
 
         string jsonStr = JsonUtility.ToJson(template);
 
@@ -65,9 +65,9 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         catch (FileNotFoundException)   // ‚à‚µ‚È‚©‚Á‚½ê‡
         {
             SaveData(); // ¶¬
+            data = ReadSaveData();
             var fMan = GameObject.FindObjectOfType<FlagManager>();
             fMan.OverwriteProgress(data.Finished);
-            Debug.Log("Progress Overwritten Succeed");
         }
     }
 

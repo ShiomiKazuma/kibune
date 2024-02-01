@@ -5,9 +5,9 @@ using UnityEngine;
 public class FlagManager : MonoBehaviour
 {
     [SerializeField, Header("アイテムを表示するフラグ")]
-    List<bool> IsItemActive;
+    List<bool> IsItemActive = new();
     [SerializeField, Header("アイテムボックスのゲームオブジェクト")]
-    List<GameObject> _items;
+    List<GameObject> _items = new();
 
     public List<bool> Progress => IsItemActive;
 
