@@ -169,7 +169,7 @@ namespace SLib
             #endregion
 
             #region 一時停止処理
-            /// <summary> ステートマシンの処理を </summary>
+            /// <summary> ステートマシンの処理を一時停止 </summary>
             public void PushStateMachine()
             {
                 _bIsPausing = true;

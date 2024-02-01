@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using SLib.Systems;
 using UnityEditor;
+using UnityEngine.Splines;
+using System.Linq;
 // çÏê¨ êõè¿
 public class GameInitializer : MonoBehaviour
 {
@@ -30,6 +32,14 @@ public class GameInitializer : MonoBehaviour
         var flagMan = GameObject.FindObjectOfType<FlagManager>();
         flagMan.OverwriteProgress(idata.Finished);
     }
+    private static void InitializeVeicles()
+    {
+        var sanims = GameObject.FindObjectsOfType<SplineAnimate>().ToList();
+        foreach (var item in sanims)
+        {
+            item.Play();
+        }
+    }
 
     void Awake()
     {
@@ -39,5 +49,7 @@ public class GameInitializer : MonoBehaviour
     {
         InitializePlayer();
         InitializeInventory();
+        InitializeVeicles();
     }
+
 }
