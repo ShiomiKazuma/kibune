@@ -82,6 +82,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     void Story(List<bool> progress)
     {
         var gos = GameObject.FindObjectsOfType<TheProofItem>().ToList();
+        Proofs = new List<GameObject>(gos.Count);
         gos.ForEach((x) =>
         {
             if (x.Index == 0) Proofs[0] = x.gameObject;
