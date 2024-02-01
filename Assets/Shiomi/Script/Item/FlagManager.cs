@@ -4,36 +4,58 @@ using UnityEngine;
 
 public class FlagManager : MonoBehaviour
 {
-    [SerializeField, Header("アイテムを表示するフラグ")] public bool[] IsItemFlag;
-    [SerializeField, Header("アイテムボックスのゲームオブジェクト")] GameObject[] _items;
+    [SerializeField, Header("アイテムを表示するフラグ")]
+    List<bool> IsItemActive = new();
+    [SerializeField, Header("アイテムボックスのゲームオブジェクト")]
+    List<GameObject> _items = new();
 
-    private void Start()
+    public List<bool> Progress => IsItemActive;
+
+    /// <summary> 保持されている進捗を上書き </summary>
+    /// <param name="progress"></param>
+    public void OverwriteProgress(List<bool> progress)
     {
-        //アイテムフラグの初期化
-        for(int i = 0; i < _items.Length; i++)
+        IsItemActive.Clear();
+
+        foreach (var item in progress)
         {
-            _items[i].SetActive(IsItemFlag[i]);
+            IsItemActive.Add(item);
         }
+
+        UpdateActiveItem();
     }
+
     /// <summary>
-    /// アイテムフラグのtrue
+    /// インベントリへ有効なアイテムを追加（インデックス指定）
     /// </summary>
-    /// <param name="Id"> アイテムID </param>
-    public void AddItem(int Id)
+    /// <param name="Index"> アイテムID </param>
+    public void AddActiveItem(int Index)
     {
-        IsItemFlag[Id] = true;
-        _items[Id].SetActive(true);  
+        IsItemActive[Index] = true;
+        _items[Index].SetActive(true);
+
+        UpdateActiveItem();
     }
 
     /// <summary>
     /// アイテムのオンオフを更新する
     /// </summary>
-    public void UpdateItem()
+    void UpdateActiveItem()
     {
         //アイテムフラグの更新
-        for (int i = 0; i < _items.Length; i++)
+        for (int i = 0; i < _items.Count; i++)
         {
-            _items[i].SetActive(IsItemFlag[i]);
+            _items[i].SetActive(IsItemActive[i]);
         }
     }
+
+    private void Start()
+    {
+        //アイテムフラグの初期化
+        for (int i = 0; i < _items.Count; i++)
+        {
+            _items[i].SetActive(IsItemActive[i]);
+        }
+    }
+
 }

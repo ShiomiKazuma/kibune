@@ -32,9 +32,11 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
                     break;
             }
         }
-        else if (scene.name == "InGameTesters")
+        else if (scene.name == "InGame")
         {
             _hudManager.ToFront(2);
+            var eventProgMan = GameObject.FindAnyObjectByType<FramedEventsInGameGeneralManager>();
+            eventProgMan.TryGetSetProgressData();
         }
         else if (scene.name == "StaffRoll")
         {

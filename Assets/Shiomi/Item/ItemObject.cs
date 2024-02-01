@@ -11,7 +11,7 @@ public class ItemObject : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            _flagManager.AddItem(_id);
+            _flagManager.AddActiveItem(_id);
         }
     }
 }
