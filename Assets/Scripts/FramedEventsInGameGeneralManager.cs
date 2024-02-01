@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
@@ -27,6 +28,9 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     /// 5. 実行犯へ接触
     /// 6．ラストシーンへ
     /// 
+
+    [SerializeField, Header("証拠品")]
+    List<GameObject> Proofs;
 
     string DataPath = Application.dataPath + "/StoryProgressSavedData.json";
     GameInfo _info;
@@ -71,8 +75,40 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         }
     }
 
+    #region Story
+    public void RunStory(List<bool> progress)
+    {
+        if (!progress[0])
+        {
+            Debug.Log("STORY 0");
+            // 目的地を監視カメラのところへ
+            var go = GameObject.Instantiate(Proofs[0]);
+            var tr  = GameObject.FindGameObjectWithTag("ProofCAM_Pos").transform;
+            go.transform.position = tr.position;
+            go.transform.rotation = tr.rotation;
+        }
+        else if (!progress[1])
+        {
+            Debug.Log("STORY 1");
+            // 目的地を凶器のとこへ
+            var go = GameObject.Instantiate(Proofs[1]);
+            var tr = GameObject.FindGameObjectWithTag("ProofKnife_Pos").transform;
+            go.transform.position = tr.position;
+            go.transform.rotation = tr.rotation;
+        }
+        else if (!progress[2])
+        {
+            Debug.Log("STORY 2");
+            // 写真を友人宅へ
+            var go = GameObject.Instantiate(Proofs[2]);
+            var tr = GameObject.FindGameObjectWithTag("ProofPic_Pos").transform;
+            go.transform.position = tr.position;
+            go.transform.rotation = tr.rotation;
+        }
+    }
+    #endregion
+
     protected override void ToDoAtAwakeSingleton()
     {
-
     }
 }
