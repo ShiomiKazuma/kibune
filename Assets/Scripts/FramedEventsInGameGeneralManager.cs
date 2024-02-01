@@ -72,50 +72,38 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
             data = ReadSaveData();
             var fMan = GameObject.FindObjectOfType<FlagManager>();
             fMan.OverwriteProgress(data.Finished);
-
-            // ストーリーをスタート
-            Story(data.Finished);
         }
     }
 
     #region Story
-    void Story(List<bool> progress)
+    public void RunStory(List<bool> progress)
     {
-        var gos = GameObject.FindObjectsOfType<TheProofItem>().ToList();
-        Proofs = new List<GameObject>(gos.Count);
-        gos.ForEach((x) =>
-        {
-            if (x.Index == 0) Proofs[0] = x.gameObject;
-            else if (x.Index == 1) Proofs[1] = x.gameObject;
-            else if (x.Index == 2) Proofs[2] = x.gameObject;
-        });
-
         if (!progress[0])
         {
+            Debug.Log("STORY 0");
             // 目的地を監視カメラのところへ
-            foreach (var item in Proofs)
-            {
-                item.SetActive(false);
-            }
-            Proofs[0].SetActive(true);
+            var go = GameObject.Instantiate(Proofs[0]);
+            var tr  = GameObject.FindGameObjectWithTag("ProofCAM_Pos").transform;
+            go.transform.position = tr.position;
+            go.transform.rotation = tr.rotation;
         }
         else if (!progress[1])
         {
+            Debug.Log("STORY 1");
             // 目的地を凶器のとこへ
-            foreach (var item in Proofs)
-            {
-                item.SetActive(false);
-            }
-            Proofs[1].SetActive(true);
+            var go = GameObject.Instantiate(Proofs[1]);
+            var tr = GameObject.FindGameObjectWithTag("ProofKnife_Pos").transform;
+            go.transform.position = tr.position;
+            go.transform.rotation = tr.rotation;
         }
         else if (!progress[2])
         {
-            // 目的地を友人宅へ
-            foreach (var item in Proofs)
-            {
-                item.SetActive(false);
-            }
-            Proofs[2].SetActive(true);
+            Debug.Log("STORY 2");
+            // 写真を友人宅へ
+            var go = GameObject.Instantiate(Proofs[2]);
+            var tr = GameObject.FindGameObjectWithTag("ProofPic_Pos").transform;
+            go.transform.position = tr.position;
+            go.transform.rotation = tr.rotation;
         }
     }
     #endregion

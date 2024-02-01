@@ -27,6 +27,11 @@ public class TheProofItem : MonoBehaviour
                 var go = Instantiate(TomoNavi);
                 go.transform.position = Vector3.zero;
             }
+            var man = GameObject.FindAnyObjectByType<FramedEventsInGameGeneralManager>();
+            man.SaveData();
+            man.TryGetSetProgressData();
+            var prog = man.ReadSaveData().Finished;
+            man.RunStory(prog);
             Destroy(this.gameObject);
         }
     }
