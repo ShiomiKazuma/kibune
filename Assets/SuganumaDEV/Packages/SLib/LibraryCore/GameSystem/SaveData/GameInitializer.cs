@@ -10,7 +10,13 @@ using System.Linq;
 public class GameInitializer : MonoBehaviour
 {
     PlayerSaveDataSerializer _dataSerializer;
-
+    enum SceneType
+    {
+        InGame,
+        LastScene,
+    }
+    [SerializeField, Header("シーンタイプ")]
+    SceneType sceneType;
 
     public void InitializePlayer()      // ゲームシーン読み込み後にこれを読み込む
     {
@@ -47,9 +53,18 @@ public class GameInitializer : MonoBehaviour
 
     private void Start()
     {
-        InitializePlayer();
-        InitializeInventory();
-        InitializeVeicles();
+        if (sceneType == SceneType.InGame)
+        {
+            InitializePlayer();
+            InitializeInventory();
+            InitializeVeicles();
+        }
+        else
+        {
+            InitializeInventory();
+            var player = GameObject.FindGameObjectWithTag("Player");
+            var pos = GameObject.FindGameObjectWithTag("LastEventStart_Pos").transform.position;
+        }
     }
 
 }

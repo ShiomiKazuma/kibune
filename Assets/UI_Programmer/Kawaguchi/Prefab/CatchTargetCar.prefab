@@ -110,6 +110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5150271634167988225, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b97be4c0907fd94d83f45cac229df5e, type: 2}
     - target: {fileID: -2020910723691505525, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -126,6 +130,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 9102842165981459597}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7630043249443405314}
     - targetCorrespondingSourceObject: {fileID: -944899089483481049, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1496679466906409247}
@@ -177,6 +184,9 @@ MonoBehaviour:
   _event:
     m_PersistentCalls:
       m_Calls: []
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!64 &394617335569403457
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -204,3 +214,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
   m_PrefabInstance: {fileID: 8173955124893979198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9056405909227908975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
+  m_PrefabInstance: {fileID: 8173955124893979198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7630043249443405314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056405909227908975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 100
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
