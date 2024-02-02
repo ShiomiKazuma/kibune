@@ -110,6 +110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5150271634167988225, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b97be4c0907fd94d83f45cac229df5e, type: 2}
     - target: {fileID: -2020910723691505525, guid: e87cba9fdafa24f4a8b400befe9437d1, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -231,7 +235,7 @@ MonoBehaviour:
   m_PlayOnAwake: 1
   m_LoopMode: 1
   m_Method: 0
-  m_Duration: 1
+  m_Duration: 100
   m_MaxSpeed: 10
   m_EasingMode: 0
   m_AlignmentMode: 1
