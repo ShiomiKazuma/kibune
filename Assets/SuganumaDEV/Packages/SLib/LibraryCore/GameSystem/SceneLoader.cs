@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
+using UnityEngine.UI;
 // Auth : Suganuma
 namespace SLib
 {
@@ -12,6 +14,8 @@ namespace SLib
         {
             [SerializeField, Header("Now Loading 表示のパネル")]
             GameObject _nowLoadingPanel;
+            [SerializeField, Header("ローディングのテキスト")]
+            Text _loadingText;
             [SerializeField, Header("シーン遷移時に必ず発火されるイベント")]
             public UnityEvent<Scene> _eventOnSceneLoaded;
 
@@ -42,6 +46,7 @@ namespace SLib
                 {
                     _nowLoadingPanel.transform.SetAsLastSibling();
                     _nowLoadingPanel.SetActive(!false);
+                    _loadingText.DOText("Loading...", 1);
                     yield return null;
                 }
             }

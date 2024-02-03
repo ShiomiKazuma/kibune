@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 // 作成 菅沼
 public class GameInitializer : MonoBehaviour
 {
+    enum SceneType
+    {
+        InGame,
+        LastEvent,
+    }
+
+    [SerializeField, Header("シーン選択")]
+    SceneType type;
+
     PlayerSaveDataSerializer _dataSerializer;
 
     public void InitializePlayer()      // ゲームシーン読み込み後にこれを読み込む
@@ -44,17 +53,18 @@ public class GameInitializer : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name != "LastScene")
-        {
-            InitializePlayer();
-            InitializeInventory();
-            InitializeVehicles();
-        }
-        else
+        if (type == SceneType.LastEvent)
         {
             InitializeInventory();
             var player = GameObject.FindGameObjectWithTag("Player");
             var pos = GameObject.FindGameObjectWithTag("LastEventStart_Pos").transform.position;
+            player.transform.position = pos;
+        }
+        else
+        {
+            InitializePlayer();
+            InitializeInventory();
+            InitializeVehicles();
         }
     }
 
