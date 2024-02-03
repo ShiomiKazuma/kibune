@@ -5658,7 +5658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106678138189014193, guid: d1c68fe2326991342b06a90622b9c75c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4106678138189014193, guid: d1c68fe2326991342b06a90622b9c75c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -5726,7 +5726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106678138189014193, guid: d1c68fe2326991342b06a90622b9c75c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ToFront
+      value: KillAll
       objectReference: {fileID: 0}
     - target: {fileID: 4106678138189014193, guid: d1c68fe2326991342b06a90622b9c75c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -5778,7 +5778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106678138189014193, guid: d1c68fe2326991342b06a90622b9c75c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: LastScene
+      value: LastSceneMovie
       objectReference: {fileID: 0}
     - target: {fileID: 4106678138189014193, guid: d1c68fe2326991342b06a90622b9c75c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

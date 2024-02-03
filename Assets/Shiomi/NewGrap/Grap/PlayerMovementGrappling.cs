@@ -248,7 +248,7 @@ public class PlayerMovementGrappling : MonoBehaviour
             velocityXZ = velocityXZ * 2.0f;
         }
 
-        return velocityXZ + velocityY;
+        return velocityXZ * 2.0f + velocityY;
     }
 
     #region Text & Debugging
