@@ -79,7 +79,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     }
 
     #region Story
-    public void RunStory(List<bool> progress)
+    public void RunStory(List<bool> progress)   //InGame‚Å‚Ì‚Ý
     {
         if (!progress[0])
         {

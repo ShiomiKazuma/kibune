@@ -2,10 +2,18 @@ using UnityEngine;
 using SLib.Systems;
 using UnityEngine.Splines;
 using System.Linq;
-using UnityEngine.SceneManagement;
 // 作成 菅沼
 public class GameInitializer : MonoBehaviour
 {
+    enum SceneType
+    {
+        InGame,
+        LastEvent,
+    }
+
+    [SerializeField, Header("シーン選択")]
+    SceneType type;
+
     PlayerSaveDataSerializer _dataSerializer;
 
     public void InitializePlayer()      // ゲームシーン読み込み後にこれを読み込む
@@ -44,17 +52,25 @@ public class GameInitializer : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name != "LastScene")
+        if (type == SceneType.LastEvent)
+        {
+            InitializeInventory();
+            var player = GameObject.FindGameObjectWithTag("Player");
+            var tr = GameObject.FindGameObjectWithTag("LastEventStart_Pos").transform;
+            var rot = tr.rotation;
+            var pos = tr.position;
+            player.transform.position = pos;
+            player.transform.rotation = rot;
+
+            var feeder = GameObject.FindObjectOfType<DialogueFeeder>();
+            var canvas = feeder.gameObject.GetComponent<CanvasGroup>();
+            canvas.alpha = 0;
+        }
+        else
         {
             InitializePlayer();
             InitializeInventory();
             InitializeVehicles();
-        }
-        else
-        {
-            InitializeInventory();
-            var player = GameObject.FindGameObjectWithTag("Player");
-            var pos = GameObject.FindGameObjectWithTag("LastEventStart_Pos").transform.position;
         }
     }
 
