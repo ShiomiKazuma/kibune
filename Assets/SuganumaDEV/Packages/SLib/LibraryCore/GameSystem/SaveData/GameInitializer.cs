@@ -1,22 +1,12 @@
-using SLib.Singleton;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using SLib.Systems;
-using UnityEditor;
 using UnityEngine.Splines;
 using System.Linq;
+using UnityEngine.SceneManagement;
 // 作成 菅沼
 public class GameInitializer : MonoBehaviour
 {
     PlayerSaveDataSerializer _dataSerializer;
-    enum SceneType
-    {
-        InGame,
-        LastScene,
-    }
-    [SerializeField, Header("シーンタイプ")]
-    SceneType sceneType;
 
     public void InitializePlayer()      // ゲームシーン読み込み後にこれを読み込む
     {
@@ -38,7 +28,8 @@ public class GameInitializer : MonoBehaviour
         var flagMan = GameObject.FindObjectOfType<FlagManager>();
         flagMan.OverwriteProgress(idata.Finished);
     }
-    private static void InitializeVeicles()
+
+    private static void InitializeVehicles()
     {
         var sanims = GameObject.FindObjectsOfType<SplineAnimate>().ToList();
         foreach (var item in sanims)
@@ -53,11 +44,11 @@ public class GameInitializer : MonoBehaviour
 
     private void Start()
     {
-        if (sceneType == SceneType.InGame)
+        if (SceneManager.GetActiveScene().name != "LastScene")
         {
             InitializePlayer();
             InitializeInventory();
-            InitializeVeicles();
+            InitializeVehicles();
         }
         else
         {
