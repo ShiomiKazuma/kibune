@@ -104,7 +104,7 @@ public class SwingGrap : MonoBehaviour
         Vector3 temp = _gunTip.position;
         temp.y = _gunTip.position.y - 2;
         _lr.SetPosition(0, temp);
-        //_lr.SetPosition(0, _gunTip.position);
+        //lineRend.SetPosition(0, gunTip.position);
         _lr.SetPosition(1, _swingPoint);
     }
 

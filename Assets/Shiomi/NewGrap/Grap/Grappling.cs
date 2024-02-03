@@ -3,27 +3,29 @@ using UnityEngine;
 public class Grappling : MonoBehaviour
 {
     PlayerMovementGrappling _pm;
-    [Header("カメラ")]
-    public Transform _cam;
-    public Transform _gunTip;
-    [Header("グラップリングが当たるレイヤー")]
-    public LayerMask _grappleable;
-    public LineRenderer _lr;
+    [SerializeField, Header("カメラ")]
+    Transform _cam;
+    [SerializeField]
+    Transform _gunTip;
+    [SerializeField, Header("グラップリングが当たるレイヤー")]
+    LayerMask _grappleable;
+    [SerializeField]
+    LineRenderer _lr;
 
-    [Header("グラッブできる最大距離")]
-    public float _maxGrappleDistance;
-    [Header("フックが伸びているアニメーションの時間")]
-    public float _grappleDelayTime;
-    [Header("どれだけ最高到達点を高くするか")]
-    public float _overshootYAxis;
+    [SerializeField, Header("グラッブできる最大距離")]
+    float _maxGrappleDistance;
+    [SerializeField, Header("硬直時間")]
+    float _grappleDelayTime;
+    [SerializeField, Header("最高到達点(相対)")]
+    float _overshootYAxis;
     Vector3 _grapplePoint;
 
-    [Header("グラップリングのクールタイム")]
-    public float _grapplingCT;
+    [SerializeField, Header("グラップリングのクールタイム")]
+    float _grapplingCT;
     float _grapplingCTTimer;
 
-    [Header("グラップリングするインプットキー")]
-    public KeyCode grappleKey = KeyCode.Mouse1;
+    [SerializeField, Header("グラップリングするインプットキー")]
+    KeyCode grappleKey = KeyCode.Mouse1;
     bool Isgrappling;
 
     [SerializeField, Header("カザキリパーティクル")]
@@ -54,7 +56,7 @@ public class Grappling : MonoBehaviour
         }
         else
         {
-            //_grapplePoint = _cam.position + _cam.forward * _maxGrappleDistance;
+            //_grapplePoint = cam.position + cam.forward * maxGrappleDistance;
             Invoke(nameof(StopGrapple), _grappleDelayTime);
         }
     }
@@ -142,7 +144,7 @@ public class Grappling : MonoBehaviour
         // グラップル可能かの判定
         RaycastHit hit;
         var stat = Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable);
-        if(_crossHair == null) _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+        if (_crossHair == null) _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
         _crossHair.SetGrappling(stat);
 
         if (Isgrappling)
