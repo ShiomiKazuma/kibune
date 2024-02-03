@@ -78,19 +78,6 @@ public class PlayerMovementGrappling : MonoBehaviour
             Jump();
             Invoke(nameof(ResetJump), _jumpCooldown);
         }
-
-        ////クラッチの開始
-        //if(Input.GetKeyDown(_crouchKey))
-        //{
-        //    transform.localScale = new Vector3(transform.localScale.x, _crouchYScale, transform.localScale.z);
-        //    _rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-        //}
-
-        ////クラッチのストップ
-        //if(Input.GetKeyUp(_crouchKey))
-        //{
-        //    transform.localScale = new Vector3(transform.localScale.x, _startYScale, transform.localScale.z);
-        //}
     }
 
     void StateHandler()
@@ -114,12 +101,6 @@ public class PlayerMovementGrappling : MonoBehaviour
             _state = MovementState.swinging;
             _moveSpeed = _swingSpeed;
         }
-        //Crouching
-        //else if(Input.GetKey(_crouchKey))
-        //{
-        //    _state = MovementState.crouching;
-        //    _moveSpeed = _crouchSpeed;
-        //}
         //Sprinting
         else if (_isGrounded && Input.GetKey(_sprintKey))
         {
@@ -260,6 +241,12 @@ public class PlayerMovementGrappling : MonoBehaviour
         Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * trajectoryHeight);
         Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity)
             + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
+
+        if (displacementY < 0f)
+        {
+            velocityY = Vector3.zero;
+            velocityXZ = velocityXZ * 2.0f;
+        }
 
         return velocityXZ + velocityY;
     }
