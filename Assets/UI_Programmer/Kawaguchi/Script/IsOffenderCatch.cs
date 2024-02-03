@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Splines;
 
 public class IsOffenderCatch : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class IsOffenderCatch : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer == layerMask)
-        _event.Invoke();
+        if (collision.gameObject.layer == layerMask)
+            _event.Invoke();
     }
 }

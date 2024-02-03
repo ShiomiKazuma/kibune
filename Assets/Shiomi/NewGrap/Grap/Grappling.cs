@@ -142,6 +142,7 @@ public class Grappling : MonoBehaviour
         // グラップル可能かの判定
         RaycastHit hit;
         var stat = Physics.Raycast(_cam.position, _cam.forward, out hit, _maxGrappleDistance, _grappleable);
+        if(_crossHair == null) _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
         _crossHair.SetGrappling(stat);
 
         if (Isgrappling)

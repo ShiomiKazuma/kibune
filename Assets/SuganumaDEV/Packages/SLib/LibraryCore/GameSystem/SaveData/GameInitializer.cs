@@ -2,7 +2,6 @@ using UnityEngine;
 using SLib.Systems;
 using UnityEngine.Splines;
 using System.Linq;
-using UnityEngine.SceneManagement;
 // çÏê¨ êõè¿
 public class GameInitializer : MonoBehaviour
 {
@@ -57,8 +56,15 @@ public class GameInitializer : MonoBehaviour
         {
             InitializeInventory();
             var player = GameObject.FindGameObjectWithTag("Player");
-            var pos = GameObject.FindGameObjectWithTag("LastEventStart_Pos").transform.position;
+            var tr = GameObject.FindGameObjectWithTag("LastEventStart_Pos").transform;
+            var rot = tr.rotation;
+            var pos = tr.position;
             player.transform.position = pos;
+            player.transform.rotation = rot;
+
+            var feeder = GameObject.FindObjectOfType<DialogueFeeder>();
+            var canvas = feeder.gameObject.GetComponent<CanvasGroup>();
+            canvas.alpha = 0;
         }
         else
         {

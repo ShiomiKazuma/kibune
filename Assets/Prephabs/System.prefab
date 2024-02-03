@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 6518645366243819612}
   - component: {fileID: 98240487089762402}
   - component: {fileID: 840651405489890601}
+  - component: {fileID: 4016838171348787429}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nowLoadingPanel: {fileID: 0}
+  _loadingText: {fileID: 0}
   _eventOnSceneLoaded:
     m_PersistentCalls:
       m_Calls: []
@@ -111,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _continueButton: {fileID: 0}
+  _toLastButton: {fileID: 0}
   _dataSerializer: {fileID: 3817377266956631674}
 --- !u!114 &3832636959184040968
 MonoBehaviour:
@@ -257,3 +260,33 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &4016838171348787429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491332444387501345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: dcac7332a9e0b904583140e5e3b5d55b, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3542783557735777485}
+          m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+          m_MethodName: CallEndPause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

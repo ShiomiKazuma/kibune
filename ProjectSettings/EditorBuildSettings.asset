@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/LastScene.unity
     guid: 2ebb16a079877d74092acd1ff91a9929
   - enabled: 1
+    path: Assets/_Scenes/LastSceneMovie.unity
+    guid: 2e63261246b5b504b905b7931a14588b
+  - enabled: 1
     path: Assets/_Scenes/StaffRoll.unity
     guid: 198fd50caab669040b9b5d95cbb27863
   - enabled: 1

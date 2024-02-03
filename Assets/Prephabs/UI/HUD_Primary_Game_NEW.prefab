@@ -828,6 +828,8 @@ GameObject:
   - component: {fileID: 1830909524057536471}
   - component: {fileID: 6103730920476699939}
   - component: {fileID: 4266228200667536847}
+  - component: {fileID: 5467595714870638431}
+  - component: {fileID: 5206676103297336029}
   m_Layer: 5
   m_Name: HUD_Primary_Game_NEW
   m_TagString: Untagged
@@ -942,6 +944,66 @@ MonoBehaviour:
   - {fileID: 4553704651125872368}
   - {fileID: 8393698160551416116}
   - {fileID: 275016574903734027}
+--- !u!114 &5467595714870638431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718117703127495497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 9f1befd301dd73f41a08604386afb8cf, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4266228200667536847}
+          m_TargetAssemblyTypeName: SLib.Systems.HUDManager, Assembly-CSharp
+          m_MethodName: KillAll
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5206676103297336029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718117703127495497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a08e34645062ebb41bd3550598e1db6b, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4266228200667536847}
+          m_TargetAssemblyTypeName: SLib.Systems.HUDManager, Assembly-CSharp
+          m_MethodName: ToFront
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2892755369506147265
 GameObject:
   m_ObjectHideFlags: 0
