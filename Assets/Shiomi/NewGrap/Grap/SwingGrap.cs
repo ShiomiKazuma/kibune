@@ -111,31 +111,36 @@ public class SwingGrap : MonoBehaviour
     public Transform _orientation;
     public Rigidbody _rb;
     public float _horizontalThrustForce;
-    public float _extendCableSpeed;
+    public float _cableExtendSpeed;
 
     void OdmGearMoveMent()
     {
+        var t = Time.deltaTime * 2;
         //right
-        if (Input.GetKey(KeyCode.D)) _rb.AddForce(_orientation.right * _horizontalThrustForce * Time.deltaTime);
+        if (Input.GetKey(KeyCode.D)) _rb.AddForce(_orientation.right * _horizontalThrustForce * t);
         //left
-        if (Input.GetKey(KeyCode.A)) _rb.AddForce(-_orientation.right * _horizontalThrustForce * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A)) _rb.AddForce(-_orientation.right * _horizontalThrustForce * t);
         //forward
-        if (Input.GetKey(KeyCode.W)) _rb.AddForce(_orientation.forward * _horizontalThrustForce * Time.deltaTime);
+        if (Input.GetKey(KeyCode.W)) _rb.AddForce(_orientation.forward * _horizontalThrustForce * t);
+        // backward
+        if (Input.GetKey(KeyCode.S)) _rb.AddForce(-_orientation.forward * _horizontalThrustForce * t);
         //’Z‚­‚·‚é
         if (Input.GetKey(KeyCode.Space))
         {
             Vector3 directionToPoint = _swingPoint - transform.position;
-            _rb.AddForce(directionToPoint.normalized * _horizontalThrustForce * Time.deltaTime);
+            var v = directionToPoint.normalized;
+            v.y *= 2;
+            _rb.AddForce(v * _horizontalThrustForce * t);
             float distanceFromPoint = Vector3.Distance(transform.position, _swingPoint);
             _joint.maxDistance = distanceFromPoint * 0.8f;
             _joint.minDistance = distanceFromPoint * 0.25f;
         }
         //’·‚­‚·‚é
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
-            float extendedDistanceromPoint = Vector3.Distance(transform.position, _swingPoint) + _extendCableSpeed;
-            _joint.maxDistance = extendedDistanceromPoint * 0.8f;
-            _joint.minDistance = extendedDistanceromPoint * 0.25f;
+            float extendedDistanceromPoint = Vector3.Distance(transform.position, _swingPoint) + _cableExtendSpeed;
+            _joint.maxDistance = extendedDistanceromPoint * 2.0f;
+            _joint.minDistance = extendedDistanceromPoint * 2.0f;
         }
     }
 

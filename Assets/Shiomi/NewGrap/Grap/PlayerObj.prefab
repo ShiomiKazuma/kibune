@@ -230,8 +230,8 @@ MonoBehaviour:
   _hook: {fileID: 0}
   _orientation: {fileID: 7084955930851348708}
   _rb: {fileID: 3634782110849552323}
-  _horizontalThrustForce: 63.8
-  _extendCableSpeed: 55.4
+  _horizontalThrustForce: 200
+  _extendCableSpeed: 100
 --- !u!114 &7548969741910383926
 MonoBehaviour:
   m_ObjectHideFlags: 0
