@@ -245,36 +245,12 @@ public class PlayerMovementGrappling : MonoBehaviour
         if (displacementY < 0f)
         {
             velocityY = Vector3.zero;
-            velocityXZ = velocityXZ * 2.0f;
+            velocityXZ = velocityXZ * 1.5f;
+            return (velocityXZ + velocityY);
         }
-
-        return velocityXZ + velocityY;
+        else
+            return (velocityXZ * 2.0f + velocityY * 1.5f);
     }
-
-    #region Text & Debugging
-
-    //public TextMeshProUGUI text_speed;
-    //public TextMeshProUGUI text_mode;
-    //private void TextStuff()
-    //{
-    //    Vector3 flatVel = new Vector3(_rb.velocity.x, 0f, _rb.velocity.z);
-
-    //    if (OnSlope())
-    //        text_speed.SetText("Speed: " + Round(_rb.velocity.magnitude, 1) + " / " + Round(_moveSpeed, 1));
-
-    //    else
-    //        text_speed.SetText("Speed: " + Round(flatVel.magnitude, 1) + " / " + Round(_moveSpeed, 1));
-
-    //    text_mode.SetText(_state.ToString());
-    //}
-
-    //public static float Round(float value, int digits)
-    //{
-    //    float mult = Mathf.Pow(10.0f, (float)digits);
-    //    return Mathf.Round(value * mult) / mult;
-    //}
-
-    #endregion
 
     void OnPaused()
     {

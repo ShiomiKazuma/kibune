@@ -9,6 +9,12 @@ namespace SLib
         /// <summary> 道筋の座標情報を格納している </summary>
         public class PathHolder : MonoBehaviour
         {
+            [SerializeField, Header("Path Color")]
+            Color color = Color.yellow;
+            [SerializeField, Header("Marker Color")]
+            Color markerC = Color.cyan;
+            [SerializeField, Header("Point Marker Size")]
+            float markerSize = 1.0f;
             /// <summary> AIのパトロールする道筋の各分岐点のトランスフォームを返す </summary>
             /// <returns></returns>
             public Vector3[] GetPatrollingPath()
@@ -24,11 +30,12 @@ namespace SLib
                 var work = points.ToList();
                 work.RemoveAt(0);
                 points = work.ToArray();
-                Gizmos.color = Color.yellow;
+                Gizmos.color = markerC;
                 foreach (var p in points)
                 {
-                    Gizmos.DrawWireSphere(p.position, .5f);
+                    Gizmos.DrawCube(p.position, Vector3.one * markerSize);
                 } // draw sphere to each point's position
+                Gizmos.color = color;
                 Gizmos.DrawLineStrip(Array.ConvertAll(points, x => x.position), true);
             }
         }

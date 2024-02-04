@@ -3,11 +3,19 @@ using SLib.Systems;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // auth suganuma
 
 public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IOnSceneTransit
 {
+    [SerializeField]
+    GameObject staffRoll;
+    [SerializeField]
+    Button toTitle;
+    [SerializeField]
+    Button newGame;
+    
     GameInfo _gameInfo;
     SceneLoader _sceneLoader;
     HUDManager _hudManager;
@@ -29,6 +37,11 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
                     break;
                 default:// title scene
                     _hudManager.ToFront(0);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    staffRoll.gameObject.SetActive(true);
+                    toTitle.gameObject.SetActive(false);
+                    newGame.gameObject.SetActive(true);
                     break;
             }
         }

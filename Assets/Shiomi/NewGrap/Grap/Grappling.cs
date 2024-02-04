@@ -73,7 +73,7 @@ public class Grappling : MonoBehaviour
             highestPointOnArc = _overshootYAxis;
 
         _pm.JumpToPosition(_grapplePoint, highestPointOnArc);
-        Invoke(nameof(StopGrapple), 1f);
+        Invoke(nameof(StopGrapple), .5f);
 
         _hook.SetActive(true);
         _hook.transform.position = _grapplePoint;

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7459556014984922467}
   - component: {fileID: 5058005919999751144}
   - component: {fileID: 4571847564347836595}
-  - component: {fileID: 6009520636704576922}
   - component: {fileID: 5278339103189729657}
   - component: {fileID: 3634782110849552323}
   - component: {fileID: 2540052629402943280}
@@ -153,20 +152,6 @@ MonoBehaviour:
   _freeze: 0
   _activeGrapple: 0
   _swinging: 0
---- !u!114 &6009520636704576922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798729652220953641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bd0746e951101941b1ce4b3cbc89de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: 3634782110849552323}
-  _freeze: 0
 --- !u!114 &5278339103189729657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,10 +170,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _lr: {fileID: 0}
-  _maxGrappleDistance: 100
+  _maxGrappleDistance: 150
   _grappleDelayTime: 0.25
-  _overshootYAxis: 10
-  _grapplingCT: 1
+  _overshootYAxis: 12
+  _grapplingCT: 0.3
   grappleKey: 323
   _particle: {fileID: 0}
   _hook: {fileID: 0}
@@ -240,7 +225,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   _pm: {fileID: 4571847564347836595}
-  _predictionSphereCastRadius: 5
+  _predictionSphereCastRadius: 10
   _predictionPoint: {fileID: 8095282207301591655}
   _hook: {fileID: 0}
   _orientation: {fileID: 7084955930851348708}
