@@ -175,7 +175,5 @@ public class ObjectiveMapIndicator : MonoBehaviour
             pos.y /= d;
         }
         _rect.anchoredPosition = pos / canvasScale;
-
-        ImageIcon.enabled = isOffscreen;
     }
 }

@@ -54,16 +54,11 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
 
     public FramedInGameEventProgressData ReadSaveData()
     {
-        string dataStr = " ";
-        try
-        {
-            StreamReader sr = new StreamReader(Application.dataPath + "/StoryProgressSavedData.json");
-            dataStr = sr.ReadToEnd();
-            sr.Close();
-        }
-        catch (FileNotFoundException)   // ‚à‚µ‚È‚©‚Á‚½ê‡
-        {
-        }
+        StreamReader sr;
+        string dataStr = "";
+        sr = new StreamReader(Application.dataPath + "/StoryProgressSavedData.json");
+        dataStr = sr.ReadToEnd();
+        sr.Close();
         return JsonUtility.FromJson<FramedInGameEventProgressData>(dataStr);
     }
 
