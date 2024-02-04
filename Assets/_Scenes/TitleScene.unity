@@ -179,7 +179,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6871537275398486054, guid: d10425d494b138f4495626e26319fe0f, type: 2}
   m_audioClip: {fileID: 8300000, guid: e00d5d646a700234aae6de3dd64c4090, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.503
+  m_Volume: 0.194
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -593,29 +593,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
       objectReference: {fileID: 660534293}
+    - target: {fileID: 3405129249224605566, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
+      propertyPath: _bgmSoundData.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3418852780606322417, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3418852780606322417, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3418852780606322417, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3418852780606322417, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 3418852780606322417, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3418852780606322417, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -176
       objectReference: {fileID: 0}
     - target: {fileID: 3564819304504203421, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMax.y
@@ -725,29 +729,33 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4484681236801669191, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4720347414187738447, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4720347414187738447, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4720347414187738447, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4720347414187738447, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 83.333336
       objectReference: {fileID: 0}
     - target: {fileID: 4720347414187738447, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4720347414187738447, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -248.33334
       objectReference: {fileID: 0}
     - target: {fileID: 4748149202013894820, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
@@ -849,6 +857,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 660534293}
+    - target: {fileID: 5822300380747348985, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5933198784127539356, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1093,6 +1105,7 @@ MonoBehaviour:
   Size2D: {x: 100, y: 100}
   PlayerTag: Player
   CameraTag: MainCamera
+  ObjTag: Objective
 --- !u!114 &1541269618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8011746049525417828, guid: 173578f2aa685914f9ddddb0f8405889, type: 3}

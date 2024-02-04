@@ -9,5 +9,6 @@ public class StoryStarter : MonoBehaviour
         var manager = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
         var prog = manager.ReadSaveData().Finished;
         manager.RunStory(prog);
+        Debug.Log($"Run Story : a-{prog[0].ToString()},b-{prog[1].ToString()},c-{prog[2].ToString()}");
     }
 }

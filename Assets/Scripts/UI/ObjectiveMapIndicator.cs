@@ -107,6 +107,8 @@ public class ObjectiveMapIndicator : MonoBehaviour
     string PlayerTag;
     [SerializeField, Header("Camera Tag")]
     string CameraTag;
+    [SerializeField, Header("Objective Tag")]
+    string ObjTag;
 
     CanvasGroup _canvasG;
     CanvasScaler _canvasS;
@@ -125,7 +127,6 @@ public class ObjectiveMapIndicator : MonoBehaviour
     {
         _canvasG = GetComponent<CanvasGroup>();
         _canvasS = GetComponent<CanvasScaler>();
-        //_canvasG.alpha = 0.0f;
         _player = GameObject.FindGameObjectWithTag(PlayerTag).transform;
         if (GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>() != null)
         {
@@ -136,10 +137,15 @@ public class ObjectiveMapIndicator : MonoBehaviour
             _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponentInChildren<Camera>();
         }
         _rect = GetComponent<RectTransform>();
+        if (_targetTf == null) _targetTf = GameObject.FindGameObjectWithTag(ObjTag).transform;
     }
 
     private void LateUpdate()
     {
+        if (GameObject.FindAnyObjectByType<GameInfo>().SceneStatus != GameInfo.SceneTransitStatus.To_InGameScene)
+        {
+            return;
+        }
         float canvasScale = transform.root.localScale.z;
         var center = 0.5f * new Vector3(Screen.width, Screen.height);
 
@@ -171,12 +177,5 @@ public class ObjectiveMapIndicator : MonoBehaviour
         _rect.anchoredPosition = pos / canvasScale;
 
         ImageIcon.enabled = isOffscreen;
-        if (isOffscreen)
-        {
-            ImageIcon.rectTransform.eulerAngles = new Vector3(
-                0f, 0f,
-                Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg
-            );
-        }
     }
 }
