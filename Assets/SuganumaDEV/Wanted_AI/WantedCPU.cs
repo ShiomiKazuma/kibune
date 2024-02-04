@@ -37,7 +37,6 @@ public class WantedCPU : MonoBehaviour
     [SerializeField, Range(0f, 50f)] float _attackRange;
     // 各レイヤマスク
     [SerializeField] LayerMask _targetLayer;
-    [SerializeField] LayerMask _groundLayer;
     // ターゲット
     [SerializeField] Transform _target;
     [SerializeField] int _targetLayerNum;
@@ -55,6 +54,8 @@ public class WantedCPU : MonoBehaviour
     Transform _selfTransform;
 
     PauseManager _pman;
+
+    Animator _anim;
 
     // AIトランジションフラグ
     bool _isInsideSightRange = false; // デフォルトから注視するまでの条件
@@ -75,6 +76,7 @@ public class WantedCPU : MonoBehaviour
     private void Awake()
     {
         _pman = GameObject.FindAnyObjectByType<PauseManager>();
+        _anim = GetComponent<Animator>();
 
         if (_target == null) _target = GameObject.FindGameObjectWithTag("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
@@ -194,6 +196,10 @@ public class WantedCPU : MonoBehaviour
 
         // any state to death
         _stateMachine.UpdateTransitionFromAnyState("DummyTransition", ref _isNoHealthNow, true, true);
+
+        // animator update
+        _anim.SetBool("Looking", _isInsideSightRange);
+        _anim.SetBool("Found", _isFoundTargetNow);
     }
 
 #if UNITY_EDITOR_64

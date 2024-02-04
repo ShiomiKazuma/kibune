@@ -30,7 +30,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6915344566285667247}
-  - {fileID: 3352451130538402508}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4012015879963232994
@@ -39,7 +38,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2505093798099336356}
+    m_TransformParent: {fileID: 6915344566285667247}
     m_Modifications:
     - target: {fileID: 1813762787050416174, guid: ebe884d8dba09b343b9e65aeab727e1f, type: 3}
       propertyPath: m_Pivot.x
@@ -208,7 +207,10 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 125114b4f19613847b8f517e85559853, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f3b18d11be36248408f7e9328d15c82e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3352451130538402508}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f3b18d11be36248408f7e9328d15c82e, type: 3}
       insertIndex: -1
@@ -219,6 +221,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f3b18d11be36248408f7e9328d15c82e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6651494255835293346}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f3b18d11be36248408f7e9328d15c82e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5939157413006291306}
   m_SourcePrefab: {fileID: 100100000, guid: f3b18d11be36248408f7e9328d15c82e, type: 3}
 --- !u!1 &6103483135336567061 stripped
 GameObject:
@@ -238,17 +243,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sightRange: 14.5
-  _attackRange: 3.3
+  _attackRange: 2.4
   _targetLayer:
     serializedVersion: 2
     m_Bits: 128
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
   _target: {fileID: 0}
-  _targetLayerNum: 0
+  _targetLayerNum: 7
   _patrolingPath: {fileID: 0}
-  _health: 0
+  _health: 1
   _gazingTime: 5
   _sprtGazing: {fileID: 21300000, guid: f3a228d149645954d907f599e9f5a4e0, type: 3}
   _sprtFound: {fileID: 21300000, guid: 69625ee7f1b27284c9b7a22f6e0ff3e9, type: 3}
@@ -298,6 +300,33 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!54 &5939157413006291306
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103483135336567061}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &6915344566285667247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f3b18d11be36248408f7e9328d15c82e, type: 3}
