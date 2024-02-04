@@ -34,7 +34,7 @@ public class GameInfo : SingletonBaseClass<GameInfo>
             {
                 _sceneStat = GameInfo.SceneTransitStatus.To_UniqueScene;
             }
-            else if (arg1.name == "InGame" || arg0.name == TitleSceneName)
+            else if (arg1.name == "InGame" || arg1.name == "LastScene" || arg0.name == TitleSceneName)
             {
                 _sceneStat = GameInfo.SceneTransitStatus.To_InGameScene;
             }

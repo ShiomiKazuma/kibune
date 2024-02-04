@@ -8,6 +8,7 @@ TagManager:
   - ProofKnife_Pos
   - ProofPic_Pos
   - LastEventStart_Pos
+  - Objective
   layers:
   - Default
   - TransparentFX

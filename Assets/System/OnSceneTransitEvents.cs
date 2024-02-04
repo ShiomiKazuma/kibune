@@ -15,7 +15,7 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
     Button toTitle;
     [SerializeField]
     Button newGame;
-    
+
     GameInfo _gameInfo;
     SceneLoader _sceneLoader;
     HUDManager _hudManager;
@@ -52,6 +52,12 @@ public class OnSceneTransitEvents : SingletonBaseClass<OnSceneTransitEvents>, IO
             eventProgMan.TryGetSetProgressData();
 
             var playerData = GameObject.FindAnyObjectByType<PlayerSaveDataSerializer>();
+        }
+        else if (scene.name == "LastScene")
+        {
+            var car = GameObject.FindGameObjectWithTag("Objective").transform;
+            var objMap = GameObject.FindAnyObjectByType<ObjectiveMapIndicator>();
+            objMap.SetTarget(car);
         }
         else if (scene.name == "StaffRoll")
         {
