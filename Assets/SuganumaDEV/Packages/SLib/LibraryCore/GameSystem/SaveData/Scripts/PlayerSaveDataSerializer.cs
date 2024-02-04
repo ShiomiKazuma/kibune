@@ -15,10 +15,23 @@ namespace SLib
 
             public SaveDataTemplate ReadSaveData()
             {
-                StreamReader sr = new StreamReader(Application.dataPath + "/PlayerSavedData.json");
-                string dataStr = sr.ReadToEnd();
-                sr.Close();
-                return JsonUtility.FromJson<SaveDataTemplate>(dataStr);
+                string dataStr = "";
+                try
+                {
+                    StreamReader sr = new StreamReader(Application.dataPath + "/PlayerSavedData.json");
+                    dataStr = sr.ReadToEnd();
+                    sr.Close();
+                    return JsonUtility.FromJson<SaveDataTemplate>(dataStr);
+                }
+                catch(FileNotFoundException)
+                {
+                    var t = GameObject.FindGameObjectWithTag("Player_Pos_OnNoData").transform;
+                    var data = new SaveDataTemplate();
+                    data._lastStandingRotation = t.rotation;
+                    data._lastStandingPosition = t.position;
+
+                    return data;
+                }
             }
         }
 

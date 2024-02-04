@@ -9,6 +9,7 @@ TagManager:
   - ProofPic_Pos
   - LastEventStart_Pos
   - Objective
+  - Player_Pos_OnNoData
   layers:
   - Default
   - TransparentFX

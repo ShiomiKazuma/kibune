@@ -54,8 +54,10 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
 
     public FramedInGameEventProgressData ReadSaveData()
     {
-        StreamReader sr = new StreamReader(Application.dataPath + "/StoryProgressSavedData.json");
-        string dataStr = sr.ReadToEnd();
+        StreamReader sr;
+        string dataStr = "";
+        sr = new StreamReader(Application.dataPath + "/StoryProgressSavedData.json");
+        dataStr = sr.ReadToEnd();
         sr.Close();
         return JsonUtility.FromJson<FramedInGameEventProgressData>(dataStr);
     }
@@ -81,14 +83,16 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     #region Story
     public void RunStory(List<bool> progress)   //InGame‚Å‚Ì‚İ
     {
+        var mapI = GameObject.FindObjectOfType<ObjectiveMapIndicator>();
         if (!progress[0])
         {
             Debug.Log("STORY 0");
             // –Ú“I’n‚ğŠÄ‹ƒJƒƒ‰‚Ì‚Æ‚±‚ë‚Ö
             var go = GameObject.Instantiate(Proofs[0]);
-            var tr  = GameObject.FindGameObjectWithTag("ProofCAM_Pos").transform;
+            var tr = GameObject.FindGameObjectWithTag("ProofCAM_Pos").transform;
             go.transform.position = tr.position;
             go.transform.rotation = tr.rotation;
+            mapI.SetTarget(go.transform);
         }
         else if (!progress[1])
         {
@@ -98,6 +102,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
             var tr = GameObject.FindGameObjectWithTag("ProofKnife_Pos").transform;
             go.transform.position = tr.position;
             go.transform.rotation = tr.rotation;
+            mapI.SetTarget(go.transform);
         }
         else if (!progress[2])
         {
@@ -107,6 +112,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
             var tr = GameObject.FindGameObjectWithTag("ProofPic_Pos").transform;
             go.transform.position = tr.position;
             go.transform.rotation = tr.rotation;
+            mapI.SetTarget(go.transform);
         }
         else if (progress[2])
         {
