@@ -1,7 +1,101 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.PlayerSettings;
+using static UnityEngine.GraphicsBuffer;
+#region 3DTransform To 2DScreenPosition
+/// <summary> 与えられた３次元の方向から２次元の方向の正規化したベクトルを返す </summary>
+/// <param name="direction"></param>
+/// <returns></returns>
+//Vector2 Calculate3DPosTo2DViewPos(Vector3 target, Vector3 origin, Vector3 cameraForward, Vector3 cameraRight)
+//{
+/// 考え方
+/// 3d での目標とプレイヤーのベクトルをD
+/// 3d でのプレイヤーの正面ベクトルをF
+/// 2d での正面ベクトルF1は(0,1)
+/// F から何度回転した方向にDがあるか知りたいので F ・ D を求める
+/// これを2d 上で再現すればよいかも
+#region Cos_
+//// the vector player -> target
+//Vector3 t = (target - origin).normalized, f = cameraForward.normalized;
+//// calculate dotFT-product
+//var dotP = Vector3.Dot(f, t);
+//dotP = Mathf.Clamp(dotP, -1.0f, 1.0f);
+//// calculate euler angle
+//var angle = Mathf.Acos(dotP) * Mathf.Rad2Deg;
+//// calculate vector rotated
+//var vec = cameraForward;
+//var result = Quaternion.Euler(0, angle, 0) * vec;
+//var rvec = new Vector2(result.z, result.x);
+//// get resolutions 
+//var res = _canvasS.referenceResolution;
+//rvec.Normalize();
+//var posX = rvec.x * (res.x / 2.0f) + (res.x / 2.0f);
+//var posY = rvec.y * (res.y / 2.0f) + (res.y / 2.0f);
+//return new Vector2(posX, posY);
+//Debug.Log($"vector res : {result.ToString()}");
+#endregion
 
+#region Atan2
+// XZ平面 → forward-right平面
+// calculate angle
+//Vector3 forward = target - cameraForward;
+//Vector3 right = target - cameraRight;
+//forward.Normalize();
+//right.Normalize();
+//float deg = Mathf.Atan2(forward.magnitude, right.magnitude);
+//Vector3 dir = target - cameraForward;
+//dir.Normalize();
+
+//float deg = Mathf.Atan2(dir.z, dir.x);
+//// calculate vector rotated
+//var vec = cameraForward;
+//var result = Quaternion.Euler(0, (deg < 0) ? deg + 360.0f : deg, 0) * vec;
+//var rvec = new Vector2(result.x, result.z);
+//// get resolutions 
+//var res = _canvasS.referenceResolution;
+//rvec.Normalize();
+//var posX = rvec.x * (res.x / 2.0f) + (res.x / 2.0f);
+//var posY = rvec.y * (res.y / 2.0f) + (res.y / 2.0f);
+//return new Vector2(posX, posY);
+//Debug.Log($"vector res : {result.ToString()}");
+#endregion
+
+#region DotPAcos-Atan2
+//Vector3 f = cameraForward;
+//Vector3 r = cameraRight;
+//Vector3 t = target - origin;
+
+//// calculate Dot
+//float dotFT = Vector3.Dot(f, t);
+//dotFT = Mathf.Clamp(dotFT, -1.0f, 1.0f);
+//// calculate euler angle Acos
+//var angleAcos = Mathf.Acos(dotFT) * Mathf.Rad2Deg;
+//Vector3 resVec1 = Quaternion.Euler(0, angleAcos, 0) * cameraForward;
+
+//// calculate angle Atan2
+//// 射影ベクトルを求める Atanのx
+//Vector3 pjT = r.normalized * (t.magnitude * Mathf.Cos((90.0f - angleAcos)));
+//// 高さのヘクトル Atanのy
+//Vector3 h = t.normalized * Mathf.Sin((90.0f - angleAcos));
+//float atan2 = Mathf.Atan2(h.magnitude, pjT.magnitude);
+//Vector3 resVec2 = Quaternion.Euler(0, atan2, 0) * cameraForward;
+
+//var result = resVec1 + resVec2;
+
+//var rvec = new Vector2(result.x, result.z);
+//// get resolutions 
+//var res = _canvasS.referenceResolution;
+//rvec.Normalize();
+//// set screen position
+//var posX = rvec.x * (res.x / 2.0f) + (res.x / 2.0f);
+//var posY = rvec.y * (res.y / 2.0f) + (res.y / 2.0f);
+//// return result
+
+//Debug.Log($"Acos = {angleAcos}, Atan2 = {atan2}");
+
+//return new Vector2(posX, posY);
+#endregion
+//}
+#endregion
 /// <summary> マップ内に目標を強調表示 </summary>
 public class ObjectiveMapIndicator : MonoBehaviour
 {
@@ -11,13 +105,15 @@ public class ObjectiveMapIndicator : MonoBehaviour
     Vector2 Size2D;
     [SerializeField, Header("Player Tag")]
     string PlayerTag;
-
-    [SerializeField] Vector2 dir;
-    [SerializeField] Transform target;
+    [SerializeField, Header("Camera Tag")]
+    string CameraTag;
 
     CanvasGroup _canvasG;
     CanvasScaler _canvasS;
     Transform _targetTf, _player;
+    Camera _mainCam;
+    RectTransform _rect;
+    Vector3 _camForward;
     public Transform Target => _targetTf;
 
     public void SetTarget(Transform target)
@@ -25,42 +121,62 @@ public class ObjectiveMapIndicator : MonoBehaviour
         _targetTf = target;
     }
 
-    /// <summary> 与えられた３次元の方向から２次元の方向の正規化したベクトルを返す </summary>
-    /// <param name="direction"></param>
-    /// <returns></returns>
-    Vector2 Calculate3DPosTo2DViewPos(Vector3 direction)
-    {
-        // forward - backward AND left - right
-        direction /= 2.0f;
-        Vector2 dir2d = new(direction.x, direction.z);
-        dir2d.Normalize();
-        var resolution = _canvasS.referenceResolution;
-        var posY = -(dir2d.y * (resolution.y / 2.0f)) + (resolution.y / 2.0f);
-        var posX = (dir2d.x * (resolution.x / 2.0f)) + (resolution.x / 2.0f);
-        return new Vector2 (posX, posY);
-    }
-
-    void SetIconScreenPos(Vector2 pos, Vector2 iconSize)
-    {
-        ImageIcon.rectTransform.position = pos;
-    }
-
     private void Start()
     {
         _canvasG = GetComponent<CanvasGroup>();
         _canvasS = GetComponent<CanvasScaler>();
         //_canvasG.alpha = 0.0f;
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _player = GameObject.FindGameObjectWithTag(PlayerTag).transform;
+        if (GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>() != null)
+        {
+            _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>();
+        }
+        else
+        {
+            _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponentInChildren<Camera>();
+        }
+        _rect = GetComponent<RectTransform>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        var playerCAM = GameObject.FindObjectOfType<PlayerCam>();
-        var lookAt = playerCAM.Forward;
-        lookAt.y = 0;
-        var pos = Calculate3DPosTo2DViewPos((_targetTf.position - lookAt));
-        //var pos = Calculate3DPosTo2DViewPos(new Vector3(dir.x, 0f, dir.y));
-        Debug.Log($"OBJECTIVE : {((_targetTf.position - _player.transform.position)).normalized.ToString()}");
-        SetIconScreenPos(pos, Size2D);
+        float canvasScale = transform.root.localScale.z;
+        var center = 0.5f * new Vector3(Screen.width, Screen.height);
+
+        var pos = _mainCam.WorldToScreenPoint(_targetTf.position) - center;
+        if (pos.z < 0f)
+        {
+            pos.x = -pos.x;
+            pos.y = -pos.y;
+
+            if (Mathf.Approximately(pos.y, 0f))
+            {
+                pos.y = -center.y;
+            }
+        }
+
+        var halfSize = 0.5f * canvasScale * _rect.sizeDelta;
+        float d = Mathf.Max(
+            Mathf.Abs(pos.x / (center.x - halfSize.x)),
+            Mathf.Abs(pos.y / (center.y - halfSize.y))
+        );
+
+
+        bool isOffscreen = (pos.z < 0f || d > 1f);
+        if (isOffscreen)
+        {
+            pos.x /= d;
+            pos.y /= d;
+        }
+        _rect.anchoredPosition = pos / canvasScale;
+
+        ImageIcon.enabled = isOffscreen;
+        if (isOffscreen)
+        {
+            ImageIcon.rectTransform.eulerAngles = new Vector3(
+                0f, 0f,
+                Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg
+            );
+        }
     }
 }

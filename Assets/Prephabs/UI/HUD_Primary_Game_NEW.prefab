@@ -5422,7 +5422,7 @@ MonoBehaviour:
   ImageIcon: {fileID: 2451117186800413826}
   Size2D: {x: 100, y: 100}
   PlayerTag: Player
-  dir: {x: 0, y: 0}
+  CameraTag: MainCamera
 --- !u!1001 &2159984067608246713
 PrefabInstance:
   m_ObjectHideFlags: 0

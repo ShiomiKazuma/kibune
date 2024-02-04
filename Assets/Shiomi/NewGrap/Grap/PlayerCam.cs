@@ -77,5 +77,7 @@ public class PlayerCam : MonoBehaviour
         //ƒJƒƒ‰‚Ìrotate‚ğ•ÏX‚·‚é
         transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
         _orientation.rotation = Quaternion.Euler(0, _yRotation, 0);
+        var p = this.transform.parent.gameObject;
+        p.transform.forward = transform.forward;
     }
 }
