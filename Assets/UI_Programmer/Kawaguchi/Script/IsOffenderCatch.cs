@@ -10,6 +10,27 @@ public class IsOffenderCatch : MonoBehaviour
     [Header("車の上に乗った時の処理")]
     [SerializeField] UnityEvent _event;
 
+    [SerializeField, Header("アニメーションが終わったときに発火するイベント")]
+    UnityEvent _animEnd;
+
+    SplineAnimate _sanim;
+
+    bool _isInvokedOnAnimEnd;
+
+    private void Awake()
+    {
+        _sanim = gameObject.transform.parent.GetComponent<SplineAnimate>();
+    }
+
+    private void Update()
+    {
+        if (_sanim.ElapsedTime >= _sanim.Duration && !_isInvokedOnAnimEnd)
+        {
+            _animEnd.Invoke();
+            _isInvokedOnAnimEnd = true;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
