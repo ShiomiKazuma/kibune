@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class TheProofItem : MonoBehaviour
 {
+    enum RunStoryOnTaken
+    {
+        RunStory,
+        None,
+    }
+
     [SerializeField, Header("取得可能範囲"), Range(1, 5)]
     int range;
     [SerializeField, Header("インデックス"), Range(0, 2)]
@@ -12,6 +18,8 @@ public class TheProofItem : MonoBehaviour
     GameObject TomoNavi;
     [SerializeField, Header("Player's LayerMask")]
     LayerMask lMask;
+    [SerializeField, Header("callback")]
+    RunStoryOnTaken Hoge;
 
     public int Index => index;
 
@@ -22,18 +30,21 @@ public class TheProofItem : MonoBehaviour
         {
             var flag = GameObject.FindObjectOfType<FlagManager>();
             flag.AddActiveItem(index);
-            if (TomoNavi != null)
-            {
-                var go = Instantiate(TomoNavi);
-                go.transform.position = Vector3.zero;
-            }
+            //if (TomoNavi != null)
+            //{
+            //    var go = Instantiate(TomoNavi);
+            //    go.transform.position = Vector3.zero;
+            //}
             var man = GameObject.FindAnyObjectByType<FramedEventsInGameGeneralManager>();
             man.SaveData();
             man.TryGetSetProgressData();
             var tomNavMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
             tomNavMan.PopNavi(TomoNavi);
-            //var prog = man.ReadSaveData().Finished;
-            //man.RunStory(prog);
+            if (Hoge == RunStoryOnTaken.RunStory)
+            {
+                var prog = man.ReadSaveData().Finished;
+                man.RunStory(prog);
+            }
             Destroy(this.gameObject);
         }
     }

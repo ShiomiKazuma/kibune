@@ -24,10 +24,10 @@ namespace SLib
                 var huds = _allHUDParent.GetChildObjects();
                 for (int i = 0; i < _allHUDParent.transform.childCount; i++)
                 {
-                    huds[i].gameObject.SetActive(false);
+                    huds[i].gameObject.GetComponent<CanvasGroup>().alpha = 0.0f;
                 }
                 _huds[index].transform.SetAsLastSibling();
-                _huds[index].gameObject.SetActive(true);
+                _huds[index].gameObject.GetComponent<CanvasGroup>().alpha = 1.0f;
             }
 
             public void KillAll()
@@ -35,7 +35,7 @@ namespace SLib
                 var huds = _allHUDParent.GetChildObjects();
                 foreach (var hud in huds)
                 {
-                    hud.gameObject.SetActive(false);
+                    hud.gameObject.GetComponent<CanvasGroup>().alpha = 0.0f;
                 }
             }
 

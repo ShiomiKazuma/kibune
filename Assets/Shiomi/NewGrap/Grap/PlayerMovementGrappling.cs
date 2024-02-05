@@ -51,6 +51,10 @@ public class PlayerMovementGrappling : MonoBehaviour
 
     PauseManager _pMan;
 
+    [SerializeField]
+    AudioClip aclip;
+    public AudioClip AClip => aclip;
+
     public enum MovementState
     {
         freeze,

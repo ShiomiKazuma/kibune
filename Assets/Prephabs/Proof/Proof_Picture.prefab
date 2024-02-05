@@ -51,6 +51,7 @@ MonoBehaviour:
   lMask:
     serializedVersion: 2
     m_Bits: 128
+  Hoge: 1
 --- !u!1001 &3362116788326378080
 PrefabInstance:
   m_ObjectHideFlags: 0
