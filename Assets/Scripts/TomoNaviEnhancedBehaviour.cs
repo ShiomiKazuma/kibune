@@ -8,7 +8,7 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
     public void SetObjectiveToSafeHouse()
     {
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        var dest = GameObject.FindGameObjectsWithTag("SafeHouse_Pos")[0].transform; // SafeHouse_Pos
+        var dest = GameObject.Find("Tomo_Dialogue_01").transform; // SafeHouse_Pos
         Debug.Log($"TomoNaviEnhancedBehaviour 0 {dest.position.ToString()}");
         mapObj.SetTarget(dest);
         // まずとも宅へ ↓ 
@@ -28,7 +28,7 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
         p2.GetComponent<SimpleConversation>().enabled = (true);
         // ↓ ともにカメラを解析させるてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
+        var dest = GameObject.Find("Tomo_Dialogue_02").transform;
         mapObj.SetTarget(dest);
         // とも宅へ ↓ 
         // ↓ Dialogue 02 で ストーリー進行 凶器回収へ
@@ -47,7 +47,7 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
         p2.GetComponent<SimpleConversation>().enabled = (true);
         // ↓ ともの解析が終わったてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
+        var dest = GameObject.FindGameObjectWithTag("Tomo_Dialogue_03").transform;
         mapObj.SetTarget(dest);
         // 友ナビ ポップ → ともから「解析が終わった。面白いなこれ」
         var tnMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
@@ -61,20 +61,7 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
     // ↓ 写真回収時の友ナビからこれを呼び出す
     public void InvokeEventOnCatchPicture()
     {
-        //var p = GameObject.Find("Tomo_Dialogue_01");
-        //var p0 = GameObject.Find("Tomo_Dialogue_02");
-        //var p1 = GameObject.Find("Tomo_Dialogue_03");
-        //p.GetComponent<SimpleConversation>().enabled = (false);
-        //p0.GetComponent<SimpleConversation>().enabled = (false);
-        //p1.GetComponent<SimpleConversation>().enabled = (true);
-        //// ↓ ともの解析が終わったてい
-        //var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        //var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
-        //mapObj.SetTarget(dest);
-        // 友ナビ ポップ → ともから「解析が終わった。面白いなこれ」
-        // とも宅へ ↓ 
-        // ↓ Dialogue 04 で ストーリー 進行
-
+        Debug.Log("Dialogue 03 Calling!");
         var p = GameObject.Find("Tomo_Dialogue_01");
         var p0 = GameObject.Find("Tomo_Dialogue_02");
         var p1 = GameObject.Find("Tomo_Dialogue_03");
@@ -85,21 +72,11 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
         p2.GetComponent<SimpleConversation>().enabled = (false);
         // ↓ ともの解析が終わったてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
+        var dest = GameObject.Find("Tomo_Dialogue_03").transform;
         mapObj.SetTarget(dest);
         // 友ナビ ポップ → ともから「解析が終わった。面白いなこれ」
         // とも宅へ ↓ 
         // ↓ Dialogue 04 で ストーリー 進行
-    }
-
-    public void InvokeEventToStagePicture()
-    {
-        var hoge = GameObject.FindFirstObjectByType<FramedEventsInGameGeneralManager>();
-        hoge.SaveData();
-        hoge.TryGetSetProgressData();
-        var data = hoge.ReadSaveData();
-        hoge.RunStory(data.Finished);
-        // バグったらここを ctrl + z
     }
 
     public void InvokeEventToLastChase()
@@ -114,7 +91,7 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
         p2.GetComponent<SimpleConversation>().enabled = (true);
         // ↓ ともの解析が終わったてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
+        var dest = GameObject.FindGameObjectWithTag("Tomo_Dialogue_04").transform;
         mapObj.SetTarget(dest);
         // 友ナビ ポップ → ともから「解析が終わった。面白いなこれ」
         // とも宅へ ↓ 
