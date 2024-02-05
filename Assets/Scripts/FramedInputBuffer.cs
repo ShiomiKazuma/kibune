@@ -57,7 +57,7 @@ public class FramedInputBuffer : MonoBehaviour
         bool grapple_t1 = false;    // Normal One
         bool grapple_t2 = false;    // Grapple Like Path Finder One
         bool inventry = false;      // inventry
-        bool pause = false;         // pause and settings
+        bool pause = false;         // gm and settings
 
         FramedDeviceInputContext context;
 

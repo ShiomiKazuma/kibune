@@ -16,7 +16,7 @@ public class GameManager : SingletonBaseClass<GameManager>
         pm.CallBeginPause();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        OnGameOver();
+        if (OnGameOver != null) OnGameOver();
         _hudManager = GameObject.FindAnyObjectByType<HUDManager>();
         _hudManager.ToFront(5);
     }

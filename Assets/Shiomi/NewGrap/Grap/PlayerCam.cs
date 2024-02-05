@@ -12,6 +12,9 @@ public class PlayerCam : MonoBehaviour
     bool _pauseOverride;
     PauseManager _pMan;
 
+    float mouseX;
+    float mouseY;
+
     public Vector3 Forward => this.gameObject.transform.forward;
 
     public void DoFov(float endValue)
@@ -66,14 +69,17 @@ public class PlayerCam : MonoBehaviour
         if (_pauseOverride) { return; }
 
         //マウスのインプット
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * _sensX;
-        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * _sensY;
+        mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * _sensX;
+        mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * _sensY;
 
         _yRotation += mouseX;
         _xRotation -= mouseY;
 
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
+    }
 
+    private void FixedUpdate()
+    {        
         //カメラのrotateを変更する
         transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
         _orientation.rotation = Quaternion.Euler(0, _yRotation, 0);

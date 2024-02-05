@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 5278339103189729657}
   - component: {fileID: 3634782110849552323}
   - component: {fileID: 2540052629402943280}
-  - component: {fileID: 7548969741910383926}
   m_Layer: 7
   m_Name: PlayerObj
   m_TagString: Player
@@ -202,7 +201,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &2540052629402943280
 MonoBehaviour:
@@ -231,19 +230,7 @@ MonoBehaviour:
   _orientation: {fileID: 7084955930851348708}
   _rb: {fileID: 3634782110849552323}
   _horizontalThrustForce: 200
-  _extendCableSpeed: 100
---- !u!114 &7548969741910383926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798729652220953641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4932e7fb2e76c5a40885ce4732bfafbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _cableExtendSpeed: 52.9
 --- !u!1 &1151967832799515121
 GameObject:
   m_ObjectHideFlags: 0
