@@ -13,8 +13,8 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
         mapObj.SetTarget(dest);
         // まずとも宅へ ↓ 
         // ↓ Dialogue 01 ストーリー進行 カメラ回収へ
-        var storyStarter = GameObject.FindFirstObjectByType<StoryStarter>();
-        storyStarter.RunStory();
+        //var storyStarter = GameObject.FindFirstObjectByType<StoryStarter>();
+        //storyStarter.RunStory();
     }
 
     // ↓ カメラを集めに行く
