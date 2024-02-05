@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class DDOLObject : MonoBehaviour
 {
-    private void Awake()
-    {
-        GameObject.DontDestroyOnLoad(this);
-    }
+    
 }

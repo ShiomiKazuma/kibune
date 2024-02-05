@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
@@ -110,18 +111,28 @@ public class ObjectiveMapIndicator : MonoBehaviour
     [SerializeField, Header("Objective Tag")]
     string ObjTag;
 
+    [SerializeField] bool experimental;
+
     CanvasGroup _canvasG;
     CanvasScaler _canvasS;
     Transform _targetTf, _player;
     Camera _mainCam;
     RectTransform _rect;
-    Vector3 _camForward;
     public Transform Target => _targetTf;
 
     public void SetTarget(Transform target)
     {
         _targetTf = target;
         _canvasG.alpha = (_targetTf == null) ? 0.0f : 1.0f;
+
+        if (GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>() != null)
+        {
+            _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>();
+        }
+        else
+        {
+            _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponentInChildren<Camera>();
+        }
     }
 
     private void Start()
@@ -148,6 +159,7 @@ public class ObjectiveMapIndicator : MonoBehaviour
             Debug.Log("MAP ICON RETURNING");
             return;
         }
+
         float canvasScale = transform.root.localScale.z;
         var center = 0.5f * new Vector3(Screen.width, Screen.height);
 
@@ -177,5 +189,7 @@ public class ObjectiveMapIndicator : MonoBehaviour
             pos.y /= d;
         }
         _rect.anchoredPosition = pos / canvasScale;
+
+        Debug.Log($"Screen Pos {pos.ToString()}");
     }
 }

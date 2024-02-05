@@ -8,7 +8,8 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
     public void SetObjectiveToSafeHouse()
     {
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
-        var dest = GameObject.Find("Tomo_Dialogue_01").transform;
+        var dest = GameObject.FindGameObjectsWithTag("SafeHouse_Pos")[0].transform; // SafeHouse_Pos
+        Debug.Log($"TomoNaviEnhancedBehaviour 0 {dest.position.ToString()}");
         mapObj.SetTarget(dest);
         // まずとも宅へ ↓ 
         // ↓ Dialogue 01 ストーリー進行 カメラ回収へ
