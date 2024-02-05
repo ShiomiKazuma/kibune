@@ -113,8 +113,6 @@ public class ObjectiveMapIndicator : MonoBehaviour
 
     [SerializeField] bool experimental;
 
-    CanvasGroup _canvasG;
-    CanvasScaler _canvasS;
     Transform _targetTf, _player;
     Camera _mainCam;
     RectTransform _rect;
@@ -123,7 +121,7 @@ public class ObjectiveMapIndicator : MonoBehaviour
     public void SetTarget(Transform target)
     {
         _targetTf = target;
-        _canvasG.alpha = (_targetTf == null) ? 0.0f : 1.0f;
+        ImageIcon.color= (_targetTf == null) ? Color.clear : Color.white;
 
         if (GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>() != null)
         {
@@ -137,8 +135,6 @@ public class ObjectiveMapIndicator : MonoBehaviour
 
     private void Start()
     {
-        _canvasG = GetComponent<CanvasGroup>();
-        _canvasS = GetComponent<CanvasScaler>();
         _player = GameObject.FindGameObjectWithTag(PlayerTag).transform;
         if (GameObject.FindGameObjectWithTag(CameraTag).GetComponent<Camera>() != null)
         {
@@ -148,8 +144,8 @@ public class ObjectiveMapIndicator : MonoBehaviour
         {
             _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponentInChildren<Camera>();
         }
-        _rect = GetComponent<RectTransform>();
-        _canvasG.alpha = (_targetTf == null) ? 0.0f : 1.0f;
+        _rect = ImageIcon.gameObject.GetComponent<RectTransform>();
+        ImageIcon.color = (_targetTf == null) ? Color.clear : Color.white;
     }
 
     private void Update()
@@ -159,6 +155,8 @@ public class ObjectiveMapIndicator : MonoBehaviour
             Debug.Log("MAP ICON RETURNING");
             return;
         }
+
+        _rect = ImageIcon.gameObject.GetComponent<RectTransform>();
 
         float canvasScale = transform.root.localScale.z;
         var center = 0.5f * new Vector3(Screen.width, Screen.height);

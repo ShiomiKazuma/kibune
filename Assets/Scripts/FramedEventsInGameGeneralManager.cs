@@ -87,6 +87,8 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         var p2 = GameObject.Find("Tomo_Dialogue_02");
         p1.SetActive(false);
         p2.SetActive(true);
+        p1.GetComponent<SimpleConversation>().enabled = false;
+        p2.GetComponent<SimpleConversation>().enabled = true;
         // ↓ ともにカメラを解析させるてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
         var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
@@ -100,10 +102,14 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     // ↓ 凶器を集めたら友ナビからこれの呼び出し
     void InvokeEventOnCatchKnife()
     {
+        var p = GameObject.Find("Tomo_Dialogue_01");
         var p1 = GameObject.Find("Tomo_Dialogue_02");
         var p2 = GameObject.Find("Tomo_Dialogue_03");
+        p.SetActive(false);
         p1.SetActive(false);
         p2.SetActive(true);
+        p1.GetComponent<SimpleConversation>().enabled = false;
+        p2.GetComponent<SimpleConversation>().enabled = true;
         // ↓ ともの解析が終わったてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
         var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
@@ -124,6 +130,8 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         var p2 = GameObject.Find("Tomo_Dialogue_04");
         p1.SetActive(false);
         p2.SetActive(true);
+        p1.GetComponent<SimpleConversation>().enabled = false;
+        p2.GetComponent<SimpleConversation>().enabled = true;
         // ↓ ともの解析が終わったてい
         var mapObj = GameObject.FindFirstObjectByType<ObjectiveMapIndicator>();
         var dest = GameObject.FindGameObjectWithTag("SafeHouse_Pos").transform;
@@ -158,7 +166,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         }
         else if (!progress[1])
         {
-            InvokeEventOnCatchCamera();
+            //InvokeEventOnCatchCamera();
             /// 友人宅にて 「これの映像が暗号化されてる、解析に時間がかかりそうだ。そのあいだにもっと決定的なものを探してくれ」
             /// 
 
@@ -171,7 +179,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         }
         else if (!progress[2])
         {
-            InvokeEventOnCatchKnife();
+            //InvokeEventOnCatchKnife();
             /// 友ナビ 「解析結果の画像を印刷した取りに来い！」
             /// 
 
@@ -184,7 +192,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         }
         else if (progress[2])
         {
-            InvokeEventOnCatchPicture();
+            //InvokeEventOnCatchPicture();
             // 最終決戦
             var sceneLoader = GameObject.FindObjectOfType<SceneLoader>();
             sceneLoader.LoadSceneByName(SceneName);

@@ -43,7 +43,7 @@ public class SimpleConversation : MonoBehaviour
         _isConversible = false;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         bool canSpeak = Physics.CheckSphere(transform.position, _conversationRange, _playerLayer); // ‰ï˜b‰Â”\Œ—“à‚É‚¢‚é‚È‚ç
 

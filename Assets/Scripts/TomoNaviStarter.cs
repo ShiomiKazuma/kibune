@@ -9,9 +9,14 @@ public class TomoNaviStarter : MonoBehaviour
 
     private void Start()
     {
-        GameObject go = GameObject.Instantiate(_tomoNavi);
-        TomoNaviManager manager = FindAnyObjectByType<TomoNaviManager>();
-        go.transform.parent = manager.gameObject.transform;
-        go.transform.localPosition = Vector3.zero;
+        var hoge = GameObject.FindFirstObjectByType<FramedEventsInGameGeneralManager>();
+        var data = hoge.ReadSaveData();
+        if (!data.Finished[0])
+        {
+            GameObject go = GameObject.Instantiate(_tomoNavi);
+            TomoNaviManager manager = FindAnyObjectByType<TomoNaviManager>();
+            go.transform.parent = manager.gameObject.transform;
+            go.transform.localPosition = Vector3.zero;
+        }
     }
 }

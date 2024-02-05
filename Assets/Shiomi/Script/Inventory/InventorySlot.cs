@@ -12,7 +12,7 @@ namespace Shiomi
         //[Header("削除ボタン")] public Button _removeButton;
         [SerializeField, Header("アイテムの説明を表示させるTextBox")] Text _textBox;
         [SerializeField, Header("アイテムの説明文")] string _text;
-        [SerializeField, Header("アイテムのID")] int _itemId;
+        //[SerializeField, Header("アイテムのID")] int _itemId;
         //3dオブジェクトとテキストの表示
         public void SetFlavourText()
         {

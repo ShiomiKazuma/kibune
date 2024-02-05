@@ -22,6 +22,8 @@ public class SwingGrap : MonoBehaviour
     PlayerCrossHair _crossHair; // Players Cross Hair
     PauseManager _pMan;
 
+    AudioSource _as;
+
     bool _pausedOverride;
 
     void CheckForSwingPoints()
@@ -84,6 +86,8 @@ public class SwingGrap : MonoBehaviour
 
         _lr.positionCount = 2;
         _currentGrapplePosition = _gunTip.position;
+
+        _as.PlayOneShot(_pm.AClip);
     }
 
     public void StopSwing()
@@ -174,6 +178,7 @@ public class SwingGrap : MonoBehaviour
     private void Start()
     {
         _crossHair = GameObject.FindAnyObjectByType<PlayerCrossHair>();
+        _as = GetComponent<AudioSource>();
         _lr.positionCount = 0;
     }
 

@@ -11,6 +11,12 @@ public class StoryStarter : MonoBehaviour
         mapI.SetTarget(go.transform);
     }
 
+    public void SetObjective(Transform tr)
+    {
+        var mapI = GameObject.FindObjectOfType<ObjectiveMapIndicator>();
+        mapI.SetTarget(tr.transform);
+    }
+
     public void RunStoryByIndex(int index)// index以降のストーリーを走らせる
     {
         var manager = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
@@ -29,5 +35,10 @@ public class StoryStarter : MonoBehaviour
         manager.TryGetSetProgressData();
         var prog = manager.ReadSaveData().Finished;
         manager.RunStory(prog);
+    }
+
+    private void Start()
+    {
+        RunStory();
     }
 }
