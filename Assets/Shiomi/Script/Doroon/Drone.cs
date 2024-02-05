@@ -140,6 +140,7 @@ public class Drone : MonoBehaviour
             {
                 Debug.Log("”š”­");
                 var dest = Instantiate(_explosionGameObject, this.transform.position, Quaternion.identity);
+                GameObject.FindFirstObjectByType<GameManager>().GameOver();
                 Destroy(this.gameObject);
             }
         }

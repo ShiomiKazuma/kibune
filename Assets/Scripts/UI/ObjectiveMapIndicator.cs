@@ -121,6 +121,7 @@ public class ObjectiveMapIndicator : MonoBehaviour
     public void SetTarget(Transform target)
     {
         _targetTf = target;
+        _canvasG.alpha = (_targetTf == null) ? 0.0f : 1.0f;
     }
 
     private void Start()
@@ -137,13 +138,14 @@ public class ObjectiveMapIndicator : MonoBehaviour
             _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponentInChildren<Camera>();
         }
         _rect = GetComponent<RectTransform>();
-        if (_targetTf == null) _targetTf = GameObject.FindGameObjectWithTag(ObjTag).transform;
+        _canvasG.alpha = (_targetTf == null) ? 0.0f : 1.0f;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (GameObject.FindAnyObjectByType<GameInfo>().SceneStatus != GameInfo.SceneTransitStatus.To_InGameScene)
         {
+            Debug.Log("MAP ICON RETURNING");
             return;
         }
         float canvasScale = transform.root.localScale.z;
