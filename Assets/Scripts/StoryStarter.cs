@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class StoryStarter : MonoBehaviour
 {
+    public void SetObjectiveAutomatically()
+    {
+        GameObject go = GameObject.FindGameObjectWithTag("Objective");
+        var mapI = GameObject.FindObjectOfType<ObjectiveMapIndicator>();
+        mapI.SetTarget(go.transform);
+    }
+
     public void RunStoryByIndex(int index)// index以降のストーリーを走らせる
     {
         var manager = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();

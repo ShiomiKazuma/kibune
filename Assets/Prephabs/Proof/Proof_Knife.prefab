@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 3
   index: 1
-  TomoNavi: {fileID: 0}
+  TomoNavi: {fileID: 4677916246319808822, guid: f64ebc7df8988924f922e82d5a052d59, type: 3}
   lMask:
     serializedVersion: 2
     m_Bits: 128

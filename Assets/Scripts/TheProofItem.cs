@@ -30,6 +30,8 @@ public class TheProofItem : MonoBehaviour
             var man = GameObject.FindAnyObjectByType<FramedEventsInGameGeneralManager>();
             man.SaveData();
             man.TryGetSetProgressData();
+            var tomNavMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
+            tomNavMan.PopNavi(TomoNavi);
             //var prog = man.ReadSaveData().Finished;
             //man.RunStory(prog);
             Destroy(this.gameObject);
