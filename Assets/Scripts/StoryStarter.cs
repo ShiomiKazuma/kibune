@@ -22,9 +22,9 @@ public class StoryStarter : MonoBehaviour
         }
         manager.RunStory(prog);
     }
-
-    private void Start()
+    public void RunStory()
     {
+        Debug.Log("Story Starter Running");
         var manager = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
         manager.TryGetSetProgressData();
         var prog = manager.ReadSaveData().Finished;

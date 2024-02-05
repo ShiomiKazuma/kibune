@@ -66,8 +66,8 @@ public class PlayerCam : MonoBehaviour
         if (_pauseOverride) { return; }
 
         //マウスのインプット
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * _sensX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * _sensY;
+        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * _sensX;
+        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * _sensY;
 
         _yRotation += mouseX;
         _xRotation -= mouseY;

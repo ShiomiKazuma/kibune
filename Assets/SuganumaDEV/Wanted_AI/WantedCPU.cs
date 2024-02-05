@@ -120,7 +120,7 @@ public class WantedCPU : MonoBehaviour
             , () =>
             {
                 Debug.Log("UŒ‚’†....");
-                Knock(OnPlayerCaptured == null, () => { Debug.LogWarning("Šm•Û”»’è‚Ì‚½‚ß‚ÌAction‚Ö‚ÌƒCƒxƒ“ƒg“o˜^‚ª‚³‚ê‚Ä‚Ü‚¹‚ñ"); });
+                Knock(OnPlayerCaptured == null, () => { GameObject.FindFirstObjectByType<GameManager>().GameOver(); });
                 Knock(OnPlayerCaptured != null, OnPlayerCaptured);
             }
             );

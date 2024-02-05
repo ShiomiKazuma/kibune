@@ -137,6 +137,7 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     #region Story
     public void RunStory(List<bool> progress)   //InGame‚Å‚Ì‚Ý
     {
+        Debug.Log("Story Core Running");
         var mapI = GameObject.FindObjectOfType<ObjectiveMapIndicator>();
 
         if (!progress[0])

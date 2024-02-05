@@ -45,10 +45,11 @@ public class TomoNavi : MonoBehaviour   // v-1
 
     TomoNaviManager _tomoMan;
 
-    private void Start()
+    GameManager _gameManager;
+
+    void OnGameOver()
     {
-        _tomoMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
-        _uiTween.StartTween();
+        GameObject.Destroy(transform.parent.gameObject);
     }
 
     public void OnTweenEndStartFade()   // フェードアウト
@@ -67,22 +68,43 @@ public class TomoNavi : MonoBehaviour   // v-1
             {
                 switch (OnCompleted)
                 {
-                    case Behaviour.DestroyOnComplete: 
-                        switch(OnCompletedCallback)
+                    case Behaviour.DestroyOnComplete:
+                        switch (OnCompletedCallback)
                         {
                             case CallbackBehaviour.CallBack:
                                 _tomoMan.PopNavi(_callingObjectIndex);
                                 break;
-                                default: break;
+                            default: break;
                         }
                         _onDestroyed.Invoke();
-                        GameObject.Destroy(transform.parent.gameObject); 
+                        GameObject.Destroy(transform.parent.gameObject);
                         break;
-                        default: 
+                    default:
                         _onDestroyed.Invoke();
                         break;
                 }
             }
             );
+    }
+
+    private void Awake()
+    {
+        _gameManager = GameObject.FindFirstObjectByType<GameManager>();
+    }
+
+    private void OnEnable()
+    {
+        _gameManager.OnGameOver += OnGameOver;
+    }
+
+    private void OnDisable()
+    {
+        _gameManager.OnGameOver -= OnGameOver;
+    }
+
+    private void Start()
+    {
+        _tomoMan = GameObject.FindFirstObjectByType<TomoNaviManager>();
+        _uiTween.StartTween();
     }
 }

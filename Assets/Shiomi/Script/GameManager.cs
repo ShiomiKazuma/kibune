@@ -1,5 +1,6 @@
 using SLib.Singleton;
 using SLib.Systems;
+using System;
 using UnityEngine;
 
 public class GameManager : SingletonBaseClass<GameManager>
@@ -7,10 +8,17 @@ public class GameManager : SingletonBaseClass<GameManager>
     GameInfo _gInfo;
     HUDManager _hudManager;
 
+    public event Action OnGameOver;
+
     public void GameOver()  // ˆê’â~‚µ‚ÄGOˆ—
     {
         PauseManager pm = GameObject.FindObjectOfType<PauseManager>();
         pm.CallBeginPause();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        OnGameOver();
+        _hudManager = GameObject.FindAnyObjectByType<HUDManager>();
+        _hudManager.ToFront(5);
     }
 
     protected override void ToDoAtAwakeSingleton()
