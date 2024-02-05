@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 // 作成 菅沼
@@ -14,6 +15,9 @@ public class SimpleConversation : MonoBehaviour
 
     [SerializeField, Header("会話可能距離"), Range(1f, 10f)] 
     float _conversationRange; // 会話可能距離
+
+    [SerializeField, Header("文字送り範囲に入った際のイベント")]
+    UnityEvent _evtOnEntry;
 
     Text _convText; // 会話のテキスト表示
     CanvasGroup _convPanel; // テキストパネルのCanvasGroup
@@ -56,6 +60,7 @@ public class SimpleConversation : MonoBehaviour
 
                 _dFeeder.OverrideScenarios(_texts);
                 _dFeeder.TextStart();
+                _evtOnEntry.Invoke();
             }
         }
 

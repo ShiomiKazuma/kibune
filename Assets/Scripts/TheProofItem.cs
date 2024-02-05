@@ -30,8 +30,8 @@ public class TheProofItem : MonoBehaviour
             var man = GameObject.FindAnyObjectByType<FramedEventsInGameGeneralManager>();
             man.SaveData();
             man.TryGetSetProgressData();
-            var prog = man.ReadSaveData().Finished;
-            man.RunStory(prog);
+            //var prog = man.ReadSaveData().Finished;
+            //man.RunStory(prog);
             Destroy(this.gameObject);
         }
     }

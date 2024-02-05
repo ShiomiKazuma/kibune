@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -84,19 +83,28 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
     public void RunStory(List<bool> progress)   //InGameでのみ
     {
         var mapI = GameObject.FindObjectOfType<ObjectiveMapIndicator>();
+
         if (!progress[0])
         {
-            Debug.Log("STORY 0");
+            /// 友ナビで「ニュースになってるぞ！話を聞かせろ！」
+            /// 友人宅へ ポスターの機能を流用してやる →「お前がやっていないのなら証拠が必要だ。」
+            /// 事件現場へ行って証拠になりそうなものをとりに行け！
+            /// ↑ 友ナビからの呼び出しでここでしょりしなくてOK
+
             // 目的地を監視カメラのところへ
             var go = GameObject.Instantiate(Proofs[0]);
             var tr = GameObject.FindGameObjectWithTag("ProofCAM_Pos").transform;
             go.transform.position = tr.position;
             go.transform.rotation = tr.rotation;
             mapI.SetTarget(go.transform);
+
+            /// 回収されたなら友ナビをポップそれベースでイベント呼び出しをする
         }
         else if (!progress[1])
         {
-            Debug.Log("STORY 1");
+            /// 友人宅にて 「これの映像が暗号化されてる、解析に時間がかかりそうだ。そのあいだにもっと決定的なものを探してくれ」
+            /// 
+
             // 目的地を凶器のとこへ
             var go = GameObject.Instantiate(Proofs[1]);
             var tr = GameObject.FindGameObjectWithTag("ProofKnife_Pos").transform;
@@ -106,7 +114,9 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         }
         else if (!progress[2])
         {
-            Debug.Log("STORY 2");
+            /// 友ナビ 「解析結果の画像を印刷した取りに来い！」
+            /// 
+
             // 写真を友人宅へ
             var go = GameObject.Instantiate(Proofs[2]);
             var tr = GameObject.FindGameObjectWithTag("ProofPic_Pos").transform;
@@ -117,7 +127,6 @@ public class FramedEventsInGameGeneralManager : SingletonBaseClass<FramedEventsI
         else if (progress[2])
         {
             // 最終決戦
-            Debug.Log("To FINAL!");
             var sceneLoader = GameObject.FindObjectOfType<SceneLoader>();
             sceneLoader.LoadSceneByName(SceneName);
         }

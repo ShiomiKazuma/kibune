@@ -10,6 +10,7 @@ TagManager:
   - LastEventStart_Pos
   - Objective
   - Player_Pos_OnNoData
+  - SafeHouse_Pos
   layers:
   - Default
   - TransparentFX

@@ -3,11 +3,14 @@ using UnityEngine;
 public class UIObjRotator : MonoBehaviour
 {
     /// <summary>回転させるオブジェクト</summary>
-    [SerializeField, Header("回転させる証拠品")] GameObject[] _targetObjects;
+    [SerializeField, Header("回転させる証拠品")]
+    GameObject[] _targetObjects;
     /// <summary>回転のスピード</summary>
-    [SerializeField, Header("回転のスピード\nX：縦方向　Y：横方向")] Vector2 _rotationSpeed = new Vector2(0.1f, 0.2f);
+    [SerializeField, Header("回転のスピード\nX：縦方向　Y：横方向")]
+    Vector2 _rotationSpeed = new Vector2(0.1f, 0.2f);
     /// <summary>動きの反転のフラグ</summary>
-    [SerializeField, Header("動きの反転のフラグ")] bool _reverse;
+    [SerializeField, Header("動きの反転のフラグ")]
+    bool _reverse;
     [SerializeField, Header("描写に使うカメラ")]
     Camera _mainCamera;
 
@@ -15,7 +18,7 @@ public class UIObjRotator : MonoBehaviour
     Vector2 _lastMousePosition;
     /// <summary>初期角度</summary>
     Quaternion _initialRotation;
-    bool _canRotation = false;
+    bool _canRotate = false;
 
     void Start()
     {
@@ -52,7 +55,7 @@ public class UIObjRotator : MonoBehaviour
 
     private void Update()
     {
-        if (_canRotation && _currentTargetObject != null)
+        if (_canRotate && _currentTargetObject != null)
         {
             if (Input.GetMouseButtonDown(1))
             {
@@ -96,11 +99,11 @@ public class UIObjRotator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _canRotation = true;
+        _canRotate = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _canRotation = false;
+        _canRotate = false;
     }
 }

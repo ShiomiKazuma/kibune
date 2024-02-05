@@ -137,7 +137,10 @@ public class ObjectiveMapIndicator : MonoBehaviour
             _mainCam = GameObject.FindGameObjectWithTag(CameraTag).GetComponentInChildren<Camera>();
         }
         _rect = GetComponent<RectTransform>();
-        if (_targetTf == null) _targetTf = GameObject.FindGameObjectWithTag(ObjTag).transform;
+        if (_targetTf == null)
+        {
+            _canvasG.alpha = 0.0f;
+        }
     }
 
     private void LateUpdate()

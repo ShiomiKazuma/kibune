@@ -25,8 +25,6 @@ public class GameInitializer : MonoBehaviour
         go.transform.position = saveDataTemplate._lastStandingPosition;
         go.transform.rotation = saveDataTemplate._lastStandingRotation;
         go.SetActive(true);
-
-        Debug.Log("PLAYER POS");
     }
 
     void InitializeInventory()

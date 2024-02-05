@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class StoryStarter : MonoBehaviour
 {
+    public void RunStoryByIndex(int index)// index以降のストーリーを走らせる
+    {
+        var manager = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
+        manager.TryGetSetProgressData();
+        var prog = manager.ReadSaveData().Finished;
+        for (int i = 0; i <= index; i++)
+        {
+            prog[i] = true;
+        }
+        manager.RunStory(prog);
+    }
+
     private void Start()
     {
         var manager = GameObject.FindObjectOfType<FramedEventsInGameGeneralManager>();
         manager.TryGetSetProgressData();
         var prog = manager.ReadSaveData().Finished;
         manager.RunStory(prog);
-        Debug.Log($"Run Story : a-{prog[0].ToString()},b-{prog[1].ToString()},c-{prog[2].ToString()}");
     }
 }
