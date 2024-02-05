@@ -232,7 +232,7 @@ MonoBehaviour:
   _orientation: {fileID: 7084955930851348708}
   _rb: {fileID: 3634782110849552323}
   _horizontalThrustForce: 200
-  _cableExtendSpeed: 52.9
+  _cableExtendSpeed: 20
 --- !u!82 &1263493426559456349
 AudioSource:
   m_ObjectHideFlags: 0

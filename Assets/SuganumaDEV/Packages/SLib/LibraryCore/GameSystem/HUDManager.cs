@@ -35,7 +35,7 @@ namespace SLib
                 var huds = _allHUDParent.GetChildObjects();
                 foreach (var hud in huds)
                 {
-                    hud.gameObject.SetActive(false);
+                    hud.gameObject.GetComponent<CanvasGroup>().alpha = 0.0f;
                 }
             }
 

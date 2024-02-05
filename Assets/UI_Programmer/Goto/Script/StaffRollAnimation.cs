@@ -26,6 +26,8 @@ public class StaffRollAnimation : MonoBehaviour
         {
             SceneLoader loader = GameObject.FindObjectOfType<SceneLoader>();
             loader.LoadSceneByName(GameObject.FindAnyObjectByType<GameInfo>().TitleSceneName);
+            var hud = GameObject.FindFirstObjectByType<HUDManager>();
+            hud.ToFront(0);
         });
     }
 }

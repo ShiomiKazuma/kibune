@@ -92,6 +92,16 @@ public class TomoNaviEnhancedBehaviour : MonoBehaviour
         // ↓ Dialogue 04 で ストーリー 進行
     }
 
+    public void InvokeEventToStagePicture()
+    {
+        var hoge = GameObject.FindFirstObjectByType<FramedEventsInGameGeneralManager>();
+        hoge.SaveData();
+        hoge.TryGetSetProgressData();
+        var data = hoge.ReadSaveData();
+        hoge.RunStory(data.Finished);
+        // バグったらここを ctrl + z
+    }
+
     public void InvokeEventToLastChase()
     {
         var p = GameObject.Find("Tomo_Dialogue_01");
